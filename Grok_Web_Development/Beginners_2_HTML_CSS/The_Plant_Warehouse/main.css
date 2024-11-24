@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Mono:wdth,wght@62.5..100,100..900&family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,200..1000,440..540;1,6..12,75..125,200..1000,440..540&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url(https://cyanprozresourcesdrivetoweb.on.drv.tw/Documents/Fonts/Source%20Code%20Pro/Styles.css);
+@import url(https://cyanprozresourcesdrivetoweb.on.drv.tw/Documents/Fonts/Source%20Sans%20Pro/Styles.css);
+
+html {
+    font-family: "Source Sans Pro", "Open Sans", "Noto Sans", "Noto Color Emoji", sans-serif;
+}
+body {
+    background-color: #fff;
+}
+a {
+    color: #494;
+}
+h1:nth-child(1), h2:nth-child(1), h3:nth-child(1), h4:nth-child(1), h5:nth-child(1), h6:nth-child(1) {
+    margin-top: 0;
+}
+div.header {
+    display: flex;
+    flex-direction: column;
+    background-color: #494;
+}
+div.header a {
+    color: #fff;
+    text-decoration: none;
+}
+div.header > nav {
+    display: flex;
+    justify-content: center;
+}
+div.header > nav > a {
+    padding: 10px;
+}
+div.header > nav > a:hover:after {
+    content: "";
+    background-color: #fff;
+}
+div.header > nav > a > span.fa {
+    margin-right: 4px;
+}
+div.header a.logo {
+    display: block;
+    padding: 60px 40px 40px 40px;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 200;
+    background: url(https://as1.ftcdn.net/v2/jpg/01/58/74/76/1000_F_158747661_fUQxikM4RIccGHCAStqjlTWRt0BZG3Ul.jpg);
+}
+h1.logo, h2.slogan {
+    display: none;
+}
+div.content {
+    display: grid;
+    grid-template-columns: auto 320px;
+    max-width: 1024px;
+}
+div.content > div.section {
+    min-width: 0;
+}
+div.section.about {
+    padding: 20px;
+}
+h2, h3:not(div.section.locations > h3) {
+    margin-top: 0;
+    color: #000;
+    border-bottom: #000 solid;
+}
+h2 {
+    border-bottom-width: 2px;
+}
+h3:not(div.section.locations > h3) {
+    border-bottom-width: 1px;
+}
+div.section.locations {
+    margin: 20px 20px 20px 0;
+    padding: 10px;
+    border: #888 2px dashed;
+}
+div.section.locations > h3 {
+    margin: 0;
+    padding: 10px;
+    background-color: #494;
+    color: #fff;
+}
+div.section.locations > p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+div.section.blog-posts {
+    grid-column: 1 / span 2;
+    padding: 20px 40px;
+    background-color: #494;
+    color: #fff;
+}
+div.section.blog-posts a {
+    color: #fff;
+}
+div.section.blog-posts h2 {
+    color: #fff;
+    border-bottom: #fff solid 2px;
+}
+div.section.blog-posts > .blog-post {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+div.section.blog-posts > .blog-post > img {
+    flex-grow: 0;
+    border: #fff 10px solid;
+    max-width: 24vw;
+}
+div.section.blog-posts > .blog-post > .post-details {
+    flex-grow: 1;
+    width: max-content;
+}
+a.button {
+    text-decoration: none;
+}
+a.button > span.fa {
+    margin-left: 4px;
+}
+div.section.blog-posts a.button {
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #fff;
+    color: #000;
+}
+div.section.blog-posts p:has(a.button):nth-last-child(1) {
+    text-align: end;
+}
+div.section.instagram-feed {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);;
+    grid-column: 1 / span 2;
+    box-sizing: border-box;
+    padding: 20px;
+    max-width: 100%;
+}
+div.section.instagram-feed > h3 {
+    grid-column: 1 / span 3;
+}
+div.section.instagram-feed > .instagram-post {
+    box-sizing: border-box;
+    padding: 10px;
+}
+div.section.instagram-feed > .instagram-post > img {
+    width: 100%;
+}
