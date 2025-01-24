@@ -1,4 +1,5 @@
-@import url(https://cyanprozdrivetowebdomain.on.drv.tw/Online_Resources/CyanProz/Common_Styles.css);
+/* @import url("https://cyanprozdrivetowebdomain.on.drv.tw/Online_Resources/CyanProz/Common_Styles.css"); */
+@import url("./common-styles.css");
 
 html {
     overflow-y: scroll;
