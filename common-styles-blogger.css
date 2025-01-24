@@ -79,6 +79,12 @@ html {
     /* transition: background 1s ease-in-out; */
 }
 
+@media (prefers-color-scheme: light) /* and (min-width: 1001px) */ {
+    #Header_And_Content_Layout::before {
+        filter: invert(1) brightness(0.8);
+    }
+}
+
 /* @media screen and (max-width: 1000px) {
     #Header_And_Content_Layout::before {
         background-image: none;
