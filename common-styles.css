@@ -318,7 +318,7 @@ select:focus, #Translate1 select.goog-te-combo:focus {
 }
 
 input[type="color"] {
-    padding: 0px 2px;
+    padding: 4px 4px;
 }
 
 button:not(.Header_Button) * {
