@@ -227,7 +227,11 @@ try {
     }
     if (Search_Parameters.get("secret") == "singlestorey") {
         console.log("Hi");
-        document.documentElement.style.fontFeatureSettings = "\"ss02\" 1, \"ss03\" 1";
+        document.documentElement.style.fontFeatureSettings = "\"ss02\", \"ss03\"";
+    }
+    if (Search_Parameters.get("secret") == "smallcaps") {
+        console.log("Hi");
+        document.documentElement.style.fontFeatureSettings = "\"ss02\", \"ss03\"";
     }
     // • Pages
     // if (Search_Parameters.has("page") && Search_Parameters.get("page").trim() && Search_Parameters.get("page") != "home" && Search_Parameters.get("page") != "website_lab")
