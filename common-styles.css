@@ -11,7 +11,7 @@
 /* @import url("./Fonts/Myriad_Pro/Styles.css"); */
 
 :root {
-    --UI_Font_Family: /* "Source Sans Pro", "Source Sans 3", */ "Open Sans", "Noto Sans", "Noto Color Emoji", system-ui, ui-sans-serif, sans-serif;
+    --UI_Font_Family: /* "Source Sans Pro", */ "Source Sans 3", "Open Sans", "Noto Sans", "Noto Color Emoji", system-ui, ui-sans-serif, sans-serif;
     --UI_Monospace_Font: "Source Code Pro", monospace;
     --UI_Font_Size: 16px;
     --Header_Height: 45px;
