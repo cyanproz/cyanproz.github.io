@@ -7,6 +7,7 @@
 /* @import url("https://cyanprozdrivetowebdomain.on.drv.tw/Documents/Fonts/Source%20Code%20Pro/Styles.css"); */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @import url("./Fonts/Source_Sans_3/Styles.css");
+@import url("./Fonts/Source_Code_Pro/Styles.css");
 
 :root {
     --UI_Font_Family: /* "Source Sans Pro", */ "Source Sans 3", "Open Sans", "Noto Sans", "Noto Color Emoji", system-ui, ui-sans-serif, sans-serif;
