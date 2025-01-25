@@ -17,14 +17,14 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-    src: url(./MyriadPro-It.woff2) format("woff2");
+    src: url(./MyriadPro-Regular.woff2) format("woff2");
 }
 @font-face {
     font-family: "Myriad Pro";
     font-weight: normal;
     font-style: italic;
     font-display: swap;
-    src: url(./MyriadPro-Regular.woff2) format("woff2");
+    src: url(./MyriadPro-It.woff2) format("woff2");
 }
 @font-face {
     font-family: "Myriad Pro";
