@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "Myriad Pro";
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    src: url(./MyriadPro-Light.woff2) format("woff2");
+}
+@font-face {
+    font-family: "Myriad Pro";
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+    src: url(./MyriadPro-LightIt.woff2) format("woff2");
+}
+@font-face {
+    font-family: "Myriad Pro";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url(./MyriadPro-LightIt.woff2) format("woff2");
+}
+@font-face {
+    font-family: "Myriad Pro";
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+    src: url(./MyriadPro-Regular.woff2) format("woff2");
+}
+@font-face {
+    font-family: "Myriad Pro";
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url(./MyriadPro-Semibold.woff2) format("woff2");
+}
+@font-face {
+    font-family: "Myriad Pro";
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+    src: url(./MyriadPro-SemiboldIt.woff2) format("woff2");
+}
+@font-face {
+    font-family: "Myriad Pro";
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+    src: url(./MyriadPro-Bold.woff2) format("woff2");
+}
+@font-face {
+    font-family: "Myriad Pro";
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+    src: url(./MyriadPro-BoldIt.woff2) format("woff2");
+}
+@font-face {
+    font-family: "Myriad Pro";
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    src: url(./MyriadPro-Black.woff2) format("woff2");
+}
+@font-face {
+    font-family: "Myriad Pro";
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+    src: url(./MyriadPro-BlackIt.woff2) format("woff2");
+}
