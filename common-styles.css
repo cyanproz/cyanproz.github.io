@@ -240,6 +240,7 @@ a:not(.Dropdown_Item a):not(.Dropdown .Header_Button > a):not(.Button_Link):not(
 
 a * {
     color: inherit;
+    transition: color .25s ease-in-out;
 }
 
 button:not(.Header_Button),
