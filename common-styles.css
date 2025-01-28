@@ -562,6 +562,7 @@ details[open] > summary::before {
 }
 
 .Code_Box {
+    overflow: hidden;
     background-color: var(--Foreground);
     border: solid 1px var(--Border);
     font-size: 1rem;
