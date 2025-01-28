@@ -238,6 +238,10 @@ a:not(.Dropdown_Item a):not(.Dropdown .Header_Button > a):not(.Button_Link):not(
     outline: dotted 1px var(--Text);
 }
 
+a * {
+    color: inherit;
+}
+
 button:not(.Header_Button),
 a.Button_Link,
 a.comment-reply,
