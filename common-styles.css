@@ -526,6 +526,10 @@ details[open] > summary::before {
     z-index: 1000000;
 }
 
+.Dialog_Background.Shown {
+    display: flex;
+}
+
 .Dialog {
     border: solid 1px var(--Border);
     border-radius: 10px;
