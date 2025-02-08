@@ -30,6 +30,8 @@
         </div>
         <script src="../common-script.js"></script>
         <script>
+            import { Serial_Port } from "../serial-port.js";
+
             var Main_Serial_Port = new Serial_Port(115200);
 
             async function Accept_Serial_Communication_Request() {
