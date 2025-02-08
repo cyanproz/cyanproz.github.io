@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Library Information Reader</title>
+        <link rel="stylesheet" href="https://cyanproz.github.io/common-styles.css">
+    </head>
+    <body>
+        <h1>Scriptorium Library</h1>
+        <p>Click on the links below to read more about the library:</p>
+        <ul>
+            <li><a href="about.html">About the Library</a></li>
+            <li><a href="services.html">Library Services</a></li>
+            <li><a href="hours.html">Library Hours</a></li>
+            <li><a href="staff.html">Library Staff</a></li>
+            <div class='Dialog_Background Fullscreen Shown' style='display: none;'>
+                <div class='Dialog'>
+                    <div class="Caption">Serial Communication Request</div>
+                    <div class="Body">Please accept the serial communication request</div>
+                    <div class="Footer">
+                        <button>Accept</button>
+                    </div>
+                </div>
+            </div>
+        </ul>
+        <script>
+            async function connectToSerial() {
+                try {
+                    // Request access to a serial device
+                    const port = await navigator.serial.requestPort();
+
+                    // Open the port with baud rate (e.g., 115200)
+                    await port.open({ baudRate: 115200 });
+                
+                    console.log("Serial port connected!");
+                    return port;
+                } catch (error) {
+                    console.error("Error connecting to serial port:", error);
+                }
+            }
+
+            var Ser_Com_Req_Dlg_Result = confirm("Please accept the serial communication request");
+            if (Ser_Com_Req_Dlg_Result) connectToSerial();
+        </script>
+    </body>
+</html>
