@@ -405,9 +405,6 @@ class Serial_Port {
     }
 }
 
-const serialComm = new Serial_Communication();
-serialComm.Connect();
-
 console.log(Google_Translate_Combobox());
 
 // Check_Google_Translate_Combobox_Interval = setInterval(function() {
