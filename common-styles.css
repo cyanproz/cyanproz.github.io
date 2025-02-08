@@ -529,7 +529,7 @@ details[open] > summary::before {
 }
 
 .Dialog_Background.Shown {
-    display: flex; /*dededd*/
+    display: flex;
     opacity: 0;        
 }
 
