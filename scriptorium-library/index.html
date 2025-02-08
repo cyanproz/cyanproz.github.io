@@ -33,7 +33,7 @@
             var Main_Serial_Port = new Serial_Port(115200);
 
             async function Accept_Serial_Communication_Request() {
-                await serial.connect();
+                await Main_Serial_Port.connect();
             }
 
             setInterval(function() {
