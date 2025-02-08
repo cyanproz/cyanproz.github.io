@@ -519,15 +519,18 @@ details[open] > summary::before {
 }
 
 .Dialog_Background {
-    /* display: flex; */
+    display: none;
     justify-content: center;
     align-items: center;
     background: var(--Dialog_Background);
     z-index: 1000000;
+    opacity: 1;        
+    transition: opacity .25s linear;
 }
 
 .Dialog_Background.Shown {
     display: flex;
+    opacity: 0;        
 }
 
 .Dialog {
