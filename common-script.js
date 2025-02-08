@@ -320,8 +320,8 @@ setInterval(function() {
     }
 }, 32);
 
-class Serial_Port {
-    constructor(baudRate = 9600) {
+export class Serial_Port {
+    constructor(baudRate = 115200) {
         this.port = null;
         this.reader = null;
         this.baudRate = baudRate;
