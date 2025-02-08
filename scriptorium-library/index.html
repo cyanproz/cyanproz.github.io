@@ -24,23 +24,34 @@
                 </div>
             </div> -->
         </ul>
-        <button onclick="Accept_Serial_Communication_Request()">Accept Serial Communication Request</button>
+        <button id="Accept_Ser_Com_Req_Button" onclick="Accept_Serial_Communication_Request();">Accept Serial Communication Request</button>
         <div class="Serial_Terminal" style="background-color: black; font-family: 'Source Code Pro', monospace;">
             Abet sigma
         </div>
-        <script src="https://cyanproz.github.io/common-script.js"></script>
         <script>
+
+        </script>
+        <script type="module" src="https://cyanproz.github.io/common-script.js"></script>
+        <script type="module">
             import { Serial_Port } from "https://cyanproz.github.io/common-script.js"; // Adjust the path if needed
 
             var Main_Serial_Port = new Serial_Port(115200);
 
             async function Accept_Serial_Communication_Request() {
-                await Main_Serial_Port.Connect();
+                console.log("Accepting serial communication request...");
+                // Main_Serial_Port.Connect()..then((result) => {
+                    
+                // }).catch((err) => {
+                    
+                // });;
+                return;
             }
 
-            setInterval(function() {
-
-            }, 32);
+            document.getElementById("Accept_Ser_Com_Req_Button").onclick = async() => {
+                await Accept_Serial_Communication_Request();
+            };
+            
+            // window.Accept_Serial_Communication_Request = Accept_Serial_Communication_Request;
 
             // var Ser_Com_Req_Dlg_Result = confirm("Please accept the serial communication request");
             // if (Ser_Com_Req_Dlg_Result) connectToSerial();
