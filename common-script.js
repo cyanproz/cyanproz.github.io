@@ -320,6 +320,59 @@ setInterval(function() {
     }
 }, 32);
 
+class Serial_Communication {
+    async Connect(Port) {
+        Serial_Port = await Connect_To_Serial();
+        if (Serial_Port) {
+            Read_Serial_Data(Serial_Port);
+        }
+    }
+
+    async Send_Message(Port) {
+        if (Serial_Port) {
+            await Send_Serial_Data(Serial_Port, "Hello, device!\n");
+        }
+    }
+
+    async Connect_To_Serial(Port, Baud_Rate) {
+        try {
+            const port = await navigator.serial.requestPort();
+            await port.open({ baudRate: Baud_Rate });
+            console.log("Serial port connected!");
+            return port;
+        } catch (error) {
+            console.error("Error connecting to serial port:", error);
+        }
+    }
+
+    async Read_Serial_Data(Port) {
+        try {
+            const reader = Port.readable.getReader();
+            while (true) {
+                const { value, done } = await reader.read();
+                if (done) break;
+                const message = new TextDecoder().decode(value);
+                console.log("Received:", message);
+                document.getElementById("output").innerText += message + "\n";
+            }
+            reader.releaseLock();
+        } catch (error) {
+            console.error("Error reading serial data:", error);
+        }
+    }
+
+    async Send_Serial_Data(Port, data) {
+        try {
+            const writer = Port.writable.getWriter();
+            await writer.write(new TextEncoder().encode(data));
+            writer.releaseLock();
+            console.log("Sent:", data);
+        } catch (error) {
+            console.error("Error sending serial data:", error);
+        }
+    }
+}
+
 console.log(Google_Translate_Combobox());
 
 // Check_Google_Translate_Combobox_Interval = setInterval(function() {

@@ -23,34 +23,15 @@
                     </div>
                 </div>
             </div> -->
-            <button onclick="Connect_To_Serial()">Accept Serial Communication Request</button>
+            <button onclick="Accept_Serial_Communication_Request()">Accept Serial Communication Request</button>
         </ul>
-        <script src="https://cyanproz.github.io/common-script.js"></script>
+        <script src="../common-script.js"></script>
         <script>
-            let serialPort;
-    
-            async function Connect_To_Serial() {
-                try {
-                    // Request access to a serial device
-                    const port = await navigator.serial.requestPort();
+            var Serial_Port;
 
-                    // Open the port with baud rate (e.g., 115200)
-                    await port.open({ baudRate: 115200 });
-                
-                    console.log("Serial port connected!");
-                    return port;
-                } catch (error) {
-                    console.error("Error connecting to serial port:", error);
-                }
-
-                serialPort = await connectToSerial();
-                if (serialPort) {
-                    readSerialData(serialPort);
-                }
+            function Accept_Serial_Communication_Request() {
+                Serial_Communication.Connect(Serial_Port);
             }
-
-            setInterval(function() {
-            }, 32);
 
             // var Ser_Com_Req_Dlg_Result = confirm("Please accept the serial communication request");
             // if (Ser_Com_Req_Dlg_Result) connectToSerial();
