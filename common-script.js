@@ -320,50 +320,65 @@ setInterval(function() {
     }
 }, 32);
 
-class Serial_Communication {
-    async Connect(Port) {
-        Serial_Port = await Connect_To_Serial();
-        if (Serial_Port) {
-            Read_Serial_Data(Serial_Port);
-        }
+class Serial_Port {
+    constructor(baudRate = 9600) {
+        this.port = null;
+        this.reader = null;
+        this.baudRate = baudRate;
+        this.connected = false;
     }
 
-    async Send_Message(Port) {
-        if (Serial_Port) {
-            await Send_Serial_Data(Serial_Port, "Hello, device!\n");
-        }
-    }
-
-    async Connect_To_Serial(Port, Baud_Rate) {
+    /** Connect to the serial port */
+    async Connect() {
         try {
-            const port = await navigator.serial.requestPort();
-            await port.open({ baudRate: Baud_Rate });
+            this.port = await navigator.serial.requestPort();
+            await this.port.open({ baudRate: this.baudRate });
             console.log("Serial port connected!");
-            return port;
+            this.connected = true;
+            return true;
         } catch (error) {
             console.error("Error connecting to serial port:", error);
+            this.connected = false;
+            return false;
         }
     }
 
-    async Read_Serial_Data(Port) {
+    /** Read data from the serial port */
+    async Read_Data(callback) {
+        if (!this.port) {
+            console.error("No serial port connected.");
+            return;
+        }
+
         try {
-            const reader = Port.readable.getReader();
+            this.reader = this.port.readable.getReader();
+
             while (true) {
-                const { value, done } = await reader.read();
-                if (done) break;
+                const { value, done } = await this.reader.read();
+                if (done) break; // Stop if reader is closed
+
                 const message = new TextDecoder().decode(value);
                 console.log("Received:", message);
-                document.getElementById("output").innerText += message + "\n";
+
+                // Execute callback function if provided
+                if (callback) callback(message);
             }
-            reader.releaseLock();
+
+            this.reader.releaseLock();
         } catch (error) {
             console.error("Error reading serial data:", error);
         }
     }
 
-    async Send_Serial_Data(Port, data) {
+    /** Send data to the serial port */
+    async Send_Data(data) {
+        if (!this.port) {
+            console.error("No serial port connected.");
+            return;
+        }
+
         try {
-            const writer = Port.writable.getWriter();
+            const writer = this.port.writable.getWriter();
             await writer.write(new TextEncoder().encode(data));
             writer.releaseLock();
             console.log("Sent:", data);
@@ -371,7 +386,27 @@ class Serial_Communication {
             console.error("Error sending serial data:", error);
         }
     }
+
+    /** Close the serial port */
+    async Disconnect() {
+        if (!this.port) return;
+
+        try {
+            if (this.reader) {
+                await this.reader.cancel();
+                this.reader.releaseLock();
+            }
+            await this.port.close();
+            this.port = null;
+            console.log("Serial port disconnected.");
+        } catch (error) {
+            console.error("Error closing serial port:", error);
+        }
+    }
 }
+
+const serialComm = new Serial_Communication();
+serialComm.Connect();
 
 console.log(Google_Translate_Combobox());
 

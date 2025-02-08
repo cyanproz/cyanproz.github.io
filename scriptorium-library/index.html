@@ -27,11 +27,14 @@
         </ul>
         <script src="../common-script.js"></script>
         <script>
-            var Serial_Port;
+            var Main_Serial_Port = new Serial_Port(115200);
 
-            function Accept_Serial_Communication_Request() {
-                Serial_Communication.Connect(Serial_Port);
+            async function Accept_Serial_Communication_Request() {
+                await serial.connect();
             }
+
+            setInterval(function() {
+            }, 32);
 
             // var Ser_Com_Req_Dlg_Result = confirm("Please accept the serial communication request");
             // if (Ser_Com_Req_Dlg_Result) connectToSerial();
