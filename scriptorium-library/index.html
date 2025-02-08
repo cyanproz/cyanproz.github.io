@@ -26,6 +26,8 @@
             <button onclick="Connect_To_Serial()">Accept Serial Communication Request</button>
         </ul>
         <script>
+            let serialPort;
+    
             async function Connect_To_Serial() {
                 try {
                     // Request access to a serial device
@@ -39,7 +41,15 @@
                 } catch (error) {
                     console.error("Error connecting to serial port:", error);
                 }
+
+                serialPort = await connectToSerial();
+                if (serialPort) {
+                    readSerialData(serialPort);
+                }
             }
+
+            setInterval(function() {
+            }, 32);
 
             // var Ser_Com_Req_Dlg_Result = confirm("Please accept the serial communication request");
             // if (Ser_Com_Req_Dlg_Result) connectToSerial();
