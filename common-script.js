@@ -347,26 +347,30 @@ export class Serial_Port {
     async Read_Data(callback) {
         if (!this.port) {
             console.error("No serial port connected.");
-            return;
+            return null;
         }
-
+    
         try {
+            var Messages = "";
             this.reader = this.port.readable.getReader();
-
+        
             while (true) {
                 const { value, done } = await this.reader.read();
                 if (done) break; // Stop if reader is closed
-
+            
                 const message = new TextDecoder().decode(value);
                 console.log("Received:", message);
-
+                Messages += message;
+            
                 // Execute callback function if provided
                 if (callback) callback(message);
             }
-
+        
             this.reader.releaseLock();
+            return Messages;
         } catch (error) {
             console.error("Error reading serial data:", error);
+            return null;
         }
     }
 
@@ -376,7 +380,7 @@ export class Serial_Port {
             console.error("No serial port connected.");
             return;
         }
-
+    
         try {
             const writer = this.port.writable.getWriter();
             await writer.write(new TextEncoder().encode(data));
@@ -390,7 +394,7 @@ export class Serial_Port {
     /** Close the serial port */
     async Disconnect() {
         if (!this.port) return;
-
+    
         try {
             if (this.reader) {
                 await this.reader.cancel();
