@@ -469,6 +469,11 @@ fieldset {
     padding: 8px;
 }
 
+table.Styled {
+    border: 1px solid var(--Border);
+    border-collapse: collapse;
+}
+
 details > summary {
     user-select: none;
     cursor: pointer;
