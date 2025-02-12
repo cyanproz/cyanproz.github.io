@@ -347,7 +347,7 @@ export class Serial_Port {
     async Read_Data(callback) {
         if (!this.port) {
             console.error("No serial port connected.");
-            return null;
+            return "null";
         }
     
         try {
