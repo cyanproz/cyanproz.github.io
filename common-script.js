@@ -132,12 +132,14 @@ console.log(Get_Browser_Platform());
 // }
 
 // Events
-Image_Viewer.addEventListener("click", function(event) {
-    event.preventDefault();
-    if (event.target == event.currentTarget) {
-        event.target.style.display = "none";
-    }
-});
+try {
+    Image_Viewer.addEventListener("click", function(event) {
+        event.preventDefault();
+        if (event.target == event.currentTarget) {
+            event.target.style.display = "none";
+        }
+    });
+} catch {}
 // Image_Viewer.querySelector("div.Dialog").addEventListener("click", function(event) {
 //     event.preventDefault();
 // });
