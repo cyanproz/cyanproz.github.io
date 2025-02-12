@@ -470,8 +470,15 @@ fieldset {
 }
 
 table.Styled {
-    border: 1px solid var(--Border);
     border-collapse: collapse;
+}
+
+table.Styled th, table.Styled td {
+    border: 1px solid var(--Border);
+}
+
+table.Styled th {
+    background-color: var(--Foreground);
 }
 
 details > summary {
