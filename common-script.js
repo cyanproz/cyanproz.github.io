@@ -322,94 +322,94 @@ setInterval(function() {
     }
 }, 32);
 
-export class Serial_Port {
-    constructor(baudRate = 115200) {
-        this.port = null;
-        this.reader = null;
-        this.baudRate = baudRate;
-        this.connected = false;
-    }
+// export class Serial_Port {
+//     constructor(baudRate = 115200) {
+//         this.port = null;
+//         this.reader = null;
+//         this.baudRate = baudRate;
+//         this.connected = false;
+//     }
 
-    /** Connect to the serial port */
-    async Connect() {
-        try {
-            this.port = await navigator.serial.requestPort();
-            await this.port.open({ baudRate: this.baudRate });
-            console.log("Serial port connected!");
-            this.connected = true;
-            return true;
-        } catch (error) {
-            console.error("Error connecting to serial port:", error);
-            this.connected = false;
-            return false;
-        }
-    }
+//     /** Connect to the serial port */
+//     async Connect() {
+//         try {
+//             this.port = await navigator.serial.requestPort();
+//             await this.port.open({ baudRate: this.baudRate });
+//             console.log("Serial port connected!");
+//             this.connected = true;
+//             return true;
+//         } catch (error) {
+//             console.error("Error connecting to serial port:", error);
+//             this.connected = false;
+//             return false;
+//         }
+//     }
 
-    /** Read data from the serial port */
-    async Read_Data(callback) {
-        if (!this.port) {
-            console.error("No serial port connected.");
-            return "null";
-        }
+//     /** Read data from the serial port */
+//     async Read_Data(callback) {
+//         if (!this.port) {
+//             console.error("No serial port connected.");
+//             return "null";
+//         }
     
-        try {
-            var Messages = "";
-            this.reader = this.port.readable.getReader();
+//         try {
+//             var Messages = "";
+//             this.reader = this.port.readable.getReader();
         
-            while (true) {
-                const { value, done } = await this.reader.read();
-                if (done) break; // Stop if reader is closed
+//             while (true) {
+//                 const { value, done } = await this.reader.read();
+//                 if (done) break; // Stop if reader is closed
             
-                const message = new TextDecoder().decode(value);
-                console.log("Received:", message);
-                Messages += message;
+//                 const message = new TextDecoder().decode(value);
+//                 console.log("Received:", message);
+//                 Messages += message;
             
-                // Execute callback function if provided
-                if (callback) callback(message);
-            }
+//                 // Execute callback function if provided
+//                 if (callback) callback(message);
+//             }
         
-            this.reader.releaseLock();
-            return Messages;
-        } catch (error) {
-            console.error("Error reading serial data:", error);
-            return null;
-        }
-    }
+//             this.reader.releaseLock();
+//             return Messages;
+//         } catch (error) {
+//             console.error("Error reading serial data:", error);
+//             return null;
+//         }
+//     }
 
-    /** Send data to the serial port */
-    async Send_Data(data) {
-        if (!this.port) {
-            console.error("No serial port connected.");
-            return;
-        }
+//     /** Send data to the serial port */
+//     async Send_Data(data) {
+//         if (!this.port) {
+//             console.error("No serial port connected.");
+//             return;
+//         }
     
-        try {
-            const writer = this.port.writable.getWriter();
-            await writer.write(new TextEncoder().encode(data));
-            writer.releaseLock();
-            console.log("Sent:", data);
-        } catch (error) {
-            console.error("Error sending serial data:", error);
-        }
-    }
+//         try {
+//             const writer = this.port.writable.getWriter();
+//             await writer.write(new TextEncoder().encode(data));
+//             writer.releaseLock();
+//             console.log("Sent:", data);
+//         } catch (error) {
+//             console.error("Error sending serial data:", error);
+//         }
+//     }
 
-    /** Close the serial port */
-    async Disconnect() {
-        if (!this.port) return;
+//     /** Close the serial port */
+//     async Disconnect() {
+//         if (!this.port) return;
     
-        try {
-            if (this.reader) {
-                await this.reader.cancel();
-                this.reader.releaseLock();
-            }
-            await this.port.close();
-            this.port = null;
-            console.log("Serial port disconnected.");
-        } catch (error) {
-            console.error("Error closing serial port:", error);
-        }
-    }
-}
+//         try {
+//             if (this.reader) {
+//                 await this.reader.cancel();
+//                 this.reader.releaseLock();
+//             }
+//             await this.port.close();
+//             this.port = null;
+//             console.log("Serial port disconnected.");
+//         } catch (error) {
+//             console.error("Error closing serial port:", error);
+//         }
+//     }
+// }
 
 console.log(Google_Translate_Combobox());
 
