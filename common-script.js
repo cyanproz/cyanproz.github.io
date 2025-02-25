@@ -296,29 +296,27 @@ Array.from(Upload_File_Button_Class).forEach(function(Selected_Button) {
 
 // == Dev Mode ==
 
-const Screen_Width_Element = document.createElement("div");
-Screen_Width_Element.id = "Screen_Width";
-Screen_Width_Element.style.display = "inline-block";
-Screen_Width_Element.style.position = "fixed";
-Screen_Width_Element.style.top = "0px";
-Screen_Width_Element.style.left = "0px";
-Screen_Width_Element.style.zIndex = "100000000000000000000000000000000000000";
-Screen_Width_Element.style.backgroundColor = "#FFFFFF88";
-Screen_Width_Element.style.color = "black";
-
-document.body.appendChild(Screen_Width_Element);
-
 if (Dev_Mode) {
+    const Screen_Width_Element = document.createElement("div");
+    Screen_Width_Element.id = "Screen_Width";
+    Screen_Width_Element.style.display = "inline-block";
+    Screen_Width_Element.style.position = "fixed";
+    Screen_Width_Element.style.top = "0px";
+    Screen_Width_Element.style.left = "0px";
+    Screen_Width_Element.style.zIndex = "100000000000000000000000000000000000000";
+    Screen_Width_Element.style.backgroundColor = "#FFFFFF88";
+    Screen_Width_Element.style.color = "black";
     
+    document.body.appendChild(Screen_Width_Element);
+    
+    window.addEventListener("resize", function() {
+        Screen_Width_Element.textContent = `${window.innerWidth} × ${window.innerHeight}`;
+    });
 }
 
 // == End of Section ==
 
 setInterval(function() {
-    if (Dev_Mode) {
-        Screen_Width_Element.textContent = `${window.innerWidth} × ${window.innerHeight}`;
-    }
-
     if (document.documentElement.scrollTop <= 16) {
         Header.style.background = "#0000";
         Header.style.borderBottomColor = "#0000";
@@ -455,3 +453,5 @@ console.log(Google_Translate_Combobox());
 
 console.log("%cStop!", "font-family: 'Source Sans Pro'; font-size: 3.125rem; color: red; -webkit-text-stroke: 1px black;");
 console.log("%cThis is part of your browser intended for developers. If someone told you to copy-and-paste something here, don't do it! It could allow them to take over your information (e.g. your Blogger account).", " font-family: 'Source Sans Pro'; font-size: 1rem;");
+
+console.log("Successfully reach the lowest line of the code!");
