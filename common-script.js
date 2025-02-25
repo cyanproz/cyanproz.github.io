@@ -301,6 +301,7 @@ Screen_Width_Element.id = "Screen_Width";
 Screen_Width_Element.style.position = "fixed";
 Screen_Width_Element.style.top = "0px";
 Screen_Width_Element.style.bottom = "0px";
+Screen_Width_Element.style.zIndex = "100000000000000000000000000000000000000";
 Screen_Width_Element.style.backgroundColor = "#FFFFFF88";
 Screen_Width_Element.style.color = "black";
 
