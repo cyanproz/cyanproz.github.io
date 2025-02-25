@@ -298,6 +298,7 @@ Array.from(Upload_File_Button_Class).forEach(function(Selected_Button) {
 
 const Screen_Width_Element = document.createElement("div");
 Screen_Width_Element.id = "Screen_Width";
+Screen_Width_Element.style.display = "inline-block";
 Screen_Width_Element.style.position = "fixed";
 Screen_Width_Element.style.top = "0px";
 Screen_Width_Element.style.bottom = "0px";
