@@ -2,6 +2,8 @@
 try { var Search_Parameters = new URLSearchParams(window.location.search); }
 catch (e) {}
 
+const Dev_Mode = true;
+
 const Header_And_Content_Layout = document.getElementById("Header_And_Content_Layout");
 const Header = document.getElementById("Header");
 const Side_Bar = document.getElementById("Side_Bar"); 
@@ -292,7 +294,25 @@ Array.from(Upload_File_Button_Class).forEach(function(Selected_Button) {
 // Main_Content.style.height = "calc(100vh - " + Header.offsetHeight + "px)";
 // document.querySelector("#Blog_Container .status-msg-wrap .status-msg-body > a").setAttribute("href", "https://cyanproz.blogspot.com/?indexpage=blog")
 
+// == Dev Mode ==
+
+const Screen_Width_Element = document.createElement("div");
+Screen_Width_Element.id = "Screen_Width";
+Screen_Width_Element.style.position = "fixed";
+
+document.body.appendChild(Screen_Width_Element);
+
+if (Dev_Mode) {
+    
+}
+
+// == End of Section ==
+
 setInterval(function() {
+    if (Dev_Mode) {
+        Screen_Width_Element.textContent = `${window.innerWidth} × ${window.innerHeight}`;
+    }
+
     if (document.documentElement.scrollTop <= 16) {
         Header.style.background = "#0000";
         Header.style.borderBottomColor = "#0000";
