@@ -336,7 +336,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
     list-style-type: none;
 }
 
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 1000px) {
     .Header_Dropdown .Header_Button .Header_Dropdown_Menu {
         overflow: visible;
         position: absolute;
@@ -442,7 +442,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
 
 }
 
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 1000px) {
     #Menu_Wrapper_Button {
         display: none;
     }
@@ -578,7 +578,6 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
     #Header > nav:nth-child(2):has(#Blog_Search_Container input.gsc-input[type="text"]:focus) {
         flex-grow: 1;
     }
-
 }
 
 #Blog_Search_Container {
