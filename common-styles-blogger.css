@@ -336,7 +336,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
     list-style-type: none;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1001px) {
     .Header_Dropdown .Header_Button .Header_Dropdown_Menu {
         overflow: visible;
         position: absolute;
@@ -441,13 +441,13 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1001px) {
     #Menu_Wrapper_Button {
         display: none;
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1001px) {
     #Header .Header_Button:not(#Menu_Wrapper_Button, #CyanProz_Button, #Main_Menu .Header_Button) {
         display: none;
     }
