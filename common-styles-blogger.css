@@ -179,7 +179,6 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
     .Header_Button.Under_Construction_Button {
         display: none;
     }
-
 }
 
 .Header_Dropdown {
@@ -282,7 +281,6 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
     #CyanProz_Button {
         font-size: 24px;
     }
-
 }
 
 /* #Header > nav:nth-child(1) > .Header_Dropdown:nth-child(1) > .Header_Button > a */
@@ -320,7 +318,6 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
     100% {
         /* opacity: 1; */
     }
-
 }
 
 @keyframes Hide_Header_Dropdown_Menu {
@@ -333,7 +330,6 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
         display: none;
         opacity: 0;
     }
-
 }
 
 .Header_Dropdown .Header_Button ul.Header_Dropdown_Menu > ul {
@@ -443,14 +439,12 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
         border-bottom: solid 1px var(--Border);
         /* margin: 2px 2px 2px 2px; */
     }
-
 }
 
 @media screen and (min-width: 1000px) {
     #Menu_Wrapper_Button {
         display: none;
     }
-
 }
 
 @media screen and (max-width: 1000px) {
@@ -571,7 +565,6 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
         font-size: 18px;
         /* border-bottom: solid 1px var(--Border); */
     }
-
 }
 
 #Header > nav:nth-child(2) {
