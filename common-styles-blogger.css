@@ -215,7 +215,6 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
     #Main_Menu > .Header_Dropdown > .Header_Button {
         width: 100%;
     }
-
 }
 
 @media screen and (min-width: 1001) {
@@ -235,7 +234,6 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
     /* .Header_Dropdown */ .Header_Button:focus {
         outline: solid 1px var(--Custom_Color_1);
     }
-
 }
 
 /* .Header_Dropdown */ .Header_Button > span {
@@ -267,6 +265,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
 /* .Header_Dropdown .Header_Button > span:nth-child(1)::after {
     content: " &#9662;";
 } */
+ 
 /* #Header > nav:nth-child(1) > .Header_Dropdown:nth-child(1) > .Header_Button */
 #CyanProz_Button {
     /* border: solid 1px var(--Border); */
@@ -341,7 +340,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
     list-style-type: none;
 }
 
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 1000px) {
     .Header_Dropdown .Header_Button .Header_Dropdown_Menu {
         overflow: visible;
         position: absolute;
@@ -447,7 +446,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
 
 }
 
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 1000px) {
     #Menu_Wrapper_Button {
         display: none;
     }
