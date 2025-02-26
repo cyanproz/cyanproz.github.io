@@ -5,6 +5,11 @@ html {
     overflow-y: scroll;
 }
 
+html, body {
+    touch-action: none; /* Disables pinch zoom */
+    overscroll-behavior: contain; /* Prevents overscroll gestures */
+}
+
 /* body::after {
     content: "";
     display: block;
