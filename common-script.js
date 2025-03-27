@@ -294,38 +294,6 @@ Array.from(Upload_File_Button_Class).forEach(function(Selected_Button) {
 // Main_Content.style.height = "calc(100vh - " + Header.offsetHeight + "px)";
 // document.querySelector("#Blog_Container .status-msg-wrap .status-msg-body > a").setAttribute("href", "https://cyanproz.blogspot.com/?indexpage=blog")
 
-// == End of Section ==
-
-setInterval(function() {
-    if (document.documentElement.scrollTop <= 16) {
-        Header.style.background = "#0000";
-        Header.style.borderBottomColor = "#0000";
-        Header.style.boxShadow = "none";
-    } else {
-        Header.style.removeProperty("background");
-        Header.style.removeProperty("border-bottom-color");
-        Header.style.removeProperty("box-shadow");
-    }
-
-    if (Google_Translate_Combobox()) {
-        if (Google_Translate_Combobox().value == "ar" || Google_Translate_Combobox().value == "fa" || Google_Translate_Combobox().value == "fa-AF" || Google_Translate_Combobox().value == "ps" || Google_Translate_Combobox().value == "iw" || Google_Translate_Combobox().value == "ye") {
-            if (Search_Parameters.get("secret") == "rtl") {
-                document.documentElement.style.direction = "ltr";
-            } else {
-                document.documentElement.style.direction = "rtl";
-            }
-        } else {
-            if (Search_Parameters.get("secret") == "rtl") {
-                document.documentElement.style.direction = "rtl";
-            } else {
-                document.documentElement.style.direction = "ltr";
-            }
-        }
-    } else {
-        document.documentElement.style.removeProperty("direction");
-    }
-}, 32);
-
 // export class Serial_Port {
 //     constructor(baudRate = 115200) {
 //         this.port = null;
