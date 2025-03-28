@@ -15,12 +15,12 @@
     --ui-monospaced-font-family: "Source Code Pro", monospace;
     --ui-font-size: 16px;
     --header-height: 45px;
-    --Color_Info: hsl(208, 100%, 50%);
-    --Color_Info_Background_Transparent: hsla(208, 100%, 50%, .25);
-    --Color_Warning: hsl(55, 100%, 50%);
-    --Color_Warning_Background_Transparent: hsla(55, 100%, 50%, .25);
-    --Color_Critical: hsl(0, 100%, 67%);
-    --Color_Critical_Background_Transparent: hsla(0, 100%, 50%, .25);
+    --color-Info: hsl(208, 100%, 50%);
+    --color-Info_Background_Transparent: hsla(208, 100%, 50%, .25);
+    --color-Warning: hsl(55, 100%, 50%);
+    --color-Warning_Background_Transparent: hsla(55, 100%, 50%, .25);
+    --color-Critical: hsl(0, 100%, 67%);
+    --color-Critical_Background_Transparent: hsla(0, 100%, 50%, .25);
     --Custom_Color_1: #05f;
     --Custom_Color_1_Hover: #0040c0;
     --Custom_Color_1_Active: #002775;
@@ -601,18 +601,18 @@ details[open] > summary::before {
 }
 
 .Notecard.Info {
-    border-color: var(--Color_Info);
-    background-color: var(--Color_Info_Background_Transparent);
+    border-color: var(--color-Info);
+    background-color: var(--color-Info_Background_Transparent);
 }
 
 .Notecard.Warning {
-    border-color: var(--Color_Warning);
-    background-color: var(--Color_Warning_Background_Transparent);
+    border-color: var(--color-Warning);
+    background-color: var(--color-Warning_Background_Transparent);
 }
 
 .Notecard.Critical {
-    border-color: var(--Color_Critical);
-    background-color: var(--Color_Critical_Background_Transparent);
+    border-color: var(--color-Critical);
+    background-color: var(--color-Critical_Background_Transparent);
 }
 
 .Code_Box {
