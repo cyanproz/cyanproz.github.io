@@ -30,7 +30,6 @@ setInterval(function() {
 
 // == Dev Mode ==
 
-Screen_Width_Element.textContent = `${window.innerWidth} × ${window.innerHeight}`;
 if (Dev_Mode) {
     const Screen_Width_Element = document.createElement("div");
     Screen_Width_Element.id = "Screen_Width";
@@ -44,6 +43,7 @@ if (Dev_Mode) {
     
     document.body.appendChild(Screen_Width_Element);
     
+    Screen_Width_Element.textContent = `${window.innerWidth} × ${window.innerHeight}`;
     window.addEventListener("resize", function() {
         Screen_Width_Element.textContent = `${window.innerWidth} × ${window.innerHeight}`;
     });
