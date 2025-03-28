@@ -73,23 +73,41 @@
     --scrollbar-thumb-active-dark: #333;
 }
 
+:root {
+    --background: var(--background-light);
+    --foreground: var(--foreground-light);
+    --dialog-background: var(--dialog-background-light);
+    --text: var(--text-light);
+    --gray-Text: var(--gray-Text-light);
+    --link: var(--link-light);
+    --link-hover: var(--link-hover-light);
+    --link-active: var(--link-active-light);
+    --border: var(--border-light);
+    --button: var(--button-light);
+    --button-hover: var(--button-hover-light);
+    --button-active: var(--button-active-light);
+    --scrollbar-thumb: var(--scrollbar-thumb-light);
+    --scrollbar-thumb-hover: var(--scrollbar-thumb-hover-light);
+    --scrollbar-thumb-active: var(--scrollbar-thumb-active-light);
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #080808;
-        --foreground: #111;
-        --dialog-background: #08080888;
-        --text: #fff;
-        --gray-Text: #aaa;
-        --link: #0cf;
-        --link-hover: #009bc2;
-        --link-active: #006680;
-        --border: #333;
-        --button: #181818;
-        --button-hover: #333;
-        --button-active: #000;
-        --scrollbar-thumb: #444;
-        --scrollbar-thumb-hover: #555;
-        --scrollbar-thumb-active: #333;
+        --background: var(--background-dark);
+        --foreground: var(--foreground-dark);
+        --dialog-background: var(--dialog-background-dark);
+        --text: var(--text-dark);
+        --gray-Text: var(--gray-Text-dark);
+        --link: var(--link-dark);
+        --link-hover: var(--link-hover-dark);
+        --link-active: var(--link-active-dark);
+        --border: var(--border-dark);
+        --button: var(--button-dark);
+        --button-hover: var(--button-hover-dark);
+        --button-active: var(--button-active-dark);
+        --scrollbar-thumb: var(--scrollbar-thumb-dark);
+        --scrollbar-thumb-hover: var(--scrollbar-thumb-hover-dark);
+        --scrollbar-thumb-active: var(--scrollbar-thumb-active-dark);
     }
 }
 
