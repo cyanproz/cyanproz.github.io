@@ -14,7 +14,7 @@
     --ui-font-family: /* "Source Sans Pro", */ "Source Sans 3", "Open Sans", "Noto Sans", "Noto Color Emoji", system-ui, ui-sans-serif, sans-serif;
     --ui-monospaced-font-family: "Source Code Pro", monospace;
     --ui-font-size: 16px;
-    --header-heights: 45px;
+    --header-height: 45px;
     --Color_Info: hsl(208, 100%, 50%);
     --Color_Info_Background_Transparent: hsla(208, 100%, 50%, .25);
     --Color_Warning: hsl(55, 100%, 50%);
