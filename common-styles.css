@@ -655,7 +655,7 @@ details[open] > summary::before {
 }
 
 .Notecard.Info {
-    border-color: var(--color-Info);
+    border-color: var(--color-info);
     background-color: var(--color-info-background-transparent);
 }
 
