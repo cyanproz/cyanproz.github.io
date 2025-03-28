@@ -552,15 +552,15 @@ fieldset {
     padding: 8px;
 }
 
-table.Styled {
+table.styled {
     border-collapse: collapse;
 }
 
-table.Styled th, table.Styled td {
+table.styled th, table.styled td {
     border: 1px solid var(--border);
 }
 
-table.Styled th {
+table.styled th {
     background-color: var(--foreground);
 }
 
