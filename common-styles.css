@@ -15,65 +15,85 @@
     --ui-monospaced-font-family: "Source Code Pro", monospace;
     --ui-font-size: 16px;
     --header-height: 45px;
-    --color-Info: hsl(208, 100%, 50%);
-    --color-Info_Background_Transparent: hsla(208, 100%, 50%, .25);
-    --color-Warning: hsl(55, 100%, 50%);
-    --color-Warning_Background_Transparent: hsla(55, 100%, 50%, .25);
-    --color-Critical: hsl(0, 100%, 67%);
-    --color-Critical_Background_Transparent: hsla(0, 100%, 50%, .25);
-    --Custom_Color_1: #05f;
-    --Custom_Color_1_Hover: #0040c0;
-    --Custom_Color_1_Active: #002775;
+    --color-info: hsl(208, 100%, 50%);
+    --color-info-background-transparent: hsla(208, 100%, 50%, .25);
+    --color-warning: hsl(55, 100%, 50%);
+    --color-warning-background-transparent: hsla(55, 100%, 50%, .25);
+    --color-critical: hsl(0, 100%, 67%);
+    --color-critical-background-transparent: hsla(0, 100%, 50%, .25);
+    --custom-color-1: #05f;
+    --custom-color-1-hover: #0040c0;
+    --custom-color-1-active: #002775;
 }
 
 :root {
-    --Background-light: #fff;
-    --Background-dark: #080808;
+    --background-light: #fff;
+    --background-dark: #080808;
 
-    --Foreground-dark: #111;
-    --Foreground-light: #f8f8f8;
+    --foreground-dark: #111;
+    --foreground-light: #f8f8f8;
 
-    --Dialog_Background-light: #fff8;
-    --Dialog_Background-dark: #08080888;
+    --dialog-background-light: #fff8;
+    --dialog-background-dark: #08080888;
 
-    --Text-light: #000;
-    --Text-dark: #fff;
+    --text-light: #000;
+    --text-dark: #fff;
 
-    --Gray-Text-light: #666;
-    --Gray-Text-dark: #aaa;
+    --gray-Text-light: #666;
+    --gray-Text-dark: #aaa;
 
-    --Link-light: #08f;
-    --Link-dark: #0cf;
+    --link-light: #08f;
+    --link-dark: #0cf;
 
-    --Link_Hover-light: #0040bf;
-    --Link_Hover-dark: #009bc2;
+    --link-hover-light: #0040bf;
+    --link-hover-dark: #009bc2;
 
-    --Link_Active-light: #002b80;
-    --Link_Active-dark: #006680;
+    --link-active-light: #002b80;
+    --link-active-dark: #006680;
 
-    --Border-light: #888;
-    --Border-dark: #333;
+    --border-light: #888;
+    --border-dark: #333;
 
-    --Button-light: #eee;
-    --Button-dark: #181818;
+    --button-light: #eee;
+    --button-dark: #181818;
 
-    --Button_Hover-light: #f8f8f8;
-    --Button_Hover-dark: #333;
+    --button-hover-light: #f8f8f8;
+    --button-hover-dark: #333;
 
-    --Button_Active-light: #ddd;
-    --Button_Active-dark: #000;
+    --button-active-light: #ddd;
+    --button-active-dark: #000;
 
-    --Scrollbar_Thumb-light: #aaa;
-    --Scrollbar_Thumb-dark: #444;
+    --scrollbar-thumb-light: #aaa;
+    --scrollbar-thumb-dark: #444;
 
-    --Scrollbar_Thumb_Hover-light: #bbb;
-    --Scrollbar_Thumb_Hover-dark: #555;
+    --scrollbar-thumb-hover-light: #bbb;
+    --scrollbar-thumb-hover-dark: #555;
 
-    --Scrollbar_Thumb_Active-light: #999;
-    --Scrollbar_Thumb_Active-dark: #333;
+    --scrollbar-thumb-active-light: #999;
+    --scrollbar-thumb-active-dark: #333;
 }
 
 @media (prefers-color-scheme: dark) {
+    :root {
+        --background: #080808;
+        --foreground: #111;
+        --dialog-background: #08080888;
+        --text: #fff;
+        --gray-Text: #aaa;
+        --link: #0cf;
+        --link-hover: #009bc2;
+        --link-active: #006680;
+        --border: #333;
+        --button: #181818;
+        --button-hover: #333;
+        --button-active: #000;
+        --scrollbar-thumb: #444;
+        --scrollbar-thumb-hover: #555;
+        --scrollbar-thumb-active: #333;
+    }
+}
+
+/*@media (prefers-color-scheme: dark) {
     :root {
         --Background: #080808;
         --Foreground: #111;
@@ -91,16 +111,32 @@
         --Scrollbar_Thumb_Hover: #555;
         --Scrollbar_Thumb_Active: #333;
     }
-}
+}*/
+
+/*:root {
+    --UI_Font_Family: "Source Sans 3", "Open Sans", "Noto Sans", "Noto Color Emoji", system-ui, ui-sans-serif, sans-serif;
+    --UI_Monospace_Font: "Source Code Pro", monospace;
+    --UI_Font_Size: 16px;
+    --Header_Height: 45px;
+    --Color_Info: hsl(208, 100%, 50%);
+    --Color_Info_Background_Transparent: hsla(208, 100%, 50%, .25);
+    --Color_Warning: hsl(55, 100%, 50%);
+    --Color_Warning_Background_Transparent: hsla(55, 100%, 50%, .25);
+    --Color_Critical: hsl(0, 100%, 67%);
+    --Color_Critical_Background_Transparent: hsla(0, 100%, 50%, .25);
+    --Custom_Color_1: #05f;
+    --Custom_Color_1_Hover: #0040c0;
+    --Custom_Color_1_Active: #002775;
+}*/
 
 * {
-    /* background-color: var(--Background); */
+    /* background-color: var(--background); */
     /* font-family: "Nunito Sans", "Open Sans", "Noto Color Emoji", sans-serif; */
     /* font-stretch: 50%; */
     /* font-variation-settings:
     "wdth" 50,
     "YTLC" 500; */
-    color: var(--Text);
+    color: var(--text);
     /* font-size: 1.5vh; */
     /* scrollbar-width: thin; */
 }
@@ -136,7 +172,7 @@ html {
 
 body {
     margin: 0px;
-    background-color: var(--Background);
+    background-color: var(--background);
 }
 
 ::selection {
@@ -147,11 +183,11 @@ body {
 ::-webkit-scrollbar {
     width: 14px;
     height: 14px;
-    background-color: var(--Foreground);
+    background-color: var(--foreground);
 }
 
 /* ::-webkit-scrollbar-track {
-    border: 0px solid var(--Border);
+    border: 0px solid var(--border);
 } */
 /* ::-webkit-scrollbar-track:horizontal {
     border-width: 1px 0px;
@@ -164,7 +200,7 @@ body {
     border: solid 3px transparent;
     /* border-radius: 2em; */
     border-radius: 100000vh;
-    background-color: var(--Scrollbar_Thumb);
+    background-color: var(--scrollbar-thumb);
     background-clip: content-box;
     transition: background-color .25s ease-in-out;
 }
@@ -174,16 +210,16 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--Scrollbar_Thumb_Hover);
+    background-color: var(--scrollbar-thumb-hover);
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background-color: var(--Scrollbar_Thumb_Active);
+    background-color: var(--scrollbar-thumb-active);
 }
 
 h1, h1 > a, h2, h3, h4, h5, h6 {
     margin: 0px;
-    color: var(--Text);
+    color: var(--text);
     font-weight: bold;
 }
 
@@ -236,7 +272,7 @@ h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a, h3.post-title.entry-title > a {
 }
 
 a {
-    color: var(--Link);
+    color: var(--link);
     transition: color .2s ease-in-out;
     text-decoration: none;
     /* text-decoration: underline 1px; */
@@ -246,25 +282,25 @@ a {
 a:not(.Dropdown_Item a):not(.Dropdown .Header_Button > a):not(.Button_Link):not(.comment-reply):not(.item-control a):not(a.blog-pager-older-link):not(a.blog-pager-newer-link) * { */
 a.Button_Link, a.comment-reply, .item-control a, a.blog-pager-older-link, a.blog-pager-newer-link,
 a.Button_Link, a.comment-reply, .item-control a, a.blog-pager-older-link, a.blog-pager-newer-link * {
-    color: var(--Text);
+    color: var(--text);
     /* text-decoration: none; */
     /* text-decoration: underline 1px; */
 }
 
 a:not(.Dropdown_Item a):not(.Dropdown .Header_Button > a):not(.Button_Link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):not(a.blog-pager-older-link):not(a.blog-pager-newer-link):not(:active):hover,
 a:not(.Dropdown_Item a):not(.Dropdown .Header_Button > a):not(.Button_Link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):not(a.blog-pager-older-link):not(a.blog-pager-newer-link):not(:active):hover * {
-    color: var(--Link_Hover);
+    color: var(--link-hover);
 }
 
 a:not(.Dropdown_Item a):not(.Dropdown .Header_Button > a):not(.Button_Link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):not(a.blog-pager-older-link):not(a.blog-pager-newer-link):active,
 a:not(.Dropdown_Item a):not(.Dropdown .Header_Button > a):not(.Button_Link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):not(a.blog-pager-older-link):not(a.blog-pager-newer-link):active * {
-    color: var(--Link_Active) !important;
+    color: var(--link-active) !important;
 }
 
 a:not(.Dropdown_Item a):not(.Dropdown .Header_Button > a):not(.Button_Link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):not(a.blog-pager-older-link):not(a.blog-pager-newer-link):focus,
 a:not(.Dropdown_Item a):not(.Dropdown .Header_Button > a):not(.Button_Link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):not(a.blog-pager-older-link):not(a.blog-pager-newer-link):focus * {
-    color: var(--Link);
-    outline: dotted 1px var(--Text);
+    color: var(--link);
+    outline: dotted 1px var(--text);
 }
 
 a * {
@@ -285,10 +321,10 @@ input[type="submit"],
 input[type="reset"],
 input[type="image"],
 input[type="color"] {
-    border: solid 1px var(--Border);
+    border: solid 1px var(--border);
     border-radius: 6px;
     padding: 2px 6px;
-    background-color: var(--Button);
+    background-color: var(--button);
     font-family: var(--ui-font-family);
     font-size: 1rem;
     transition: background-color .25s ease-in-out, border-color .25s ease-in-out;
@@ -309,7 +345,7 @@ input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="image"]:hover,
 input[type="color"]:hover {
-    background-color: var(--Button_Hover);
+    background-color: var(--button-hover);
 }
 
 button:not(.Header_Button):active,
@@ -325,7 +361,7 @@ input[type="submit"]:active,
 input[type="reset"]:active,
 input[type="image"]:active,
 input[type="color"]:active {
-    background-color: var(--Button_Active);
+    background-color: var(--button-active);
 }
 
 button:not(.Header_Button):focus,
@@ -342,7 +378,7 @@ input[type="reset"]:focus,
 input[type="image"]:focus,
 input[type="color"]:focus {
     outline: transparent;
-    border: solid 1px var(--Custom_Color_1);
+    border: solid 1px var(--custom-color-1);
 }
 
 select, #Translate1 select.goog-te-combo {
@@ -351,7 +387,7 @@ select, #Translate1 select.goog-te-combo {
 }
 
 select:focus, #Translate1 select.goog-te-combo:focus {
-    background-color: var(--Background);
+    background-color: var(--background);
 }
 
 input[type="color"] {
@@ -424,10 +460,10 @@ input[type="time"],
 input[type="datetime-local"] {
     font-family: var(--ui-font-family);
     font-size: 1rem;
-    border: solid 1px var(--Border);
+    border: solid 1px var(--border);
     border-radius: 4px;
     padding: 2px 4px;
-    background-color: var(--Background);
+    background-color: var(--background);
     transition: border-color .25s ease-in-out;
 }
 
@@ -485,7 +521,7 @@ input[type="date"]:focus,
 input[type="time"]:focus,
 input[type="datetime-local"]:focus {
     outline: none;
-    border: solid 1px var(--Custom_Color_1);
+    border: solid 1px var(--custom-color-1);
 }
 
 pre, pre * {
@@ -493,7 +529,7 @@ pre, pre * {
 }
 
 fieldset {
-    border: solid 1px var(--Border);
+    border: solid 1px var(--border);
     border-radius: 8px;
     padding: 8px;
 }
@@ -503,11 +539,11 @@ table.Styled {
 }
 
 table.Styled th, table.Styled td {
-    border: 1px solid var(--Border);
+    border: 1px solid var(--border);
 }
 
 table.Styled th {
-    background-color: var(--Foreground);
+    background-color: var(--foreground);
 }
 
 details > summary {
@@ -564,7 +600,7 @@ details[open] > summary::before {
     display: none;
     justify-content: center;
     align-items: center;
-    background: var(--Dialog_Background);
+    background: var(--dialog-background);
     z-index: 1000000;
     opacity: 1;        
     transition: opacity .25s linear;
@@ -576,9 +612,9 @@ details[open] > summary::before {
 }
 
 .Dialog {
-    border: solid 1px var(--Border);
+    border: solid 1px var(--border);
     border-radius: 10px;
-    background-color: var(--Foreground);
+    background-color: var(--foreground);
     padding: 16px;
 }
 
@@ -594,7 +630,7 @@ details[open] > summary::before {
 }
 
 .Notecard {
-    border: var(--Border) solid;
+    border: var(--border) solid;
     border-width: 1px 1px 1px 8px;
     margin: 8px 0;
     padding: 12px;
@@ -602,23 +638,23 @@ details[open] > summary::before {
 
 .Notecard.Info {
     border-color: var(--color-Info);
-    background-color: var(--color-Info_Background_Transparent);
+    background-color: var(--color-info-background-transparent);
 }
 
 .Notecard.Warning {
-    border-color: var(--color-Warning);
-    background-color: var(--color-Warning_Background_Transparent);
+    border-color: var(--color-warning);
+    background-color: var(--color-warning-background-transparent);
 }
 
 .Notecard.Critical {
-    border-color: var(--color-Critical);
-    background-color: var(--color-Critical_Background_Transparent);
+    border-color: var(--color-critical);
+    background-color: var(--color-critical-background-transparent);
 }
 
 .Code_Box {
     overflow: hidden;
-    background-color: var(--Foreground);
-    border: solid 1px var(--Border);
+    background-color: var(--foreground);
+    border: solid 1px var(--border);
     font-size: 1rem;
     border-radius: 8px;
 }
@@ -630,7 +666,7 @@ details[open] > summary::before {
 
 .Code_Box pre {
     margin: 0;
-    background-color: var(--Background);
+    background-color: var(--background);
     /* font-size: 1rem; */
     font-size: 14px;
     padding: 8px 12px;
@@ -677,7 +713,7 @@ body {
     line-height: normal;
     color: var(--bs-body-color);
     text-align: var(--bs-body-text-align);
-    background-color: var(--Background);
+    background-color: var(--background);
     /* -webkit-text-size-adjust: 100%; */
     /* -webkit-tap-highlight-color: transparent; */
 }

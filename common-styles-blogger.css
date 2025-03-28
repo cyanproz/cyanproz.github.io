@@ -293,7 +293,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
     /* border-radius: 12px; */
     min-height: 40px;
     font-size: inherit;
-    font-family: var(--UI_Font_Family);
+    font-family: var(--ui-font-family);
     font-weight: bold;
     padding: 6px 10px;
     z-index: 1000;
@@ -425,12 +425,12 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
 
     .Header_Dropdown .Header_Button .Header_Dropdown_Menu > ul a.Header_Dropdown_Item:hover,
     .Header_Dropdown .Header_Button .Header_Dropdown_Menu > ul li.Header_Dropdown_Item:hover a {
-        background-color: var(--Button_Hover);
+        background-color: var(--button-hover);
     }
 
     .Header_Dropdown .Header_Button .Header_Dropdown_Menu > ul a.Header_Dropdown_Item:active,
     .Header_Dropdown .Header_Button .Header_Dropdown_Menu > ul li.Header_Dropdown_Item:active a {
-        background-color: var(--Button_Active);
+        background-color: var(--button-active);
     }
 
     /* .Header_Dropdown .Header_Button .Header_Dropdown_Menu > ul hr.Header_Dropdown_Item_Separator */
@@ -631,7 +631,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
     border-radius: 100000vh 0px 0px 100000vh;
     padding: 2px 4px 2px 6px;
     line-height: 24px;
-    font-family: var(--UI_Font_Family);
+    font-family: var(--ui-font-family);
 }
 
 #Blog_Search_Container input.gsc-search-button[type="submit"] {
@@ -641,7 +641,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
     border-radius: 0px 100000vh 100000vh 0px;
     padding: 2px;
     top: 0px;
-    font-family: var(--UI_Font_Family);
+    font-family: var(--ui-font-family);
     line-height: 24px;
     transition: background-color 0.25s ease-in-out, border-color .25s ease-in-out;
     cursor: pointer;
@@ -800,7 +800,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
 
 .widget.Translate select.goog-te-combo {
     width: 100%;
-    color: var(--Text);
+    color: var(--text);
     font-size: 1rem;
 }
 
@@ -960,7 +960,7 @@ ul.Navigation_Arrows li::before {
 
 #Blog_Container div.date-outer h2.date-header > span {
     background-color: var(--foreground);
-    color: var(--Text);
+    color: var(--text);
 }
 
 #Blog_Container div.date-outer div.Post_Image_And_Snippet_Layout {
@@ -1020,7 +1020,7 @@ ul.Navigation_Arrows li::before {
 #Blog_Container div.date-outer div.post-body.entry-content figure > figcaption *:not(a) /* ,
 #Blog_Container div.date-outer div.post-body.entry-content figure > figcaption a:not(:hover),
 #Blog_Container div.date-outer div.post-body.entry-content figure > figcaption a:not(:hover) * */ {
-    color: var(--Gray-Text);
+    color: var(--gray-text);
 }
 
 #Blog_Container div.date-outer div.post-body.entry-content figure > figcaption {
@@ -1119,7 +1119,7 @@ li.comment:nth-last-child(1) {
 
 .comment-block .comment-header span.datetime.secondary-text {
     /* font-size: 0.9em !important; */
-    color: var(--Gray-Text) !important;
+    color: var(--gray-text) !important;
     /* font-style: italic; */
     /* font-stretch: 87.5%; */
     font-weight: lighter;
@@ -1276,7 +1276,7 @@ a.blog-pager-newer-link {
 }
 
 #Website_Lab_Sidebar > :nth-child(1) {
-    background-color: var(--Button_1);
+    background-color: var(--button-1);
     border: none;
     border-radius: 8px;
     font-size: 20px;
@@ -1285,12 +1285,12 @@ a.blog-pager-newer-link {
 }
 
 #Website_Lab_Sidebar > :nth-child(1):hover {
-    background-color: var(--Button_1_Hover);
+    background-color: var(--button-1-hover);
     cursor: pointer;
 }
 
 #Website_Lab_Sidebar > :nth-child(1):active {
-    background-color: var(--Button_1_Active);
+    background-color: var(--button-1-active);
 }
 
 #Website_Lab_Sidebar > :nth-child(2) {
@@ -1307,7 +1307,7 @@ a.blog-pager-newer-link {
 .Code_Input_Box {
     font-family: 'Roboto Mono', monospace;
     font-size: 1rem;
-    color: var(--Text);
+    color: var(--text);
     background-color: var(--background);
     resize: none;
     /* width: calc(100% - 6px);
