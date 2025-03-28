@@ -11,8 +11,8 @@
 /* @import url("./Fonts/Myriad_Pro/Styles.css"); */
 
 :root {
-    --UI_Font_Family: /* "Source Sans Pro", */ "Source Sans 3", "Open Sans", "Noto Sans", "Noto Color Emoji", system-ui, ui-sans-serif, sans-serif;
-    --UI_Monospace_Font: "Source Code Pro", monospace;
+    --ui-font-family: /* "Source Sans Pro", */ "Source Sans 3", "Open Sans", "Noto Sans", "Noto Color Emoji", system-ui, ui-sans-serif, sans-serif;
+    --ui-monospaced-font-family: "Source Code Pro", monospace;
     --UI_Font_Size: 16px;
     --Header_Height: 45px;
     --Color_Info: hsl(208, 100%, 50%);
@@ -27,21 +27,50 @@
 }
 
 :root {
-    --Background: #fff;
-    --Foreground: #f8f8f8;
-    --Dialog_Background: #fff8;
-    --Text: #000;
-    --Gray-Text: #666;
-    --Link: #08f;
-    --Link_Hover: #0040bf;
-    --Link_Active: #002b80;
-    --Border: #888;
-    --Button: #eee;
-    --Button_Hover: #f8f8f8;
-    --Button_Active: #ddd;
-    --Scrollbar_Thumb: #aaa;
-    --Scrollbar_Thumb_Hover: #bbb;
-    --Scrollbar_Thumb_Active: #999;
+    --Background-light: #fff;
+    --Background-dark: #080808;
+
+    --Foreground-dark: #111;
+    --Foreground-light: #f8f8f8;
+
+    --Dialog_Background-light: #fff8;
+    --Dialog_Background-dark: #08080888;
+
+    --Text-light: #000;
+    --Text-dark: #fff;
+
+    --Gray-Text-light: #666;
+    --Gray-Text-dark: #aaa;
+
+    --Link-light: #08f;
+    --Link-dark: #0cf;
+
+    --Link_Hover-light: #0040bf;
+    --Link_Hover-dark: #009bc2;
+
+    --Link_Active-light: #002b80;
+    --Link_Active-dark: #006680;
+
+    --Border-light: #888;
+    --Border-dark: #333;
+
+    --Button-light: #eee;
+    --Button-dark: #181818;
+
+    --Button_Hover-light: #f8f8f8;
+    --Button_Hover-dark: #333;
+
+    --Button_Active-light: #ddd;
+    --Button_Active-dark: #000;
+
+    --Scrollbar_Thumb-light: #aaa;
+    --Scrollbar_Thumb-dark: #444;
+
+    --Scrollbar_Thumb_Hover-light: #bbb;
+    --Scrollbar_Thumb_Hover-dark: #555;
+
+    --Scrollbar_Thumb_Active-light: #999;
+    --Scrollbar_Thumb_Active-dark: #333;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -81,7 +110,7 @@
 }
 
 :root, html, button, input, textarea, #Header, #Blog_Search_Container {
-    font-family: var(--UI_Font_Family);
+    font-family: var(--ui-font-family);
     -webkit-font-smoothing: antialiased;
     text-rendering: geometricPrecision;
     font-display: swap;
@@ -159,13 +188,13 @@ h1, h1 > a, h2, h3, h4, h5, h6 {
 }
 
 h1:not(.widget.Header h1.title), h1 > a, h2, h3, h4, h5, h6 {
-    font-family: var(--UI_Font_Family);
+    font-family: var(--ui-font-family);
     /* font-stretch: 87.5%; */
     text-transform: capitalize;
 }
 
 .widget.Header h1.title {
-    font-family: var(--UI_Font_Family);
+    font-family: var(--ui-font-family);
 }
 
 h1 {
@@ -260,7 +289,7 @@ input[type="color"] {
     border-radius: 6px;
     padding: 2px 6px;
     background-color: var(--Button);
-    font-family: var(--UI_Font_Family);
+    font-family: var(--ui-font-family);
     font-size: 1rem;
     transition: background-color .25s ease-in-out, border-color .25s ease-in-out;
     cursor: pointer;
@@ -393,7 +422,7 @@ input[type="number"],
 input[type="date"],
 input[type="time"],
 input[type="datetime-local"] {
-    font-family: var(--UI_Font_Family);
+    font-family: var(--ui-font-family);
     font-size: 1rem;
     border: solid 1px var(--Border);
     border-radius: 4px;
@@ -460,7 +489,7 @@ input[type="datetime-local"]:focus {
 }
 
 pre, pre * {
-    font-family: var(--UI_Monospace_Font);
+    font-family: var(--ui-monospaced-font-family);
 }
 
 fieldset {
@@ -642,7 +671,7 @@ details[open] > summary::before {
 
 /* Avoid some of Bootstrap's built-in styles */
 body {
-    font-family: var(--UI_Font_Family);
+    font-family: var(--ui-font-family);
     font-size: 1rem;
     font-weight: unset;
     line-height: normal;
