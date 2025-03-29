@@ -951,11 +951,11 @@ ul.Navigation_Arrows li::before {
 }
 
 .post-labels a.post-label:hover, .post-labels a.post-label:focus {
-    background-color: var(--custom-color-1_Hover);
+    background-color: var(--custom-color-1-hover);
 }
 
 .post-labels a.post-label:active {
-    background-color: var(--custom-color-1_Active);
+    background-color: var(--custom-color-1-active);
 }
 
 #Blog_Container div.date-outer h2.date-header > span {
