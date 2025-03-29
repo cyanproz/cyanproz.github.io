@@ -168,6 +168,8 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: geometricPrecision;
     font-display: swap;
+    font-smooth: never;
+    text-rendering: optimizeLegibility;
     /* font-optical-sizing: auto; */
     /* font-weight: normal; */
     /* font-style: normal; */
