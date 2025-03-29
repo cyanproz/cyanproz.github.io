@@ -456,9 +456,10 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
         display: inline-block;
         cursor: pointer;
         background-color: #0000;
+        backdrop-filter: blur(0px);
     }
 
-    #Menu_Wrapper_Button:has(input:checked) {
+    #Menu_Wrapper_Button:has(input[type="checkbox"]:checked) {
         display: block;
         position: absolute;
         left: 0;
@@ -469,6 +470,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #Head
         height: 100vh;
         padding: 0px;
         backdrop-filter: blur(4px);
+        transition: backdrop-filter .5s linear;
         /* transform: translateX(0); */
         cursor: default;
     }

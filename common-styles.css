@@ -647,29 +647,29 @@ details[open] > summary::before {
     display: block;
 }
 
-.Notecard {
+.notecard {
     border: var(--border) solid;
     border-width: 1px 1px 1px 8px;
     margin: 8px 0;
     padding: 12px;
 }
 
-.Notecard.Info {
+.notecard.info {
     border-color: var(--color-info);
     background-color: var(--color-info-background-transparent);
 }
 
-.Notecard.Warning {
+.notecard.warning {
     border-color: var(--color-warning);
     background-color: var(--color-warning-background-transparent);
 }
 
-.Notecard.Critical {
+.notecard.critical {
     border-color: var(--color-critical);
     background-color: var(--color-critical-background-transparent);
 }
 
-.Code_Box {
+.code-box {
     overflow: hidden;
     background-color: var(--foreground);
     border: solid 1px var(--border);
@@ -677,12 +677,12 @@ details[open] > summary::before {
     border-radius: 8px;
 }
 
-.Code_Box .Programming_Language {
+.code-box .programming-language {
     padding: 2px 6px;
     font-size: .9em;
 }
 
-.Code_Box pre {
+.code-box pre {
     margin: 0;
     background-color: var(--background);
     /* font-size: 1rem; */
@@ -692,32 +692,32 @@ details[open] > summary::before {
     line-height: 24px;
 }
 
-.Code_Box .Code_Colored_Text_1 {
+.code-box .code-colored-text-1 {
     font-family: "Source Code Pro", monospace;
     color: #006eff;
 }
 
-.Code_Box .Code_Colored_Text_2 {
+.code-box .code-colored-text-2 {
     font-family: "Source Code Pro", monospace;
     color: #29ffff;
 }
 
-.Code_Box .Code_Colored_Text_3 {
+.code-box .code-colored-text-3 {
     font-family: "Source Code Pro", monospace;
     color: #ff3030;
 }
 
-.Code_Box .Code_Colored_Text_4 {
+.code-box .code-colored-text-4 {
     font-family: "Source Code Pro", monospace;
     color: #fffc5b;
 }
 
-.Code_Box .Code_Colored_Text_5 {
+.code-box .code-colored-text-5 {
     font-family: "Source Code Pro", monospace;
     color: #2bff9c;
 }
 
-.Code_Box .Code_Colored_Text_6 {
+.code-box .code-colored-text-6 {
     font-family: "Source Code Pro", monospace;
     color: #c229ff;
 }
