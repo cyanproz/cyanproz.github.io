@@ -167,7 +167,7 @@
     font-family: var(--ui-font-family);
     -webkit-font-smoothing: antialiased;
     text-rendering: geometricPrecision;
-    font-display: swap;
+    /* font-display: swap; */
     font-smooth: never;
     text-rendering: optimizeLegibility;
     /* font-optical-sizing: auto; */
