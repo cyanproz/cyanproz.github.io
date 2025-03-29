@@ -28,6 +28,12 @@ setInterval(function() {
     }
 }, 32);
 
+window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1001) {
+        document.getElementById("Menu_Wrapper_Button").querySelector("input[type=\"checkbox\"]").checked = false;
+    }
+});
+
 // == Dev Mode ==
 
 if (Dev_Mode) {
@@ -40,6 +46,7 @@ if (Dev_Mode) {
     Screen_Width_Element.style.zIndex = "100000000000000000000000000000000000000";
     Screen_Width_Element.style.backgroundColor = "#FFFFFF88";
     Screen_Width_Element.style.color = "black";
+    document.get
     
     document.body.appendChild(Screen_Width_Element);
     
