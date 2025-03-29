@@ -1182,7 +1182,6 @@ a.blog-pager-newer-link {
     #Blog_Container_Parent {
         grid-column: 1 / span 2;
     }
-
 }
 
 /* @media screen and (min-width: 1054px) and (min-aspect-ratio: 2/3) { */
@@ -1224,14 +1223,12 @@ a.blog-pager-newer-link {
     100% {
         scale: 1;
     }
-
 }
 
 @keyframes Message_Dialog_Closes {
     100% {
         scale: 0;
     }
-
 }
 
 #Message_Dialog {
