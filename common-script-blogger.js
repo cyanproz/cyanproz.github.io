@@ -34,6 +34,27 @@ window.addEventListener("resize", () => {
     }
 });
 
+function applyCommentStyles() {
+    var commentIframe = document.querySelector('iframe[title="Blogger Comments"]');
+    
+    if (commentIframe) {
+      var styleElement = document.createElement("style");
+      styleElement.textContent = `
+        body {
+          font-family: Arial, sans-serif !important;
+          background-color: #f5f5f5 !important;
+        }
+        .comments { 
+          border: 2px solid red !important;
+        }
+      `;
+
+      commentIframe.contentDocument.head.appendChild(styleElement);
+    }
+}
+
+setTimeout(applyCommentStyles, 3000); // Delay to ensure iframe loads
+
 // == Dev Mode ==
 
 if (Dev_Mode) {
