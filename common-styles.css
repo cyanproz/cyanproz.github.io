@@ -343,7 +343,7 @@ input[type="image"],
 input[type="color"] {
     border: solid 1px var(--border);
     border-radius: 6px;
-    padding: 2px 6px;
+    padding: 2px 4px;
     background-color: var(--button);
     font-family: var(--ui-font-family);
     font-size: 1rem;
@@ -429,7 +429,7 @@ a.blog-pager-newer-link {
 a.comment-reply,
 .item-control a:not(:has(img.icon-action)) {
     display: inline-block;
-    padding: 2px 6px !important;
+    padding: 2px 4px !important;
 }
 
 .item-control a:has(img.icon-action) {
@@ -680,7 +680,7 @@ details[open] > summary::before {
 }
 
 .code-box .programming-language {
-    padding: 2px 6px;
+    padding: 2px 4px;
     font-size: .9em;
 }
 
