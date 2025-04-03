@@ -1,0 +1,95 @@
+@font-face{
+    font-family: 'Source Sans 3';
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('TTF/SourceSans3-ExtraLight.ttf') format('');
+}
+
+@font-face{
+    font-family: 'Source Sans 3';
+    font-weight: 200;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('TTF/SourceSans3-ExtraLightIt.ttf') format('');
+}
+
+@font-face{
+    font-family: 'Source Sans 3';
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('TTF/SourceSans3-Light.ttf') format('');
+}
+
+@font-face{
+    font-family: 'Source Sans 3';
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('TTF/SourceSans3-LightIt.ttf') format('');
+}
+
+@font-face{
+    font-family: 'Source Sans 3';
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('TTF/SourceSans3-Regular.ttf') format('');
+}
+
+@font-face{
+    font-family: 'Source Sans 3';
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('TTF/SourceSans3-It.ttf') format('');
+}
+
+@font-face{
+    font-family: 'Source Sans 3';
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('TTF/SourceSans3-Semibold.ttf') format('');
+}
+
+@font-face{
+    font-family: 'Source Sans 3';
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('TTF/SourceSans3-SemiboldIt.ttf') format('');
+}
+
+@font-face{
+    font-family: 'Source Sans 3';
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('TTF/SourceSans3-Bold.ttf') format('');
+}
+
+@font-face{
+    font-family: 'Source Sans 3';
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('TTF/SourceSans3-BoldIt.ttf') format('');
+}
+
+@font-face{
+    font-family: 'Source Sans 3';
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('TTF/SourceSans3-Black.ttf') format('');
+}
+
+@font-face{
+    font-family: 'Source Sans 3';
+    font-weight: 900;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('TTF/SourceSans3-BlackIt.ttf') format('');
+}
