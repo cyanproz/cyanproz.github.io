@@ -163,7 +163,7 @@
     font-size: 1rem;
 }
 
-:root, html, button, input, textarea, #Header, #Blog_Search_Container {
+:root, html, button, input, textarea, #header, #Blog_Search_Container {
     scrollbar-color: var(--scrollbar-thumb) var(--background);
     font-family: var(--ui-font-family);
     -webkit-font-smoothing: antialiased;
@@ -181,7 +181,7 @@
     /* font-feature-settings: "ss02" 1, "ss03" 1, "ss04" 1; */
 }
 
-button, input, textarea, #Header, #Blog_Search_Container {
+button, input, textarea, #header, #Blog_Search_Container {
     font-feature-settings: unset !important;
 }
 
