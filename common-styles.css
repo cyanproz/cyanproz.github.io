@@ -164,6 +164,7 @@
 }
 
 :root, html, button, input, textarea, #Header, #Blog_Search_Container {
+    scrollbar-color: var(--foreground) var(--background);
     font-family: var(--ui-font-family);
     -webkit-font-smoothing: antialiased;
     text-rendering: geometricPrecision;
@@ -200,32 +201,35 @@ body {
     color: #fff;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 14px;
     height: 14px;
     background-color: var(--foreground);
-}
+} */
 
 /* ::-webkit-scrollbar-track {
     border: 0px solid var(--border);
 } */
+
 /* ::-webkit-scrollbar-track:horizontal {
     border-width: 1px 0px;
 } */
+
 /* ::-webkit-scrollbar-track:vertical {
     border-width: 0px 1px;
 } */
-::-webkit-scrollbar-thumb {
+
+/* ::-webkit-scrollbar-thumb {
     margin: 1px;
     border: solid 3px transparent;
-    /* border-radius: 2em; */
+    /. border-radius: 2em; ./
     border-radius: 100000vh;
     background-color: var(--scrollbar-thumb);
     background-clip: content-box;
     transition: background-color .2s ease-in-out;
-}
+} */
 
-::-webkit-scrollbar-thumb::after {
+/* ::-webkit-scrollbar-thumb::after {
     content: "Bruh";
 }
 
@@ -235,7 +239,7 @@ body {
 
 ::-webkit-scrollbar-thumb:active {
     background-color: var(--scrollbar-thumb-active);
-}
+} */
 
 h1, h1 > a, h2, h3, h4, h5, h6 {
     margin: 0px;
