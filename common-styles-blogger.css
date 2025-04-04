@@ -3,6 +3,7 @@
 
 html {
     overflow-y: scroll;
+    scrollbar-color: var(--scrollbar-thumb) transparent;
 }
 
 html, body {
