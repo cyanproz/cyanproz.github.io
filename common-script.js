@@ -104,7 +104,7 @@ function Get_Windows_OS() {
 console.log(Get_Windows_OS());
 
 var userAgent = navigator.userAgent;
-function Get_Browser_Platform() {
+function getBrowserPlatform() {
     if (userAgent.indexOf("Chrome") != -1) {
         return "Chrome";
     }
@@ -124,10 +124,10 @@ function Get_Browser_Platform() {
         return "Unknown browser";
     }
 }
-console.log(Get_Browser_Platform());
-// if (Get_Browser_Platform() != "Chrome")
+console.log(getBrowserPlatform());
+// if (getBrowserPlatform() != "Chrome")
 // {
-//     alert(`You're currently running this website on ${Get_Browser_Platform()}. It may not be perfect.`);
+//     alert(`You're currently running this website on ${getBrowserPlatform()}. It may not be perfect.`);
 // }
 
 // Events
