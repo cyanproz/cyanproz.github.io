@@ -54,9 +54,9 @@ if (Dev_Mode && (localStorage["isAdmin"] && localStorage["isAdmin"] == "true")) 
     
     document.body.appendChild(Screen_Width_Element);
     
-    Screen_Width_Element.textContent = `${window.innerWidth} × ${window.innerHeight}`;
+    Screen_Width_Element.textContent = window.innerWidth + " × " + window.innerHeight;
     window.addEventListener("resize", function() {
-        Screen_Width_Element.textContent = `${window.innerWidth} × ${window.innerHeight}`;
+        Screen_Width_Element.textContent = window.innerWidth + " × " + window.innerHeight;
     });
 }
 
