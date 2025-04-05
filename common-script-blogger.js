@@ -32,7 +32,7 @@ setInterval(function() {
     }
 }, 32);
 
-window.addEventListener("resize", () => {
+window.addEventListener("resize", function() {
     if (window.innerWidth >= 1001) {
         document.getElementById("Menu_Wrapper_Button").querySelector("input[type=\"checkbox\"]").checked = false;
     }
