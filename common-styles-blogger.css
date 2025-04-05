@@ -4,6 +4,8 @@
 html {
     overflow-y: scroll;
     scrollbar-color: var(--scrollbar-thumb) transparent !important;
+    background-image: url("./blog-background.png");
+    background-repeat: repeat;
 }
 
 html, body {
@@ -80,9 +82,10 @@ html, body {
 
     /* background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/denim.png"); */
     /* background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/dark-triangles.png"); */
-    background-image: url("./blog-background.png");
-    background-repeat: repeat;
     /* transition: background 1s ease-in-out; */
+
+    /* background-image: url("./blog-background.png");
+    background-repeat: repeat; */
 }
 
 @media (prefers-color-scheme: light) /* and (min-width: 1001px) */ {
