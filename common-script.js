@@ -141,7 +141,7 @@ try {
             event.target.style.display = "none";
         }
     });
-} catch {}
+} catch (e) {}
 // Image_Viewer.querySelector("div.Dialog").addEventListener("click", function(event) {
 //     event.preventDefault();
 // });
