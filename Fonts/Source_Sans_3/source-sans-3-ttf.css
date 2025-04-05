@@ -75,7 +75,7 @@
     font-weight: 700;
     font-style: italic;
     font-stretch: normal;
-    src: url('TTF/SourceSans3-BoldIt.ttf') format('');
+    src: url('TTF/SourceSans3-BoldIt.ttf') format('truetype');
 }
 
 @font-face{
@@ -83,7 +83,7 @@
     font-weight: 900;
     font-style: normal;
     font-stretch: normal;
-    src: url('TTF/SourceSans3-Black.ttf') format('');
+    src: url('TTF/SourceSans3-Black.ttf') format('truetype');
 }
 
 @font-face{
@@ -91,5 +91,5 @@
     font-weight: 900;
     font-style: italic;
     font-stretch: normal;
-    src: url('TTF/SourceSans3-BlackIt.ttf') format('');
+    src: url('TTF/SourceSans3-BlackIt.ttf') format('truetype');
 }
