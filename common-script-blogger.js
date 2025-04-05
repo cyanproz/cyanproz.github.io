@@ -43,7 +43,7 @@ window.addEventListener("resize", () => {
 
 // == Dev Mode ==
 
-if (Dev_Mode) {
+if (Dev_Mode && (localStorage["isAdmin"] && localStorage["isAdmin"] == "true")) {
     const Screen_Width_Element = document.createElement("div");
     Screen_Width_Element.id = "Screen_Width";
     Screen_Width_Element.style.display = "inline-block";
