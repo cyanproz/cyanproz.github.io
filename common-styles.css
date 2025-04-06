@@ -259,14 +259,17 @@ h1:not(.widget.Header h1.title), h1 > a, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 2.4em;
+    font-weight: 600;
 }
 
 h2 {
     font-size: 2.2em;
+    font-weight: 600;
 }
 
 h3 {
     font-size: 2em;
+    font-weight: 600;
 }
 
 h3.post-title.entry-title > a {
@@ -277,17 +280,14 @@ h3.post-title.entry-title > a {
 
 h4/* , h3.post-title.entry-title */ {
     font-size: 1.8em;
-    font-weight: 600;
 }
 
 h5 {
     font-size: 1.6em;
-    font-weight: 600;
 }
 
 h6 {
     font-size: 1.4em;
-    font-weight: 600;
 }
 
 h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a, h3.post-title.entry-title > a {
