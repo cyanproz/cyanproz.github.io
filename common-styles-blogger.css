@@ -794,7 +794,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #head
 #Blog_Container > .widget > h2, #Blog_Container > .widget h3:not(.Blog h3), #Blog_Container > .widget h3:not(.Blog h3) a,
 #Footer > .widget > h2, #Footer > .widget h3, #Footer > .widget h3 a {
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .widget > .widget-content > ul {
