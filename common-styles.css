@@ -592,7 +592,7 @@ table.styled.row--hover tr th,
 table.styled.row--hover tr td,
 table.styled thead.hover tr th,
 table.styled tbody.hover tr td {
-    transition: background-color .2s ease-in-out;
+    transition: background-color .1s ease-in-out;
 }
 
 table.styled.hover tr:hover th,
