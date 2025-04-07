@@ -581,10 +581,12 @@ table.styled th, table.styled td {
 }
 
 table.styled td {
+    padding: 2px 4px;
     background-color: var(--background);
 }
 
 table.styled th {
+    padding: 2px 4px;
     background-color: var(--foreground);
 }
 
