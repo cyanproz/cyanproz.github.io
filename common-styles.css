@@ -15,6 +15,8 @@
     --ui-monospaced-font-family: "Source Code Pro", monospace;
     --ui-font-size: 16px;
     --header-height: 45px;
+    --color-success: hsl(120, 100%, 50%);
+    --color-success-background-transparent: hsla(120, 100%, 50%, .25);
     --color-info: hsl(208, 100%, 50%);
     --color-info-background-transparent: hsla(208, 100%, 50%, .25);
     --color-warning: hsl(55, 100%, 50%);
@@ -695,6 +697,11 @@ details[open] > summary::before {
     border-width: 1px 1px 1px 8px;
     margin: 8px 0;
     padding: 12px;
+}
+
+.alert.success {
+    border-color: var(--color-success);
+    background-color: var(--color-success-background-transparent);
 }
 
 .alert.info {
