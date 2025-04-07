@@ -590,18 +590,18 @@ table.styled th {
 
 table.styled.row--hover tr th,
 table.styled.row--hover tr td,
-table.styled thead.row--hover tr th,
-table.styled tbody.row--hover tr td {
+table.styled thead.hover tr th,
+table.styled tbody.hover tr td {
     transition: background-color .2s ease-in-out;
 }
 
-table.styled.row--hover tr:hover th,
-table.styled.row--hover tr:hover td {
+table.styled.hover tr:hover th,
+table.styled.hover tr:hover td {
     background-color: var(--foreground-hover);
 }
 
-table.styled thead.row--hover tr:hover th,
-table.styled tbody.row--hover tr:hover td {
+table.styled thead.hover tr:hover th,
+table.styled tbody.hover tr:hover td {
     background-color: var(--background-hover);
 }
 
