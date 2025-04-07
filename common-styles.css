@@ -814,8 +814,8 @@ details[open] > summary::before {
     /* background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/dark-triangles.png"); */
     /* transition: background 1s ease-in-out; */
     
-    background-image: url("./blog-background.png");
-    background-repeat: repeat;
+    /* background-image: url("./blog-background.png");
+    background-repeat: repeat; */
 }
 
 @media (prefers-color-scheme: light) /* and (min-width: 1001px) */ {
