@@ -580,13 +580,29 @@ table.styled th, table.styled td {
     border: 1px solid var(--border);
 }
 
+table.styled td {
+    background-color: var(--background);
+}
+
 table.styled th {
     background-color: var(--foreground);
 }
 
-table.styled.hover th,
-table.styled.hover td {
-    background-color: var(--foreground);
+table.styled.row-hover tr th,
+table.styled.row-hover tr td,
+table.styled thead.row-hover tr th,
+table.styled tbody.row-hover tr td {
+    transition: background-color .2s ease-in-out;
+}
+
+table.styled.row-hover tr:hover th,
+table.styled.row-hover tr:hover td {
+    background-color: var(--foreground-hover);
+}
+
+table.styled thead.row-hover tr:hover th,
+table.styled tbody.row-hover tr:hover td {
+    background-color: var(--background-hover);
 }
 
 details > summary {
