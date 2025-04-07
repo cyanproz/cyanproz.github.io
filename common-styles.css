@@ -777,6 +777,13 @@ body > div.skiptranslate[style*="display: none"] {
     translate: 0 -80px;
 } */
 
+@media (prefers-color-scheme: dark) {
+    .VIpgJd-yAWNEb-VIpgJd-fmcmS-sn54Q {
+        background-color: #024 !important;
+        box-shadow: 2px 2px 4px #024 !important;
+    }
+}
+
 #header-and-content-layout {
     /* display: grid; */
     /* grid-template-rows: max-content auto; */
