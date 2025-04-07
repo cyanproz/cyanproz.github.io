@@ -145,13 +145,13 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #head
     top: 0px;
 }
 
-#Main_Menu {
+#header > nav > .menu {
     display: inline-flex;
     user-select: none;
     white-space: nowrap;
 }
 
-#Menu_Wrapper_Button > span.material-symbols-outlined {
+#hamburger-menu-button > span.material-symbols-outlined {
     padding: 8px;
     display: flex;
     align-items: center;
@@ -215,8 +215,8 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #head
         height: max-content;
     }
 
-    #Main_Menu > .Header_Button,
-    #Main_Menu > .Header_Dropdown > .Header_Button {
+    #header > nav > .menu > .Header_Button,
+    #header > nav > .menu > .Header_Dropdown > .Header_Button {
         width: 100%;
     }
 }
@@ -447,24 +447,24 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #head
 }
 
 @media screen and (min-width: 1001px) {
-    #Menu_Wrapper_Button {
+    #hamburger-menu-button {
         display: none;
     }
 }
 
 @media screen and (max-width: 1001px) {
-    #header .Header_Button:not(#Menu_Wrapper_Button, #CyanProz_Button, #Main_Menu .Header_Button) {
+    #header .Header_Button:not(#hamburger-menu-button, #CyanProz_Button, #header > nav > .menu .Header_Button) {
         display: none;
     }
 
-    #Menu_Wrapper_Button {
+    #hamburger-menu-button {
         display: inline-block;
         cursor: pointer;
         background-color: #0000;
         backdrop-filter: blur(0px);
     }
 
-    #Menu_Wrapper_Button:has(input[type="checkbox"]:checked) {
+    #hamburger-menu-button:has(input[type="checkbox"]:checked) {
         display: block;
         position: absolute;
         left: 0;
@@ -480,7 +480,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #head
         cursor: default;
     }
 
-    #Main_Menu {
+    #header > nav > .menu {
         overflow: auto;
         display: flex;
         flex-direction: column;
@@ -494,15 +494,15 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #head
         background-color: var(--background);
     }
 
-    #Menu_Wrapper_Button:has(input:checked) + #Main_Menu {
+    #hamburger-menu-button:has(input:checked) + #header > nav > .menu {
         transform: translateX(0);
     }
 
-    #Main_Menu > .Header_Button {
+    #header > nav > .menu > .Header_Button {
         width: 100%;
     }
 
-    #Main_Menu > #CyanProz_Button.Header_Button > a {
+    #header > nav > .menu > #CyanProz_Button.Header_Button > a {
         box-sizing: border-box;
         width: 100%;
     }
@@ -526,7 +526,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #head
         transform: scaleY(0);
         overflow: hidden;
     } */
-    #Main_Menu .Header_Dropdown .Header_Button > span {
+    #header > nav > .menu .Header_Dropdown .Header_Button > span {
         border-bottom: solid 2px var(--custom-color-1);
     }
 

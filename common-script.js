@@ -4,10 +4,10 @@ catch (e) {}
 
 const Dev_Mode = true;
 
-const Header_And_Content_Layout = document.getElementById("Header_And_Content_Layout");
-const Header = document.getElementById("Header");
-const Side_Bar = document.getElementById("Side_Bar"); 
-const Main_Content = document.getElementById("Main_Content");
+const Header_And_Content_Layout = document.getElementById("header-and-content-layout");
+const Header = document.getElementById("header");
+const Side_Bar = document.getElementById("side-bar"); 
+const Main_Content = document.getElementById("main-content");
 const Home_Page = document.getElementById("Home_Page");
 const Blog_Page = document.getElementById("Blog_Page");
 const CSharp_Page = document.getElementById("CSharp_Page");
