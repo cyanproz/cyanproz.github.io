@@ -3,6 +3,7 @@
     font-weight: 200;
     font-style: normal;
     font-stretch: normal;
+    font-display: swap;
     src: url('TTF/SourceSans3-ExtraLight.ttf') format('truetype');
 }
 
@@ -11,6 +12,7 @@
     font-weight: 200;
     font-style: italic;
     font-stretch: normal;
+    font-display: swap;
     src: url('TTF/SourceSans3-ExtraLightIt.ttf') format('truetype');
 }
 
@@ -19,6 +21,7 @@
     font-weight: 300;
     font-style: normal;
     font-stretch: normal;
+    font-display: swap;
     src: url('TTF/SourceSans3-Light.ttf') format('truetype');
 }
 
@@ -27,6 +30,7 @@
     font-weight: 300;
     font-style: italic;
     font-stretch: normal;
+    font-display: swap;
     src: url('TTF/SourceSans3-LightIt.ttf') format('truetype');
 }
 
@@ -35,6 +39,7 @@
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
+    font-display: swap;
     src: url('TTF/SourceSans3-Regular.ttf') format('truetype');
 }
 
@@ -43,6 +48,7 @@
     font-weight: 400;
     font-style: italic;
     font-stretch: normal;
+    font-display: swap;
     src: url('TTF/SourceSans3-It.ttf') format('truetype');
 }
 
@@ -51,6 +57,7 @@
     font-weight: 600;
     font-style: normal;
     font-stretch: normal;
+    font-display: swap;
     src: url('TTF/SourceSans3-Semibold.ttf') format('truetype');
 }
 
@@ -59,6 +66,7 @@
     font-weight: 600;
     font-style: italic;
     font-stretch: normal;
+    font-display: swap;
     src: url('TTF/SourceSans3-SemiboldIt.ttf') format('truetype');
 }
 
@@ -67,6 +75,7 @@
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
+    font-display: swap;
     src: url('TTF/SourceSans3-Bold.ttf') format('truetype');
 }
 
@@ -75,6 +84,7 @@
     font-weight: 700;
     font-style: italic;
     font-stretch: normal;
+    font-display: swap;
     src: url('TTF/SourceSans3-BoldIt.ttf') format('truetype');
 }
 
@@ -83,6 +93,7 @@
     font-weight: 900;
     font-style: normal;
     font-stretch: normal;
+    font-display: swap;
     src: url('TTF/SourceSans3-Black.ttf') format('truetype');
 }
 
@@ -91,5 +102,6 @@
     font-weight: 900;
     font-style: italic;
     font-stretch: normal;
+    font-display: swap;
     src: url('TTF/SourceSans3-BlackIt.ttf') format('truetype');
 }
