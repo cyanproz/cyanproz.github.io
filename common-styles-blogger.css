@@ -62,7 +62,7 @@ body > div.skiptranslate[style*="display: none"] {
     }
 }
 
-#header-and-content-layout::before {
+#header-contents-footer-layout-layout::before {
     content: "";
     display: block;
     position: absolute;
