@@ -34,7 +34,7 @@ setInterval(function() {
 
 window.addEventListener("resize", function() {
     if (window.innerWidth >= 1001) {
-        document.getElementById("Menu_Wrapper_Button").querySelector("input[type=\"checkbox\"]").checked = false;
+        document.getElementById("hamburger-menu-button").querySelector("input[type=\"checkbox\"]").checked = false;
     }
 });
 
