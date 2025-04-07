@@ -63,6 +63,26 @@ body > div.skiptranslate[style*="display: none"] {
 }
 
 #header-and-content-layout::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: var(--background);
+
+    /* background-image: url("https://onedrive.live.com/embed?resid=70FAF5368BE07B01%21165955&authkey=%21AJJ3voyB-I2Q-8E&width=1920&height=1080");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat; */
+    
+    /* background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/denim.png"); */
+    /* background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/dark-triangles.png"); */
+    /* transition: background 1s ease-in-out; */
+    
     background-image: url("./blog-background.png");
     background-repeat: repeat;
 }
