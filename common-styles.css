@@ -421,6 +421,10 @@ input[type="color"]:focus {
     border: solid 1px var(--custom-color-1);
 }
 
+a.button-link {
+    display: inline-block;
+}
+
 select, #Translate1 select.goog-te-combo {
     font-size: 1rem;
     padding: 1px 2px;
