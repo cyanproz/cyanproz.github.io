@@ -796,7 +796,7 @@ details[open] > summary::before {
 @media (prefers-color-scheme: light) /* and (min-width: 1001px) */ {
     #header-and-content-layout::before {
         filter: invert(1) brightness(0.8);
-    }s
+    }
 }
 
 /* @media screen and (max-width: 1000.9999999999999999px) {
