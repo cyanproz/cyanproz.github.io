@@ -29,9 +29,15 @@
 :root {
     --background-light: #fff;
     --background-dark: #080808;
+    
+    --background-hover-light: #efefef;
+    --background-hover-dark: #181818;
 
     --foreground-dark: #111;
     --foreground-light: #f8f8f8;
+
+    --foreground-hover-dark: #212121;
+    --foreground-hover-light: #e8e8e8;
 
     --dialog-background-light: #fff8;
     --dialog-background-dark: #08080888;
@@ -75,7 +81,9 @@
 
 :root {
     --background: var(--background-light);
+    --background-hover: var(--background-hover-light);
     --foreground: var(--foreground-light);
+    --foreground-hover: var(--foreground-hover-light);
     --dialog-background: var(--dialog-background-light);
     --text: var(--text-light);
     --gray-Text: var(--gray-Text-light);
@@ -94,7 +102,9 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --background: var(--background-dark);
+        --background-hover: var(--background-hover-dark);
         --foreground: var(--foreground-dark);
+        --foreground-hover: var(--foreground-hover-dark);
         --dialog-background: var(--dialog-background-dark);
         --text: var(--text-dark);
         --gray-Text: var(--gray-Text-dark);
@@ -571,6 +581,11 @@ table.styled th, table.styled td {
 }
 
 table.styled th {
+    background-color: var(--foreground);
+}
+
+table.styled.hover th,
+table.styled.hover td {
     background-color: var(--foreground);
 }
 
