@@ -765,6 +765,18 @@ details[open] > summary::before {
     color: #c229ff;
 }
 
+/* body > div.skiptranslate {
+    position: sticky;
+    top: 40px;
+    z-index: 1000000000000000000000000000000000000;
+    translate: 0 -40px;
+    transition: translate 1s ease;
+}
+
+body > div.skiptranslate[style*="display: none"] {
+    translate: 0 -80px;
+} */
+
 #header-and-content-layout {
     /* display: grid; */
     /* grid-template-rows: max-content auto; */
@@ -809,11 +821,11 @@ details[open] > summary::before {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat; */
-
+    
     /* background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/denim.png"); */
     /* background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/dark-triangles.png"); */
     /* transition: background 1s ease-in-out; */
-
+    
     background-image: url("./blog-background.png");
     background-repeat: repeat;
 }
@@ -830,17 +842,7 @@ details[open] > summary::before {
     }
 
 } */
-/* body > div.skiptranslate {
-    position: sticky;
-    top: 40px;
-    z-index: 1000000000000000000000000000000000000;
-    translate: 0 -40px;
-    transition: translate 1s ease;
-}
 
-body > div.skiptranslate[style*="display: none"] {
-    translate: 0 -80px;
-} */
 #header {
     display: flex;
     position: sticky;
