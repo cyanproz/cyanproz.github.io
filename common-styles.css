@@ -690,24 +690,24 @@ details[open] > summary::before {
     display: block;
 }
 
-.notecard {
+.alert {
     border: var(--border) solid;
     border-width: 1px 1px 1px 8px;
     margin: 8px 0;
     padding: 12px;
 }
 
-.notecard.info {
+.alert.info {
     border-color: var(--color-info);
     background-color: var(--color-info-background-transparent);
 }
 
-.notecard.warning {
+.alert.warning {
     border-color: var(--color-warning);
     background-color: var(--color-warning-background-transparent);
 }
 
-.notecard.critical {
+.alert.critical {
     border-color: var(--color-critical);
     background-color: var(--color-critical-background-transparent);
 }
