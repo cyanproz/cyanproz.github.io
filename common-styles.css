@@ -580,10 +580,15 @@ fieldset {
 
 table.styled {
     border-collapse: collapse;
+    table-layout: fixed;
 }
 
-table.styled th, table.styled td {
+table.styled th,
+table.styled td {
     border: 1px solid var(--border);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 table.styled td {
