@@ -363,7 +363,7 @@ input[type="image"],
 input[type="color"] {
     border: solid 1px var(--border);
     border-radius: 6px;
-    padding: 2px 4px;
+    padding: 3px 5px;
     background-color: var(--button);
     font-family: var(--ui-font-family);
     font-size: 1rem;
@@ -453,7 +453,7 @@ a.blog-pager-newer-link {
 a.comment-reply,
 .item-control a:not(:has(img.icon-action)) {
     display: inline-block;
-    padding: 2px 4px !important;
+    padding: 3px 5px !important;
 }
 
 .item-control a:has(img.icon-action) {
@@ -506,7 +506,7 @@ input[type="datetime-local"] {
     font-size: 1rem;
     border: solid 1px var(--border);
     border-radius: 4px;
-    padding: 2px 4px;
+    padding: 3px 5px;
     background-color: var(--background);
     transition: border-color .2s ease-in-out;
 }
@@ -592,12 +592,12 @@ table.styled td {
 }
 
 table.styled td {
-    padding: 2px 4px;
+    padding: 3px 5px;
     background-color: var(--background);
 }
 
 table.styled th {
-    padding: 2px 4px;
+    padding: 3px 5px;
     background-color: var(--foreground);
 }
 
@@ -737,7 +737,7 @@ details[open] > summary::before {
 }
 
 .code-box .programming-language {
-    padding: 2px 4px;
+    padding: 3px 5px;
     font-size: .9em;
 }
 
