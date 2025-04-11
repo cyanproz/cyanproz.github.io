@@ -435,7 +435,7 @@ select:focus, #Translate1 select.goog-te-combo:focus {
 }
 
 input[type="color"] {
-    padding: 4px 4px;
+    padding: 5px;
 }
 
 button:not(.header-button) * {
@@ -518,9 +518,9 @@ input[type="number"] {
 input[type="date"],
 input[type="time"],
 input[type="datetime-local"] {
-    padding-right: 1px;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    padding-right: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator,
