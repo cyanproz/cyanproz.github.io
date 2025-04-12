@@ -427,7 +427,7 @@ a.button-link {
 
 select, #Translate1 select.goog-te-combo {
     font-size: 1rem;
-    padding: 2px 1px;
+    padding: 2px 1px 4px 1px;
 }
 
 select:focus, #Translate1 select.goog-te-combo:focus {
