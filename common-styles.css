@@ -1206,7 +1206,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #head
         background-color: var(--background);
     }
 
-    #hamburger-menu-button:has(input:checked) + #header > nav > .menu {
+    #header > nav:has(#hamburger-menu-button:has(input:checked)) > .menu {
         transform: translateX(0);
     }
 
