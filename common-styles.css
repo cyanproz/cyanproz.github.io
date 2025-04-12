@@ -799,19 +799,19 @@ details[open] > summary::before {
     min-height: 100vh;
 }
 
-@media (prefers-color-scheme: light) /* and (min-width: 1001px) */ {
+@media (prefers-color-scheme: light) /* and (min-width: 1000.9999999999999999px) */ {
     #header-contents-footer-layout {
         background: #fff8;
     }
 }
 
-@media (prefers-color-scheme: dark) /* and (min-width: 1001px) */ {
+@media (prefers-color-scheme: dark) /* and (min-width: 1000.9999999999999999px) */ {
     #header-contents-footer-layout {
         background: #0008;
     }
 }
 
-@media (prefers-color-scheme: light) /* and (min-width: 1001px) */ {
+@media (prefers-color-scheme: light) /* and (min-width: 1000.9999999999999999px) */ {
     #header-contents-footer-layout::before {
         filter: invert(1) brightness(0.8);
     }
@@ -1053,7 +1053,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #head
     list-style-type: none;
 }
 
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 1000.9999999999999999px) {
     .header-dropdown .header-button .header-dropdown-menu {
         overflow: visible;
         position: absolute;
@@ -1158,13 +1158,13 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #head
     }
 }
 
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 1000.9999999999999999px) {
     #hamburger-menu-button {
         display: none;
     }
 }
 
-@media screen and (max-width: 1001px) {
+@media screen and (max-width: 1000.9999999999999999px) {
     #header .header-button:not(#hamburger-menu-button, #CyanProz_Button, #header > nav > .menu .header-button) {
         display: none;
     }
@@ -1238,8 +1238,10 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #head
         transform: scaleY(0);
         overflow: hidden;
     } */
+    
     #header > nav > .menu .header-dropdown .header-button > span {
         border-bottom: solid 2px var(--custom-color-1);
+        padding: 0px;
     }
 
     .header-dropdown .header-button .header-dropdown-menu > ul {
