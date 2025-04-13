@@ -661,14 +661,6 @@ a.blog-pager-older-link, a.blog-pager-newer-link {
     align-items: center;
 }
 
-a.blog-pager-older-link {
-    padding-right: 0px;
-}
-
-a.blog-pager-newer-link {
-    padding-left: 0px;
-}
-
 #Footer {
     display: flex;
     justify-content: center;
