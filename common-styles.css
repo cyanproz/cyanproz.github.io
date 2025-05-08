@@ -21,7 +21,7 @@
     --color-info-background-transparent: hsla(212, 100%, 50%, .25);
     --color-warning: hsl(55, 100%, 50%);
     --color-warning-background-transparent: hsla(55, 100%, 50%, .25);
-    --color-critical: hsl(0, 100%, 60%);
+    --color-critical: hsl(0, 69%, 51%);
     --color-critical-background-transparent: hsla(0, 100%, 60%, .25);
     --custom-color-1: #05f;
     --custom-color-1-hover: #0040c0;
@@ -85,7 +85,7 @@
 }
 
 /* Light Theme */
-html:not(html.theme--light):not(html.theme--dark), html.theme--light, .theme--light {
+:root, :root:has(html.theme--light), .theme--light {
     --background: var(--background-light);
     --background-hover: var(--background-hover-light);
     --foreground: var(--foreground-light);
@@ -107,7 +107,7 @@ html:not(html.theme--light):not(html.theme--dark), html.theme--light, .theme--li
 }
 
 /* Dark Theme */
-html.theme--dark, .theme--dark {
+:root:has(html.theme--dark), .theme--dark {
     --background: var(--background-dark);
     --background-hover: var(--background-hover-dark);
     --foreground: var(--foreground-dark);
@@ -130,7 +130,7 @@ html.theme--dark, .theme--dark {
 
 @media (prefers-color-scheme: dark) {
     /* Light Theme */
-    html.theme--light, .theme--light {
+    :root:has(html.theme--light), .theme--light {
         --background: var(--background-light);
         --background-hover: var(--background-hover-light);
         --foreground: var(--foreground-light);
@@ -152,7 +152,7 @@ html.theme--dark, .theme--dark {
     }
 
     /* Dark Theme */
-    html:not(html.theme--light):not(html.theme--dark), html.theme--dark, .theme--dark {
+    :root, :root:has(html.theme--dark), .theme--dark {
         --background: var(--background-dark);
         --background-hover: var(--background-hover-dark);
         --foreground: var(--foreground-dark);
