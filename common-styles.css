@@ -986,9 +986,9 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #head
 
 /* .header-dropdown */ .header-button > span {
     display: inline-block;
-    min-height: 40px;
     padding: 7px 10px;
     /* height: 28px; */
+    min-height: 40px;
 }
 
 /* .header-dropdown */ .header-button[title] {
