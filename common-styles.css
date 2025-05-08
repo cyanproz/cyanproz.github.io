@@ -914,6 +914,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #head
 }
 
 .header-item {
+    display: inline-block;
     padding: 7px 10px;
 }
 
