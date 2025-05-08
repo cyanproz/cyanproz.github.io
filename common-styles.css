@@ -86,7 +86,7 @@
 
 /* Light Theme */
 :root:not(:root.theme--dark),
-:root:has(html.theme--light),
+:root.theme--light,
 .theme--light {
     --background: var(--background-light);
     --background-hover: var(--background-hover-light);
@@ -133,7 +133,7 @@
 
 @media (prefers-color-scheme: dark) {
     /* Dark Theme */
-    :root:not(.theme--light):not(.theme--dark) {
+    :root:not(:root.theme--light) {
         --background: var(--background-dark);
         --background-hover: var(--background-hover-dark);
         --foreground: var(--foreground-dark);
