@@ -250,8 +250,19 @@ button, input, textarea, #header, #Blog_Search_Container {
 
 html {
     /* height: max-content; */
-    color-scheme: light dark;
     scroll-behavior: smooth;
+}
+
+html:not(html.theme--light):not(html.theme--dark) {
+    color-scheme: light dark;
+}
+
+html.theme--light {
+    color-scheme: light;
+}
+
+html.theme--dark {
+    color-scheme: dark;
 }
 
 body {
