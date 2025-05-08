@@ -85,7 +85,7 @@
 }
 
 /* Light Theme */
-:root, :root:has(html.theme--light), .theme--light {
+:root:not(:root:has(html.theme--light)):not(:root:has(html.theme--dark)), :root:has(html.theme--light), .theme--light {
     --background: var(--background-light);
     --background-hover: var(--background-hover-light);
     --foreground: var(--foreground-light);
