@@ -865,24 +865,6 @@ details[open] > summary::before {
     min-height: 100vh;
 }
 
-@media (prefers-color-scheme: light) /* and (min-width: 1000.9999999999999999px) */ {
-    #header-contents-footer-layout {
-        background: #fff8;
-    }
-}
-
-@media (prefers-color-scheme: dark) /* and (min-width: 1000.9999999999999999px) */ {
-    #header-contents-footer-layout {
-        background: #0008;
-    }
-}
-
-@media (prefers-color-scheme: light) /* and (min-width: 1000.9999999999999999px) */ {
-    #header-contents-footer-layout::before {
-        filter: invert(1) brightness(0.8);
-    }
-}
-
 /* @media screen and (max-width: 1000.9999999999999999px) {
     #header-contents-footer-layout::before {
         background-image: none;
