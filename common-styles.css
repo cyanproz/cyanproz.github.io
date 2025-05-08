@@ -17,12 +17,12 @@
     --header-height: 45px;
     --color-success: hsl(120, 100%, 50%);
     --color-success-background-transparent: hsla(120, 100%, 50%, .25);
-    --color-info: hsl(208, 100%, 50%);
-    --color-info-background-transparent: hsla(208, 100%, 50%, .25);
+    --color-info: hsl(212, 100%, 50%);
+    --color-info-background-transparent: hsla(212, 100%, 50%, .25);
     --color-warning: hsl(55, 100%, 50%);
     --color-warning-background-transparent: hsla(55, 100%, 50%, .25);
-    --color-critical: hsl(0, 100%, 67%);
-    --color-critical-background-transparent: hsla(0, 100%, 50%, .25);
+    --color-critical: hsl(0, 100%, 60%);
+    --color-critical-background-transparent: hsla(0, 100%, 60%, .25);
     --custom-color-1: #05f;
     --custom-color-1-hover: #0040c0;
     --custom-color-1-active: #002775;
