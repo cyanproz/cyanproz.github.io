@@ -84,6 +84,7 @@
     --scrollbar-thumb-active-dark: #333;
 }
 
+/* Light Theme */
 :root, .theme--light {
     --background: var(--background-light);
     --background-hover: var(--background-hover-light);
@@ -105,6 +106,7 @@
     --scrollbar-thumb-active: var(--scrollbar-thumb-active-light);
 }
 
+/* Dark Theme */
 .theme--dark {
     --background: var(--background-dark);
     --background-hover: var(--background-hover-dark);
@@ -127,6 +129,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
+    /* Light Theme */
     .theme--light {
         --background: var(--background-light);
         --background-hover: var(--background-hover-light);
@@ -147,7 +150,8 @@
         --scrollbar-thumb-hover: var(--scrollbar-thumb-hover-light);
         --scrollbar-thumb-active: var(--scrollbar-thumb-active-light);
     }
-    
+
+    /* Dark Theme */
     :root, .theme--dark {
         --background: var(--background-dark);
         --background-hover: var(--background-hover-dark);
