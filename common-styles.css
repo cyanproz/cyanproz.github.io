@@ -132,29 +132,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    /* Light Theme */
-    :root:has(html.theme--light),
-    .theme--light {
-        --background: var(--background-light);
-        --background-hover: var(--background-hover-light);
-        --foreground: var(--foreground-light);
-        --foreground-hover: var(--foreground-hover-light);
-        --dialog-background: var(--dialog-background-light);
-        --text: var(--text-light);
-        --selected-text: var(--selected-text-light);
-        --gray-Text: var(--gray-Text-light);
-        --link: var(--link-light);
-        --link-hover: var(--link-hover-light);
-        --link-active: var(--link-active-light);
-        --border: var(--border-light);
-        --button: var(--button-light);
-        --button-hover: var(--button-hover-light);
-        --button-active: var(--button-active-light);
-        --scrollbar-thumb: var(--scrollbar-thumb-light);
-        --scrollbar-thumb-hover: var(--scrollbar-thumb-hover-light);
-        --scrollbar-thumb-active: var(--scrollbar-thumb-active-light);
-    }
-
     /* Dark Theme */
     :root:not(:root:has(html.theme--light)),
     :root:has(html.theme--dark),
