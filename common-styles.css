@@ -887,7 +887,7 @@ details[open] > summary::before {
     /* border-radius: 0px 0px 10px 10px; */
     background-color: var(--foreground);
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
-    height: 41px;
+    height: calc(1rem * 2.5 + 1px);
     will-change: top;
     transition: top 1s ease, background-color .125s linear, border-bottom-color .125s linear, box-shadow .125s linear;
     /* width: 100vw; */
