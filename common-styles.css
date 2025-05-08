@@ -125,8 +125,30 @@
     --scrollbar-thumb-hover: var(--scrollbar-thumb-hover-dark);
     --scrollbar-thumb-active: var(--scrollbar-thumb-active-dark);
 }
+
 @media (prefers-color-scheme: dark) {
-    :root {
+    .theme--light {
+        --background: var(--background-light);
+        --background-hover: var(--background-hover-light);
+        --foreground: var(--foreground-light);
+        --foreground-hover: var(--foreground-hover-light);
+        --dialog-background: var(--dialog-background-light);
+        --text: var(--text-light);
+        --selected-text: var(--selected-text-light);
+        --gray-Text: var(--gray-Text-light);
+        --link: var(--link-light);
+        --link-hover: var(--link-hover-light);
+        --link-active: var(--link-active-light);
+        --border: var(--border-light);
+        --button: var(--button-light);
+        --button-hover: var(--button-hover-light);
+        --button-active: var(--button-active-light);
+        --scrollbar-thumb: var(--scrollbar-thumb-light);
+        --scrollbar-thumb-hover: var(--scrollbar-thumb-hover-light);
+        --scrollbar-thumb-active: var(--scrollbar-thumb-active-light);
+    }
+    
+    :root, .theme--dark {
         --background: var(--background-dark);
         --background-hover: var(--background-hover-dark);
         --foreground: var(--foreground-dark);
