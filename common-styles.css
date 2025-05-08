@@ -913,6 +913,10 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #head
     position: relative;
 }
 
+.header-item {
+    padding: 7px 10px;
+}
+
 /* .header-dropdown */ .header-button {
     display: block;
     padding: 0;
