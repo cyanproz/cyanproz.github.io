@@ -47,6 +47,9 @@
     --text-light: #000;
     --text-dark: #fff;
 
+    --selected-text-light: #000;
+    --selected-text-dark: #fff;
+
     --gray-Text-light: #666;
     --gray-Text-dark: #aaa;
 
@@ -81,13 +84,14 @@
     --scrollbar-thumb-active-dark: #333;
 }
 
-:root {
+:root, .light {
     --background: var(--background-light);
     --background-hover: var(--background-hover-light);
     --foreground: var(--foreground-light);
     --foreground-hover: var(--foreground-hover-light);
     --dialog-background: var(--dialog-background-light);
     --text: var(--text-light);
+    --selected-text: var(--selected-text-light);
     --gray-Text: var(--gray-Text-light);
     --link: var(--link-light);
     --link-hover: var(--link-hover-light);
@@ -101,6 +105,26 @@
     --scrollbar-thumb-active: var(--scrollbar-thumb-active-light);
 }
 
+.dark {
+    --background: var(--background-dark);
+    --background-hover: var(--background-hover-dark);
+    --foreground: var(--foreground-dark);
+    --foreground-hover: var(--foreground-hover-dark);
+    --dialog-background: var(--dialog-background-dark);
+    --text: var(--text-dark);
+    --selected-text: var(--selected-text-dark);
+    --gray-Text: var(--gray-Text-dark);
+    --link: var(--link-dark);
+    --link-hover: var(--link-hover-dark);
+    --link-active: var(--link-active-dark);
+    --border: var(--border-dark);
+    --button: var(--button-dark);
+    --button-hover: var(--button-hover-dark);
+    --button-active: var(--button-active-dark);
+    --scrollbar-thumb: var(--scrollbar-thumb-dark);
+    --scrollbar-thumb-hover: var(--scrollbar-thumb-hover-dark);
+    --scrollbar-thumb-active: var(--scrollbar-thumb-active-dark);
+}
 @media (prefers-color-scheme: dark) {
     :root {
         --background: var(--background-dark);
@@ -109,6 +133,7 @@
         --foreground-hover: var(--foreground-hover-dark);
         --dialog-background: var(--dialog-background-dark);
         --text: var(--text-dark);
+        --selected-text: var(--selected-text-dark);
         --gray-Text: var(--gray-Text-dark);
         --link: var(--link-dark);
         --link-hover: var(--link-hover-dark);
@@ -209,7 +234,7 @@ body {
 }
 
 ::selection {
-    background-color: #6668;
+    background-color: var(--selected-text);
     color: #fff;
 }
 
@@ -253,7 +278,13 @@ body {
     background-color: var(--scrollbar-thumb-active);
 } */
 
-h1, h1 > a, h2, h3, h4, h5, h6 {
+h1,
+h1 > a,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0px;
     color: var(--text);
     font-weight: bold;
