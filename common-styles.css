@@ -260,8 +260,8 @@ body {
 }
 
 ::selection {
-    background-color: var(--selected-text);
-    color: #fff;
+    background-color: #6668;
+    color: var(--selected-text);
 }
 
 /* ::-webkit-scrollbar {
