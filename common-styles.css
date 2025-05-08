@@ -152,7 +152,7 @@
     }
 
     /* Dark Theme */
-    :root, :root:has(html.theme--dark), .theme--dark {
+    :root:root:not(:root:has(html.theme--light)):not(:root:has(html.theme--dark)), :root:has(html.theme--dark), .theme--dark {
         --background: var(--background-dark);
         --background-hover: var(--background-hover-dark);
         --foreground: var(--foreground-dark);
