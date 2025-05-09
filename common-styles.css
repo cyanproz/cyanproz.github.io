@@ -44,12 +44,12 @@
     /* --foreground-light: #f8f8f8; */
     --foreground-light: hsl(0, 0%, 95%);
     /* --foreground-dark: #111; */
-    --foreground-dark: hsl(0, 0%, 5%);
+    --foreground-dark: hsl(0, 0%, 7%);
 
     /* --foreground-hover-light: #e8e8e8; */
     --foreground-hover-light: hsl(0, 0%, 85%);
     /* --foreground-hover-dark: #212121; */
-    --foreground-hover-dark: hsl(0, 0%, 10%);
+    --foreground-hover-dark: hsl(0, 0%, 12%);
 
     --dialog-background-light: #fff8;
     --dialog-background-dark: #08080888;
