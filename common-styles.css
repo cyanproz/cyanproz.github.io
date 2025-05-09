@@ -22,6 +22,8 @@
     --color-warning: hsl(55, 100%, 50%);
     --color-warning-background-transparent: hsla(55, 100%, 50%, .25);
     --color-critical: hsl(0, 100%, 60%);
+    --color-critical-hover: hsl(0, 100%, 40%);
+    --color-critical-active: hsl(0, 100%, 20%);
     --color-critical-background-transparent: hsla(0, 100%, 60%, .25);
     --custom-color-1: #05f;
     --custom-color-1-hover: #0040c0;
@@ -29,17 +31,25 @@
 }
 
 :root {
-    --background-light: #fff;
-    --background-dark: #080808;
+    /* --background-light: #fff; */
+    --background-light: hsl(0, 0%, 100%);
+    /* --background-dark: #080808; */
+    --background-dark: hsl(0, 0%, 5%);
     
-    --background-hover-light: #efefef;
-    --background-hover-dark: #181818;
+    /* --background-hover-light: #efefef; */
+    --background-hover-light: hsl(0, 0%, 90%);
+    /* --background-hover-dark: #181818; */
+    --background-hover-dark: hsl(0, 0%, 10%);
 
-    --foreground-dark: #111;
-    --foreground-light: #f8f8f8;
+    /* --foreground-light: #f8f8f8; */
+    --foreground-light: hsl(0, 0%, 95%);
+    /* --foreground-dark: #111; */
+    --foreground-dark: hsl(0, 0%, 10%);
 
-    --foreground-hover-dark: #212121;
-    --foreground-hover-light: #e8e8e8;
+    /* --foreground-hover-light: #e8e8e8; */
+    --foreground-hover-light: hsl(0, 0%, 85%);
+    /* --foreground-hover-dark: #212121; */
+    --foreground-hover-dark: hsl(0, 0%, 15%);
 
     --dialog-background-light: #fff8;
     --dialog-background-dark: #08080888;
@@ -66,13 +76,19 @@
     --border-dark: #333;
 
     --button-light: #eee;
+    --button-light: hsl(0, 0%, 93%);
     --button-dark: #181818;
+    --button-dark: hsl(0, 0%, 9%);
 
     --button-hover-light: #f8f8f8;
+    --button-hover-light: hsl(0, 0%, 97%);
     --button-hover-dark: #333;
+    --button-hover-dark: hsl(0, 0%, 20%);
 
     --button-active-light: #ddd;
+    --button-active-light: hsl(0, 0%, 87%);
     --button-active-dark: #000;
+    --button-active-dark: hsl(0, 0%, 0%);
 
     --scrollbar-thumb-light: #aaa;
     --scrollbar-thumb-dark: #444;
