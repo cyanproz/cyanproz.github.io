@@ -554,11 +554,11 @@ a.read-more.button-link {
     display: inline-block;
 }
 
-button.Upload_File_Button {
+button.upload-file-button {
     padding-top: 1px;
 }
 
-button.Upload_File_Button::before {
+button.upload-file-button::before {
     display: inline;
     content: "📄 Upload file:";
 }
