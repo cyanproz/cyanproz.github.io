@@ -512,9 +512,10 @@ select:focus, #Translate1 select.goog-te-combo:focus {
 }
 
 input[type="color"] {
+    display: inline-block;
+    box-sizing: content-box;
     padding: 4px;
     height: calc(1rem + 3px);
-    box-sizing: content-box;
 }
 
 a.button-link,
