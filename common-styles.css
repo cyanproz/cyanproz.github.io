@@ -18,11 +18,11 @@
     --color-success: hsl(120, 100%, 40%);
     --color-success-hover: hsl(120, 100%, 35%);
     --color-success-active: hsl(120, 100%, 30%);
-    --color-success-background-transparent: hsla(120, 100%, 50%, .25);
+    --color-success-background-transparent: hsla(120, 100%, 40%, .25);
     --color-info: hsl(212, 100%, 60%);
     --color-info-hover: hsl(212, 100%, 50%);
     --color-info-active: hsl(212, 100%, 40%);
-    --color-info-background-transparent: hsla(212, 100%, 50%, .25);
+    --color-info-background-transparent: hsla(212, 100%, 60%, .25);
     --color-warning: hsl(55, 100%, 50%);
     --color-warning-hover: hsl(55, 100%, 45%);
     --color-warning-active: hsl(55, 100%, 40%);
