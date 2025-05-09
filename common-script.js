@@ -12,8 +12,8 @@ const Home_Page = document.getElementById("Home_Page");
 const Blog_Page = document.getElementById("Blog_Page");
 const CSharp_Page = document.getElementById("CSharp_Page");
 const Website_Lab_Page = document.getElementById("Website_Lab_Page");
-const Upload_File_Button_Class = document.querySelectorAll(".Upload_File_Button");
-const Image_Viewer = document.getElementById("image-viewer");
+const upload_file_button_class = document.querySelectorAll(".upload-file-button");
+const image_viewer = document.getElementById("image-viewer");
 const Flag_Tags = document.querySelectorAll("Flag_Tags");
 function Google_Translate_Combobox() {
     return document.querySelector("div.widget.Translate#Translate1 > #google_translate_element .goog-te-combo");
@@ -49,8 +49,8 @@ function Start_Website_Lab() {
     Website_Lab_Result.document.write("</style>");
 }
 function View_Image(URL) {
-    Image_Viewer.style.display = "flex";
-    Image_Viewer.querySelector(".Dialog > img").src = URL;
+    image_viewer.style.display = "flex";
+    image_viewer.querySelector(".Dialog > img").src = URL;
 }
 
 function Get_Windows_OS() {
@@ -132,14 +132,14 @@ console.log(getBrowserPlatform());
 
 // Events
 try {
-    Image_Viewer.addEventListener("click", function(event) {
+    image_viewer.addEventListener("click", function(event) {
         event.preventDefault();
         if (event.target == event.currentTarget) {
             event.target.style.display = "none";
         }
     });
 } catch (e) {}
-// Image_Viewer.querySelector("div.Dialog").addEventListener("click", function(event) {
+// image_viewer.querySelector("div.Dialog").addEventListener("click", function(event) {
 //     event.preventDefault();
 // });
 
@@ -268,7 +268,7 @@ try {
 catch (e) {}
 
 // Others
-Array.from(Upload_File_Button_Class).forEach(function(Selected_Button) {
+Array.from(upload_file_button_class).forEach(function(Selected_Button) {
     Selected_Button.addEventListener("click", function() {
         Selected_Button.querySelector("input[type=\"file\"]").click();
     });
