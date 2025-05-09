@@ -487,22 +487,22 @@ input[type="color"].info {
     --button-active: var(--color-info-active);
 }
 
-button:not(.header-button).danger,
-a.button-link.danger,
-a.comment-reply.danger,
-a.blog-pager-older-link.danger,
-a.blog-pager-newer-link.danger,
-.item-control a.danger,
-select.danger,
-#Translate1 select.goog-te-combo.danger,
-input[type="button"].danger,
-input[type="submit"].danger,
-input[type="reset"].danger,
-input[type="image"].danger,
-input[type="color"].danger {
-    --button: var(--color-danger);
-    --button-hover: var(--color-danger-hover);
-    --button-active: var(--color-danger-active);
+button:not(.header-button).warning,
+a.button-link.warning,
+a.comment-reply.warning,
+a.blog-pager-older-link.warning,
+a.blog-pager-newer-link.warning,
+.item-control a.warning,
+select.warning,
+#Translate1 select.goog-te-combo.warning,
+input[type="button"].warning,
+input[type="submit"].warning,
+input[type="reset"].warning,
+input[type="image"].warning,
+input[type="color"].warning {
+    --button: var(--color-warning);
+    --button-hover: var(--color-warning-hover);
+    --button-active: var(--color-warning-active);
 }
 
 button:not(.header-button).danger,
