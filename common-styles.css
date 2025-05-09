@@ -16,15 +16,21 @@
     --ui-font-size: 16px;
     --header-height: 45px;
     --color-success: hsl(120, 100%, 50%);
+    --color-success-hover: hsl(120, 100%, 40%);
+    --color-success-active: hsl(120, 100%, 30%);
     --color-success-background-transparent: hsla(120, 100%, 50%, .25);
     --color-info: hsl(212, 100%, 50%);
+    --color-info-hover: hsl(212, 100%, 40%);
+    --color-info-active: hsl(212, 100%, 30%);
     --color-info-background-transparent: hsla(212, 100%, 50%, .25);
     --color-warning: hsl(55, 100%, 50%);
+    --color-warning-hover: hsl(55, 100%, 40%);
+    --color-warning-active: hsl(55, 100%, 30%);
     --color-warning-background-transparent: hsla(55, 100%, 50%, .25);
-    --color-critical: hsl(0, 100%, 60%);
-    --color-critical-hover: hsl(0, 100%, 40%);
-    --color-critical-active: hsl(0, 100%, 20%);
-    --color-critical-background-transparent: hsla(0, 100%, 60%, .25);
+    --color-danger: hsl(0, 100%, 60%);
+    --color-danger-hover: hsl(0, 100%, 50%);
+    --color-danger-active: hsl(0, 100%, 40%);
+    --color-danger-background-transparent: hsla(0, 100%, 60%, .25);
     --custom-color-1: #05f;
     --custom-color-1-hover: #0040c0;
     --custom-color-1-active: #002775;
@@ -445,6 +451,78 @@ input[type="color"] {
     /* font-size: inherit; */
 }
 
+button:not(.header-button).success,
+a.button-link.success,
+a.comment-reply.success,
+a.blog-pager-older-link.success,
+a.blog-pager-newer-link.success,
+.item-control a.success,
+select.success,
+#Translate1 select.goog-te-combo.success,
+input[type="button"].success,
+input[type="submit"].success,
+input[type="reset"].success,
+input[type="image"].success,
+input[type="color"].success {
+    --button: var(--color-success);
+    --button-hover: var(--color-success-hover);
+    --button-active: var(--color-success-active);
+}
+
+button:not(.header-button).info,
+a.button-link.info,
+a.comment-reply.info,
+a.blog-pager-older-link.info,
+a.blog-pager-newer-link.info,
+.item-control a.info,
+select.info,
+#Translate1 select.goog-te-combo.info,
+input[type="button"].info,
+input[type="submit"].info,
+input[type="reset"].info,
+input[type="image"].info,
+input[type="color"].info {
+    --button: var(--color-info);
+    --button-hover: var(--color-info-hover);
+    --button-active: var(--color-info-active);
+}
+
+button:not(.header-button).danger,
+a.button-link.danger,
+a.comment-reply.danger,
+a.blog-pager-older-link.danger,
+a.blog-pager-newer-link.danger,
+.item-control a.danger,
+select.danger,
+#Translate1 select.goog-te-combo.danger,
+input[type="button"].danger,
+input[type="submit"].danger,
+input[type="reset"].danger,
+input[type="image"].danger,
+input[type="color"].danger {
+    --button: var(--color-danger);
+    --button-hover: var(--color-danger-hover);
+    --button-active: var(--color-danger-active);
+}
+
+button:not(.header-button).danger,
+a.button-link.danger,
+a.comment-reply.danger,
+a.blog-pager-older-link.danger,
+a.blog-pager-newer-link.danger,
+.item-control a.danger,
+select.danger,
+#Translate1 select.goog-te-combo.danger,
+input[type="button"].danger,
+input[type="submit"].danger,
+input[type="reset"].danger,
+input[type="image"].danger,
+input[type="color"].danger {
+    --button: var(--color-danger);
+    --button-hover: var(--color-danger-hover);
+    --button-active: var(--color-danger-active);
+}
+
 button:not(.header-button):hover,
 a.button-link:hover,
 a.comment-reply:hover,
@@ -811,9 +889,9 @@ details[open] > summary::before {
     background-color: var(--color-warning-background-transparent);
 }
 
-.alert.critical {
-    border-color: var(--color-critical);
-    background-color: var(--color-critical-background-transparent);
+.alert.danger {
+    border-color: var(--color-danger);
+    background-color: var(--color-danger-background-transparent);
 }
 
 .code-box {
