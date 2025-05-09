@@ -5,7 +5,7 @@ catch (e) {}
 const Dev_Mode = true;
 
 const Header_And_Content_Layout = document.getElementById("header-and-content-layout");
-const Header = document.getElementById("header");
+const Header = document.getElementById("header");f
 const Side_Bar = document.getElementById("side-bar"); 
 const Main_Content = document.getElementById("main-content");
 const Home_Page = document.getElementById("Home_Page");
