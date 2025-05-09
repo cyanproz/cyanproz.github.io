@@ -15,9 +15,9 @@
     --ui-monospaced-font-family: "Source Code Pro", monospace;
     --ui-font-size: 16px;
     --header-height: 45px;
-    --color-success: hsl(120, 100%, 50%);
-    --color-success-hover: hsl(120, 100%, 40%);
-    --color-success-active: hsl(120, 100%, 30%);
+    --color-success: hsl(120, 100%, 40%);
+    --color-success-hover: hsl(120, 100%, 30%);
+    --color-success-active: hsl(120, 100%, 20%);
     --color-success-background-transparent: hsla(120, 100%, 50%, .25);
     --color-info: hsl(212, 100%, 50%);
     --color-info-hover: hsl(212, 100%, 40%);
