@@ -29,7 +29,7 @@
     --color-warning-hover: hsl(60, 100%, 35%);
     --color-warning-active: hsl(60, 100%, 30%);
     --color-warning-text-color: #000;
-    --color-warning-background-transparent: hsla(45, 100%, 40%, 0.25);
+    --color-warning-background-transparent: hsla(45, 100%, 40%, .25);
     --color-danger: hsl(0, 100%, 60%);
     --color-danger-hover: hsl(0, 100%, 50%);
     --color-danger-active: hsl(0, 100%, 40%);
@@ -468,7 +468,7 @@ input[type="submit"].success,
 input[type="reset"].success,
 input[type="image"].success,
 input[type="color"].success {
-    color: #fff;
+    color: var(--color-success-text-color);
     --button: var(--color-success);
     --button-hover: var(--color-success-hover);
     --button-active: var(--color-success-active);
@@ -487,7 +487,7 @@ input[type="submit"].info,
 input[type="reset"].info,
 input[type="image"].info,
 input[type="color"].info {
-    color: #fff;
+    color: var(--color-info-text-color);
     --button: var(--color-info);
     --button-hover: var(--color-info-hover);
     --button-active: var(--color-info-active);
@@ -506,7 +506,7 @@ input[type="submit"].warning,
 input[type="reset"].warning,
 input[type="image"].warning,
 input[type="color"].warning {
-    color: #fff;
+    color: var(--color-warning-text-color);
     --button: var(--color-warning);
     --button-hover: var(--color-warning-hover);
     --button-active: var(--color-warning-active);
@@ -525,7 +525,7 @@ input[type="submit"].danger,
 input[type="reset"].danger,
 input[type="image"].danger,
 input[type="color"].danger {
-    color: #fff;
+    color: var(--color-danger-text-color);
     --button: var(--color-danger);
     --button-hover: var(--color-danger-hover);
     --button-active: var(--color-danger-active);
