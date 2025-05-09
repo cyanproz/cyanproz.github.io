@@ -13,7 +13,7 @@ const Blog_Page = document.getElementById("Blog_Page");
 const CSharp_Page = document.getElementById("CSharp_Page");
 const Website_Lab_Page = document.getElementById("Website_Lab_Page");
 const Upload_File_Button_Class = document.querySelectorAll(".Upload_File_Button");
-const Image_Viewer = document.getElementById("Image_Viewer");
+const Image_Viewer = document.getElementById("image-viewer");
 const Flag_Tags = document.querySelectorAll("Flag_Tags");
 function Google_Translate_Combobox() {
     return document.querySelector("div.widget.Translate#Translate1 > #google_translate_element .goog-te-combo");
