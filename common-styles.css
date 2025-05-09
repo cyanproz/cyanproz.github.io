@@ -23,10 +23,10 @@
     --color-info-hover: hsl(212, 100%, 50%);
     --color-info-active: hsl(212, 100%, 40%);
     --color-info-background-transparent: hsla(212, 100%, 60%, .25);
-    --color-warning: hsl(55, 100%, 50%);
-    --color-warning-hover: hsl(55, 100%, 45%);
-    --color-warning-active: hsl(55, 100%, 40%);
-    --color-warning-background-transparent: hsla(55, 100%, 50%, .25);
+    --color-warning: hsl(45, 100%, 40%);
+    --color-warning-hover: hsl(45, 100%, 35%);
+    --color-warning-active: hsl(45, 100%, 30%);
+    --color-warning-background-transparent: hsla(45, 100%, 40%, 0.25);
     --color-danger: hsl(0, 100%, 60%);
     --color-danger-hover: hsl(0, 100%, 50%);
     --color-danger-active: hsl(0, 100%, 40%);
