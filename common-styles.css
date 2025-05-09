@@ -21,7 +21,7 @@
     --color-info-background-transparent: hsla(212, 100%, 50%, .25);
     --color-warning: hsl(55, 100%, 50%);
     --color-warning-background-transparent: hsla(55, 100%, 50%, .25);
-    --color-critical: hsl(0, 69%, 51%);
+    --color-critical: hsl(0, 100%, 60%);
     --color-critical-background-transparent: hsla(0, 100%, 60%, .25);
     --custom-color-1: #05f;
     --custom-color-1-hover: #0040c0;
