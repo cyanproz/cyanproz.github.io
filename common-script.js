@@ -48,9 +48,9 @@ function Start_Website_Lab() {
     Website_Lab_Result.document.write("<style>");
     Website_Lab_Result.document.write("</style>");
 }
-function View_Image(URL) {
+function view_image(URL) {
     image_viewer.style.display = "flex";
-    image_viewer.querySelector(".Dialog > img").src = URL;
+    image_viewer.querySelector(".dialog > img").src = URL;
 }
 
 function Get_Windows_OS() {
