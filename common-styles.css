@@ -16,16 +16,16 @@
     --ui-font-size: 16px;
     --header-height: 45px;
     --color-success: hsl(120, 100%, 40%);
-    --color-success-hover: hsl(120, 100%, 30%);
-    --color-success-active: hsl(120, 100%, 20%);
+    --color-success-hover: hsl(120, 100%, 35%);
+    --color-success-active: hsl(120, 100%, 30%);
     --color-success-background-transparent: hsla(120, 100%, 50%, .25);
-    --color-info: hsl(212, 100%, 50%);
-    --color-info-hover: hsl(212, 100%, 40%);
-    --color-info-active: hsl(212, 100%, 30%);
+    --color-info: hsl(212, 100%, 60%);
+    --color-info-hover: hsl(212, 100%, 50%);
+    --color-info-active: hsl(212, 100%, 40%);
     --color-info-background-transparent: hsla(212, 100%, 50%, .25);
     --color-warning: hsl(55, 100%, 50%);
-    --color-warning-hover: hsl(55, 100%, 40%);
-    --color-warning-active: hsl(55, 100%, 30%);
+    --color-warning-hover: hsl(55, 100%, 45%);
+    --color-warning-active: hsl(55, 100%, 40%);
     --color-warning-background-transparent: hsla(55, 100%, 50%, .25);
     --color-danger: hsl(0, 100%, 60%);
     --color-danger-hover: hsl(0, 100%, 50%);
@@ -464,6 +464,7 @@ input[type="submit"].success,
 input[type="reset"].success,
 input[type="image"].success,
 input[type="color"].success {
+    color: #fff;
     --button: var(--color-success);
     --button-hover: var(--color-success-hover);
     --button-active: var(--color-success-active);
@@ -482,6 +483,7 @@ input[type="submit"].info,
 input[type="reset"].info,
 input[type="image"].info,
 input[type="color"].info {
+    color: #fff;
     --button: var(--color-info);
     --button-hover: var(--color-info-hover);
     --button-active: var(--color-info-active);
@@ -500,6 +502,7 @@ input[type="submit"].warning,
 input[type="reset"].warning,
 input[type="image"].warning,
 input[type="color"].warning {
+    color: #fff;
     --button: var(--color-warning);
     --button-hover: var(--color-warning-hover);
     --button-active: var(--color-warning-active);
@@ -518,6 +521,7 @@ input[type="submit"].danger,
 input[type="reset"].danger,
 input[type="image"].danger,
 input[type="color"].danger {
+    color: #fff;
     --button: var(--color-danger);
     --button-hover: var(--color-danger-hover);
     --button-active: var(--color-danger-active);
