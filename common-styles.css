@@ -717,6 +717,7 @@ input[type="datetime-local"] {
     padding-right: 2px;
     padding-top: 2px;
     padding-bottom: 3px;
+    font-variant-numeric: tabular-nums;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator,
