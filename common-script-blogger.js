@@ -1,6 +1,6 @@
-if (!localStorage["isAdmin"] && localStorage["isAdmin"] != "true" && getBrowserPlatform()) {
-    document.body.innerHTML = "<h1>Sorry</h1><p>This page is not ready to be shown in public. Currently under a big change</p>";
-}
+// if (!localStorage["isAdmin"] && localStorage["isAdmin"] != "true" && getBrowserPlatform()) {
+//     document.body.innerHTML = "<h1>Sorry</h1><p>This page is not ready to be shown in public. Currently under a big change</p>";
+// }
 
 setInterval(function() {
     if (document.documentElement.scrollTop <= 16) {
