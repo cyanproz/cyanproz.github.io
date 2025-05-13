@@ -860,7 +860,6 @@ details[open] > summary::before {
 .container-box-template--1 {
     padding: 15px;
     box-sizing: border-box;
-    width: 100%;
     /* max-width: 1200px; */
     border: solid 1px var(--border);
     border-radius: 10px;
