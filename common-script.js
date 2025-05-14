@@ -23,11 +23,11 @@ var HTML_Input_Box = document.querySelector("#Website_Lab_Side_Bar > :nth-child(
 var CSS_Input_Box = document.querySelector("#Website_Lab_Side_Bar > :nth-child(2) > div.Code_Input_Box_Parent:nth-child(2) > textarea.Code_Input_Box");
 var Javascript_Input_Box = document.querySelector("#Website_Lab_Side_Bar > :nth-child(2) > div.Code_Input_Box_Parent:nth-child(3) > textarea.Code_Input_Box");
 
-// Flags
+// == Flags ==
 var Page_Is_Home_Page = document.querySelector('#Flag_Tags .Page_Is_Home_Page');
 var Page_Is_Static_Page = document.querySelector('#Flag_Tags .Page_Is_Static_Page');
 
-// Functions
+// == Functions ==
 function Show_Message_Box_Dialog(Title, Message) {
     const Message_Dialog = document.getElementById("Message_Dialog").querySelector("div");
     const Message_Dialog_Title = Message_Dialog.querySelector(".Title");
@@ -130,7 +130,63 @@ console.log(getBrowserPlatform());
 //     alert(`You're currently running this website on ${getBrowserPlatform()}. It may not be perfect.`);
 // }
 
-// Events
+const AlertDialogType = Object.freeze({
+    DIV: "div",
+    FORM: "form"
+})
+
+function createAlertDialog(title, bodyHTML, buttons, alertDialogType, formAction = "", formMethod = "") {
+    // Create overlay
+    const overlay = document.createElement("div");
+    overlay.className = "overlay";
+    
+    // Create form dialog
+    const dialog = document.createElement(alertDialogType);
+    if (alertDialogType == AlertDialogType.FORM) {
+        dialog.className = "alert-dialog";
+        dialog.method = formMethod == "" ? "POST" : formAction;
+        dialog.action = formAction;
+    }
+    
+    // Header
+    const header = document.createElement("div");
+    header.className = "header";
+    header.textContent = title;
+    
+    // Body
+    const body = document.createElement("div");
+    body.className = "body";
+    body.innerHTML = bodyHTML;
+    
+    // Footer
+    const footer = document.createElement("div");
+    footer.className = "footer";
+    
+    buttons.forEach(btnHTML => {
+        const wrapper = document.createElement("div");
+        wrapper.innerHTML = btnHTML;
+        const button = wrapper.firstElementChild;
+        
+        // Optional: handle cancel-type buttons
+        if (button.textContent.toLowerCase().includes("batal")) {
+            button.addEventListener("click", e => {
+                e.preventDefault();
+                overlay.remove();
+            });
+        }
+
+        footer.appendChild(button);
+    });
+
+    // Append all to form dialog
+    dialog.appendChild(header);
+    dialog.appendChild(body);
+    dialog.appendChild(footer);
+    overlay.appendChild(dialog);
+    document.body.appendChild(overlay);
+}
+
+// == Events ==
 try {
     image_viewer.addEventListener("click", function(event) {
         event.preventDefault();
