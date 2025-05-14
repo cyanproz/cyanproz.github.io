@@ -1379,7 +1379,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #head
 }
 
 @media screen and (max-width: 1000.9999999999999999px) {
-    #header .header-button:not(#hamburger-menu-button, #CyanProz_Button, #header > nav > .menu .header-button) {
+    #header .header-button.hide-in-small-screen:not(#hamburger-menu-button, #CyanProz_Button, #header > nav > .menu .header-button) {
         display: none;
     }
 
