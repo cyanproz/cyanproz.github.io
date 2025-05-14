@@ -133,7 +133,7 @@ console.log(getBrowserPlatform());
 const AlertDialogType = Object.freeze({
     DIV: "div",
     FORM: "form"
-})
+});
 
 function createAlertDialog(title, bodyHTML, buttons, alertDialogType, formAction = "", formMethod = "") {
     // Create overlay
