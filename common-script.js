@@ -396,17 +396,17 @@ console.log(Google_Translate_Combobox());
 //     clearInterval(Check_Google_Translate_Combobox_Interval);
 // }, 100);
 
-document.addEventListener("gesturestart", function (event) {
-    event.preventDefault();
-});
+// document.addEventListener("gesturestart", function (event) {
+//     event.preventDefault();
+// });
 
-document.addEventListener("gesturechange", function (event) {
-    event.preventDefault();
-});
+// document.addEventListener("gesturechange", function (event) {
+//     event.preventDefault();
+// });
 
-document.addEventListener("gestureend", function (event) {
-    event.preventDefault();
-});
+// document.addEventListener("gestureend", function (event) {
+//     event.preventDefault();
+// });
 
 console.log("%cStop!", "font-family: 'Source Sans Pro'; font-size: 3.125rem; color: red; -webkit-text-stroke: 1px black;");
 console.log("%cThis is part of your browser intended for developers. If someone told you to copy-and-paste something here, don't do it! It could allow them to take over your information (e.g. your Blogger account).", " font-family: 'Source Sans Pro'; font-size: 1rem;");
