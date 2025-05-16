@@ -9,10 +9,10 @@ html {
     background-repeat: repeat; */
 }
 
-html, body {
-    touch-action: none; /* Disables pinch zoom */
-    overscroll-behavior: contain; /* Prevents overscroll gestures */
-}
+/* html, body {
+    touch-action: none;
+    overscroll-behavior: contain;
+} */
 
 /* body::after {
     content: "";
