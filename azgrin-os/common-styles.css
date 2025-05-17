@@ -2,7 +2,6 @@
 @import url('https://cyanproz.github.io/common-styles.css');
 :root {
     /* --GexOS_Arrow_Cursor: url(GexOS_Cursor.cur), default; */
-    --System_Font: "Nunito Sans", sans-serif;
     --Scrollbar_Track: #fff;
 }
 
@@ -182,7 +181,7 @@
 
 /* *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.Window_Caption_Bar_Button_Group):not(.Window_Caption_Bar_Button_Group)*/
 #Main_Session_Screen { 
-    font-family: var(--System_Font);
+    font-family: var(--ui-font-family);
     font-size: 16px;
     /* font-family: 'Ubuntu', sans-serif; */
 }
