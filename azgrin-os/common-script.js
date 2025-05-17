@@ -188,7 +188,7 @@ function recreateElement(element)
     selectedElementParent.appendChild(selectedElement);
 }
 
-function recreateElement_And_Remove_The_Events(element)
+function recreateElementAndRemoveTheEvents(element)
 {
     console.log(element);
     console.log(element.parentElement);
@@ -196,7 +196,7 @@ function recreateElement_And_Remove_The_Events(element)
     element.parentNode.replaceChild(newElement, element); // Replace the old element with the new one
 }
 
-function removeElement_And_Events(element)
+function removeElementAndEvents(element)
 {
     console.log(element);
     console.log(element.parentElement);
