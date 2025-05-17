@@ -5,7 +5,7 @@ const boot = document.getElementById("boot");
 const activeWindow = document.getElementById("window--active");
 const menuBar = document.getElementById("menu-bar");
 const taskbar = document.getElementById("taskbar");
-// const Active_Window_Caption_Bar = Active_Window.querySelector(".Window_Caption_Bar");
+// const Active_Window_Caption_Bar = Active_Window.querySelector(".window-caption-bar");
 const activeWindow_Caption_Bar = activeWindow.querySelector("#window-caption-bar");
 // const Active_Window_Caption_Bar = Active_Window.getElementsByClassName("window-caption-bar");
 // const Active_Window_Caption_Bar = Active_Window.getElementById("window-caption-bar");
@@ -169,10 +169,10 @@ function registerWindowEvents(window) {
     windowMaximizeAndRestoreButtonCheckBox.addEventListener("change", function(event) {
         // console.log("Animating window animation");
         console.log(event);
-        window.classList.add("Maximizing_Or_Restore_Down_Animation");
+        window.classList.add("maximizing-or-restore-down-animation");
         
         setTimeout(() => {
-            window.classList.remove("Maximizing_Or_Restore_Down_Animation");
+            window.classList.remove("maximizing-or-restore-down-animation");
         }, 500);
         // console.log("Window animation finished");
     })
@@ -207,7 +207,7 @@ function removeElement_And_Events(element)
 
 // Add event listener for mousedown event on the draggable element
 registerWindowEvents(activeWindow);
-console.log(activeWindow.querySelector(".Window_Caption_Bar input[type=\"checkbox\"]"));
+console.log(activeWindow.querySelector(".window-caption-bar input[type=\"checkbox\"]"));
 
 menuBar.style.display = "none";
 taskbar.style.display = "none";
