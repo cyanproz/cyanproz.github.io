@@ -1,21 +1,21 @@
-const Boot = document.getElementById("Boot");
-// const Active_Window = document.querySelector(".Window");
-// const Active_Window = document.querySelector("#Window");
-// const Active_Window = document.getElementsByClassName("Window");
-const Active_Window = document.getElementById("Window__Active");
-const Menu_Bar = document.getElementById("Menu_Bar");
-const Taskbar = document.getElementById("Taskbar");
+const boot = document.getElementById("boot");
+// const Active_Window = document.querySelector(".window");
+// const Active_Window = document.querySelector("#window");
+// const Active_Window = document.getElementsByClassName("window");
+const activeWindow = document.getElementById("window--active");
+const menuBar = document.getElementById("menu-bar");
+const Taskbar = document.getElementById("taskbar");
 // const Active_Window_Caption_Bar = Active_Window.querySelector(".Window_Caption_Bar");
-const Active_Window_Caption_Bar = Active_Window.querySelector("#Window_Caption_Bar");
-// const Active_Window_Caption_Bar = Active_Window.getElementsByClassName("Window_Caption_Bar");
-// const Active_Window_Caption_Bar = Active_Window.getElementById("Window_Caption_Bar");
-// const Window_Close_Button = Active_Window.getElementById("#Window_Caption_Bar");
-var Working_Area = document.getElementById("Working_Area");
+const activeWindow_Caption_Bar = activeWindow.querySelector("#window-caption-bar");
+// const Active_Window_Caption_Bar = Active_Window.getElementsByClassName("window-caption-bar");
+// const Active_Window_Caption_Bar = Active_Window.getElementById("window-caption-bar");
+// const Window_Close_Button = Active_Window.getElementById("#window-caption-bar");
+var workingArea = document.getElementById("working-area");
 
-function Close_Window()
+function closeWindow()
 {
     console.log("Clicked");
-    Active_Window.classList.add("Close_Window");
+    activeWindow.classList.add("Close_Window");
 }
 
 // function Make_Window_Draggable(Window, Window_Caption_Bar)
@@ -57,177 +57,176 @@ function Close_Window()
 //     }
 // }
 
-function Register_Window_Events(Window) {
-    let X_Offset, Y_Offset;
-    let Original_X_Offset = 0;
-    let Original_Y_Offset = 0;
-    var Is_Dragging = false;
+function registerWindowEvents(window) {
+    let xOffset, yOffset;
+    let originalxOffset = 0;
+    let originalyOffset = 0;
+    var isDragging = false;
     
-    const Window_Caption_Bar = Window.querySelector(".Window_Caption_Bar");
-    const Window_Minimize_Button = Window.querySelector(".Window_Maximize_And_Restore_Button");
-    const Window_Maximize_And_Restore_Button = Window.querySelector(".Window_Maximize_And_Restore_Button");
-    const Window_Maximize_And_Restore_Button_Check_Box = Window.querySelector(".Window_Maximize_And_Restore_Button > input[type=\"checkbox\"]");
-    const Window_Close_Button = Window.querySelector(".Window_Maximize_And_Restore_Button");
+    const windowcaptionBar = window.querySelector(".Window_Caption_Bar");
+    const windowminimizeButton = window.querySelector(".Window_Maximize_And_Restore_Button");
+    const windowMaximizeAndRestoreButton = window.querySelector(".Window_Maximize_And_Restore_Button");
+    const windowMaximizeAndRestoreButtonCheckBox = window.querySelector(".Window_Maximize_And_Restore_Button > input[type=\"checkbox\"]");
+    const windowcloseButton = window.querySelector(".Window_Maximize_And_Restore_Button");
     
-    Window_Caption_Bar.addEventListener("mousedown", Window_Caption_Bar_Mouse_Down);
-    Window_Caption_Bar.addEventListener("touchstart", Window_Caption_Bar_Touch_Start, { passive: false });
-    Window_Caption_Bar.addEventListener("dblclick", (event) => {
-        Window_Maximize_And_Restore_Button.click();
+    windowCaptionBar.addEventListener("mousedown", windowCaptionBarMouseDown);
+    windowCaptionBar.addEventListener("touchstart", windowCaptionBarTouchStart, { passive: false });
+    windowCaptionBar.addEventListener("dblclick", (event) => {
+        windowMaximizeAndRestoreButton.click();
     });
-    Window_Caption_Bar.addEventListener("contextmenu", (event) => {
+    windowCaptionBar.addEventListener("contextmenu", (event) => {
         event.preventDefault();
-        Window_Maximize_And_Restore_Button.click();
+        windowMaximizeAndRestoreButton.click();
     });
 
-    function Window_Start_Dragging(event, Cursor) {
-        Original_X_Offset = Window.getBoundingClientRect().left;
-        Original_Y_Offset = Window.getBoundingClientRect().top;
-        Window.classList.add("Dragging");
-        // console.log(`${Original_X_Offset}, ${Original_Y_Offset}`);
-        // console.log(Original_X_Offset);
-        // console.log(Original_Y_Offset);
-        Is_Dragging = true;
+    function windowstartDragging(event, cursor) {
+        originalXOffset = window.getBoundingClientRect().left;
+        originalYOffset = window.getBoundingClientRect().top;
+        window.classList.add("Dragging");
+        // console.log(`${originalXOffset}, ${originalYOffset}`);
+        // console.log(originalXOffset);
+        // console.log(originalYOffset);
+        isDragging = true;
         // Calculate the offset between the mouse cursor and the draggable element
-        X_Offset = Cursor.clientX - Window.getBoundingClientRect().left;
-        Y_Offset = Cursor.clientY - Window.getBoundingClientRect().top;
+        xOffset = cursor.clientX - window.getBoundingClientRect().left;
+        yOffset = cursor.clientY - window.getBoundingClientRect().top;
     }
-    function Window_Caption_Bar_Mouse_Down(event) {
+    function windowCaptionBarMouseDown(event) {
         // Prevent default behavior to avoid text selection (mouse down)
         event.preventDefault();
         Window_Start_Dragging(event, event);
         
-        document.addEventListener("mousemove", Window_Caption_Bar_Mouse_Move);
-        document.addEventListener("mouseup", Window_Caption_Bar_Mouse_Up);
+        document.addEventListener("mousemove", windowCaptionBarMouseMove);
+        document.addEventListener("mouseup", windowCaptionBarMouseUp);
     }
-    function Window_Caption_Bar_Touch_Start(event) {
+    function windowCaptionBarTouchStart(event) {
         // Prevent default behavior to avoid scrolling (touch start)
         // event.preventDefault();
         Window_Start_Dragging(event, event.touches[0]);
         
-        document.addEventListener("touchmove", Window_Caption_Bar_Touch_Move, { passive: false });
-        document.addEventListener("touchend", Window_Caption_Bar_Touch_End);
-        document.addEventListener("touchcancel", Window_Caption_Bar_Touch_End);
+        document.addEventListener("touchmove", windowCaptionBarTouchMove, { passive: false });
+        document.addEventListener("touchend", windowCaptionBarTouchEnd);
+        document.addEventListener("touchcancel", windowCaptionBarTouchEnd);
     }
     
-    function Window_Dragging(event, Cursor) {
-        // Window_Maximize_And_Restore_Button_Check_Box.checked = false;
+    function windowDragging(event, cursor) {
+        // windowMaximizeAndRestoreButtonCheckBox.checked = false;
 
         // Calculate the new position of the draggable element
         
-        const x = Cursor.clientX - X_Offset;
-        const y = Cursor.clientY - Y_Offset;
+        const x = cursor.clientX - xOffset;
+        const y = cursor.clientY - yOffset;
         
         // Set the new position of the draggable element
-        Window.style.left = `${x}px`;
-        if (y <= Working_Area.getBoundingClientRect().top) {
-            Window.style.top = `${Working_Area.getBoundingClientRect().top}px`;
+        window.style.left = `${x}px`;
+        if (y <= workingArea.getBoundingClientRect().top) {
+            window.style.top = `${workingArea.getBoundingClientRect().top}px`;
         } else {
-            Window.style.top = `${y}px`;
+            window.style.top = `${y}px`;
         }
         // Window.style.transform = `skew(${-((event.movementX > 80 ? 80 : (event.movementX < -80 ? -80 : event.movementX)) / 2)}deg)`;
     }
-    function Window_Caption_Bar_Mouse_Move(event) {
-        Window_Dragging(event, event);
+    function windowCaptionBarMouseMove(event) {
+        windowDragging(event, event);
     }
-    function Window_Caption_Bar_Touch_Move(event) {
+    function windowCaptionBarTouchMove(event) {
         event.preventDefault(); // Prevent default behavior to avoid scrolling
-        Window_Dragging(event, event.touches[0]);
+        windowDragging(event, event.touches[0]);
     }
     
-    function Window_Stop_Dragging(Cursor) {
-        Window.classList.remove("Dragging");
-        // Window.style.transform = "skew(0deg)";
-        if (Cursor.clientY < Working_Area.getBoundingClientRect().top) {
-            Window_Maximize_And_Restore_Button_Check_Box.checked = false;
-            Window_Maximize_And_Restore_Button_Check_Box.click();
+    function windowstopDragging(cursor) {
+        window.classList.remove("Dragging");
+        // window.style.transform = "skew(0deg)";
+        if (cursor.clientY < workingArea.getBoundingClientRect().top) {
+            windowMaximizeAndRestoreButtonCheckBox.checked = false;
+            windowMaximizeAndRestoreButtonCheckBox.click();
             setTimeout(() => {
-                // Window.top
-                Window.style.left = `${Original_X_Offset}px`;
-                Window.style.top = `${Original_Y_Offset}px`;
+                // window.top
+                window.style.left = `${originalXOffset}px`;
+                window.style.top = `${originalYOffset}px`;
             }, 500);
         }
-        Is_Dragging = false;
+        isDragging = false;
     }
-    function Window_Caption_Bar_Mouse_Up(event) {
+    function windowCaptionBarMouseUp(event) {
         console.log(event);
         Window_Stop_Dragging(event);
         
         // Remove event listeners for mousemove and mouseup events
-        document.removeEventListener("mousemove", Window_Caption_Bar_Mouse_Move);
-        document.removeEventListener("mouseup", Window_Caption_Bar_Mouse_Up);
+        document.removeEventListener("mousemove", windowCaptionBarMouseMove);
+        document.removeEventListener("mouseup", windowCaptionBarMouseUp);
     }
-    function Window_Caption_Bar_Touch_End(event) {
+    function windowCaptionBarTouchEnd(event) {
         console.log(event);
         // Window_Stop_Dragging(event.touches[0]);
 
         // Remove event listeners for touchmove and touchend events
-        document.removeEventListener("touchmove", Window_Caption_Bar_Touch_Move);
-        document.removeEventListener("touchend", Window_Caption_Bar_Touch_End);
-        document.removeEventListener("touchcancel", Window_Caption_Bar_Touch_End);
+        document.removeEventListener("touchmove", windowCaptionBarTouchMove);
+        document.removeEventListener("touchend", windowCaptionBarTouchEnd);
+        document.removeEventListener("touchcancel", windowCaptionBarTouchEnd);
     }
     
-    Window_Maximize_And_Restore_Button_Check_Box.addEventListener("change", function(event) {
+    windowMaximizeAndRestoreButtonCheckBox.addEventListener("change", function(event) {
         // console.log("Animating window animation");
         console.log(event);
-        Window.classList.add("Maximizing_Or_Restore_Down_Animation");
+        window.classList.add("Maximizing_Or_Restore_Down_Animation");
         
         setTimeout(() => {
-            Window.classList.remove("Maximizing_Or_Restore_Down_Animation");
+            window.classList.remove("Maximizing_Or_Restore_Down_Animation");
         }, 500);
         // console.log("Window animation finished");
     })
 }
 
-function Recreate_Element(Element)
+function recreateElement(element)
 {
-    console.log(Element);
-    console.log(Element.parentElement);
-    const Selected_Element = Element;
-    const Selected_Element_Parent = Element.parentElement;
-    Element.remove();
-    Selected_Element_Parent.appendChild(Selected_Element);
+    console.log(element);
+    console.log(element.parentElement);
+    const selectedElement = element;
+    const selectedelementParent = element.parentElement;
+    element.remove();
+    selectedElementParent.appendChild(selectedElement);
 }
 
-function Recreate_Element_And_Remove_The_Events(Element)
+function recreateElement_And_Remove_The_Events(element)
 {
-    console.log(Element);
-    console.log(Element.parentElement);
-    const New_Element = Element.cloneNode(true); // Create a clone of the element
-    Element.parentNode.replaceChild(New_Element, Element); // Replace the old element with the new one
+    console.log(element);
+    console.log(element.parentElement);
+    const newElement = element.cloneNode(true); // Create a clone of the element
+    element.parentNode.replaceChild(newElement, element); // Replace the old element with the new one
 }
 
-function Remove_Element_And_Events(Element)
+function removeElement_And_Events(element)
 {
-    console.log(Element);
-    console.log(Element.parentElement);
-    const New_Element = Element.cloneNode(true); // Create a clone of the element
-    Element.parentNode.replaceChild(New_Element, Element); // Replace the old element with the new one
-    New_Element.remove();
+    console.log(element);
+    console.log(element.parentElement);
+    const newElement = element.cloneNode(true); // Create a clone of the element
+    element.parentNode.replaceChild(newElement, element); // Replace the old element with the new one
+    newElement.remove();
 }
 
 // Add event listener for mousedown event on the draggable element
-Register_Window_Events(Active_Window);
-console.log(Active_Window.querySelector(".Window_Caption_Bar input[type=\"checkbox\"]"));
+registerWindowEvents(activeWindow);
+console.log(activeWindow.querySelector(".Window_Caption_Bar input[type=\"checkbox\"]"));
 
-Menu_Bar.style.display = "none";
+menuBar.style.display = "none";
 Taskbar.style.display = "none";
-Active_Window.style.display = "none";
-
+activeWindow.style.display = "none";
 
 
 setTimeout(() => {
-    Boot.style.animation = "Fade_Out 1s linear";
+    boot.style.animation = "Fade_Out 1s linear";
 }, 2000);
 setTimeout(() => {
-    Boot.style.display = "none";
+    boot.style.display = "none";
 }, 2900);
 setTimeout(() => {
-    Menu_Bar.style.display = "flex";
+    menuBar.style.display = "flex";
     Taskbar.style.display = "flex";
 }, 4000);
 
 setTimeout(() => {
-    Active_Window.style.display = "flex";
-    Active_Window.classList.add("Open_Window");
+    activeWindow.style.display = "flex";
+    activeWindow.classList.add("Open_Window");
     // Active_Window.style.animation = "Open_Window 1s cubic-bezier(0, 0, 0, 1);";
 }, 5000);
