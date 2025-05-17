@@ -4,7 +4,7 @@ const boot = document.getElementById("boot");
 // const Active_Window = document.getElementsByClassName("window");
 const activeWindow = document.getElementById("window--active");
 const menuBar = document.getElementById("menu-bar");
-const Taskbar = document.getElementById("taskbar");
+const taskbar = document.getElementById("taskbar");
 // const Active_Window_Caption_Bar = Active_Window.querySelector(".Window_Caption_Bar");
 const activeWindow_Caption_Bar = activeWindow.querySelector("#window-caption-bar");
 // const Active_Window_Caption_Bar = Active_Window.getElementsByClassName("window-caption-bar");
@@ -15,7 +15,7 @@ var workingArea = document.getElementById("working-area");
 function closeWindow()
 {
     console.log("Clicked");
-    activeWindow.classList.add("Close_Window");
+    activeWindow.classList.add("close-window");
 }
 
 // function Make_Window_Draggable(Window, Window_Caption_Bar)
@@ -210,23 +210,23 @@ registerWindowEvents(activeWindow);
 console.log(activeWindow.querySelector(".Window_Caption_Bar input[type=\"checkbox\"]"));
 
 menuBar.style.display = "none";
-Taskbar.style.display = "none";
+taskbar.style.display = "none";
 activeWindow.style.display = "none";
 
 
 setTimeout(() => {
-    boot.style.animation = "Fade_Out 1s linear";
+    boot.style.animation = "fade-out 1s linear";
 }, 2000);
 setTimeout(() => {
     boot.style.display = "none";
 }, 2900);
 setTimeout(() => {
     menuBar.style.display = "flex";
-    Taskbar.style.display = "flex";
+    taskbar.style.display = "flex";
 }, 4000);
 
 setTimeout(() => {
     activeWindow.style.display = "flex";
-    activeWindow.classList.add("Open_Window");
-    // Active_Window.style.animation = "Open_Window 1s cubic-bezier(0, 0, 0, 1);";
+    activeWindow.classList.add("open-window");
+    // activeWindow.style.animation = "open-window 1s cubic-bezier(0, 0, 0, 1);";
 }, 5000);
