@@ -18,42 +18,42 @@ function closeWindow()
     activeWindow.classList.add("close-window");
 }
 
-// function Make_Window_Draggable(Window, Window_Caption_Bar)
+// function Make_Window_Draggable(Window, windowCaptionBar)
 // {
-//     let X_Offset, Y_Offset;
+//     let xOffset, yOffset;
     
-//     Window_Caption_Bar.addEventListener("mousedown", Window_Caption_Bar_Mouse_Down);
+//     windowCaptionBar.addEventListener("mousedown", windowCaptionBarMouseDown);
     
 //     // Function to handle mouse down event
-//     function Window_Caption_Bar_Mouse_Down(event)
+//     function windowCaptionBarMouseDown(event)
 //     {
 //         // Calculate the offset between the mouse cursor and the draggable element
-//         X_Offset = event.clientX - Window.getBoundingClientRect().left;
-//         Y_Offset = event.clientY - Window.getBoundingClientRect().top;
+//         xOffset = event.clientX - Window.getBoundingClientRect().left;
+//         yOffset = event.clientY - Window.getBoundingClientRect().top;
         
 //         // Add event listeners for mousemove and mouseup events
-//         document.addEventListener("mousemove", Window_Caption_Bar_Mouse_Move);
-//         document.addEventListener("mouseup", Window_Caption_Bar_Mouse_Up);
+//         document.addEventListener("mousemove", windowCaptionBarMouseMove);
+//         document.addEventListener("mouseup", windowCaptionBarMouseUp);
 //     }
     
 //     // Function to handle mouse move event
-//     function Window_Caption_Bar_Mouse_Move(event)
+//     function windowCaptionBarMouseMove(event)
 //     {
 //         // Calculate the new position of the draggable element
-//         const x = event.clientX - X_Offset;
-//         const y = event.clientY - Y_Offset;
+//         const x = event.clientX - xOffset;
+//         const y = event.clientY - yOffset;
         
 //         // Set the new position of the draggable element
-//         Active_Window.style.left = `${x}px`;
-//         Active_Window.style.top = `${y}px`;
+//         activeWindow.style.left = `${x}px`;
+//         activeWindow.style.top = `${y}px`;
 //     }
 
 //     // Function to handle mouse up event
-//     function Window_Caption_Bar_Mouse_Up()
+//     function windowCaptionBarMouseUp()
 //     {
 //         // Remove event listeners for mousemove and mouseup events
-//         document.removeEventListener("mousemove", Window_Caption_Bar_Mouse_Move);
-//         document.removeEventListener("mouseup", Window_Caption_Bar_Mouse_Up);
+//         document.removeEventListener("mousemove", windowCaptionBarMouseMove);
+//         document.removeEventListener("mouseup", windowCaptionBarMouseUp);
 //     }
 // }
 
@@ -63,11 +63,11 @@ function registerWindowEvents(window) {
     let originalyOffset = 0;
     var isDragging = false;
     
-    const windowCaptionBar = window.querySelector(".Window_Caption_Bar");
-    const windowMinimizeButton = window.querySelector(".Window_Maximize_And_Restore_Button");
-    const windowMaximizeAndRestoreButton = window.querySelector(".Window_Maximize_And_Restore_Button");
-    const windowMaximizeAndRestoreButtonCheckBox = window.querySelector(".Window_Maximize_And_Restore_Button > input[type=\"checkbox\"]");
-    const windowCloseButton = window.querySelector(".Window_Maximize_And_Restore_Button");
+    const windowCaptionBar = window.querySelector(".window-caption-bar");
+    const windowMinimizeButton = window.querySelector(".window-maximize-and-restore-button");
+    const windowMaximizeAndRestoreButton = window.querySelector(".window-maximize-and-restore-button");
+    const windowMaximizeAndRestoreButtonCheckBox = window.querySelector(".window-maximize-and-restore-button > input[type=\"checkbox\"]");
+    const windowCloseButton = window.querySelector(".window-maximize-and-restore-button");
     
     windowCaptionBar.addEventListener("mousedown", windowCaptionBarMouseDown);
     windowCaptionBar.addEventListener("touchstart", windowCaptionBarTouchStart, { passive: false });
