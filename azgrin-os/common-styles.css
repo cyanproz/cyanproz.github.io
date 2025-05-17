@@ -1,11 +1,11 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');*/
 @import url('https://cyanproz.github.io/common-styles.css');
 :root {
-    /* --GexOS_Arrow_Cursor: url(GexOS_Cursor.cur), default; */
-    --Scrollbar_Track: #fff;
+    /* --azgrin-os-arrow-cursor: url(GexOS_Cursor.cur), default; */
+    --scrollbar-track: #fff;
 }
 
-@keyframes Bounce_Rotation {
+@keyframes bounce-rotation {
     0%
     {
         transform: rotate(-12.5deg);
@@ -22,7 +22,7 @@
     }
 }
 
-@keyframes Open_Window {
+@keyframes open-window {
     0%
     {
         filter: opacity(0%);
@@ -36,7 +36,7 @@
     }
 }
 
-@keyframes Close_Window {
+@keyframes close-window {
     0%
     {
         /* display: none; */
@@ -52,73 +52,73 @@
     }
 }
 
-@keyframes Fade_Out {
+@keyframes fade-out {
     100%
     {
         filter: opacity(0%);
     }
 }
 
-.Bounce_Rotation_Element {
-    animation: Bounce_Rotation 5s ease-in-out infinite;
+.bounce-rotation-element {
+    animation: bounce-rotation 5s ease-in-out infinite;
 }
 
-.Rainbow_Background_Element {
-    animation: Rainbow_Background 10s linear infinite;
+.rainbow-background-element {
+    animation: rainbow-background 10s linear infinite;
 }
 
-.Rainbow_Foreground_Element {
-    animation: Rainbow_Foreground 10s linear infinite;
+.rainbow-foreground-element {
+    animation: rainbow-foreground 10s linear infinite;
 }
 
-.Open_Window {
-    animation: Open_Window .5s linear;
+.open-window {
+    animation: open-window .5s linear;
 }
 
-.Close_Window {
-    /* animation: Close_Window 0.3s cubic-bezier(0, 0, 0, 1); */
-    animation: Close_Window 0.3s cubic-bezier(0, 0, 1, 0);
-    /* animation: Close_Window 0.3s linear; */
+.close-window {
+    /* animation: close-window 0.3s cubic-bezier(0, 0, 0, 1); */
+    animation: close-window 0.3s cubic-bezier(0, 0, 1, 0);
+    /* animation: close-window 0.3s linear; */
 }
 
 :root {
-    --Custom_Color_1: #05f;
-    --Custom_Color_1_Hover: #0040c0;
-    --Custom_Color_1_Active: #002775;
-    --Link: #08f;
-    --Link_Hover: #0040c0;
-    --Link_Active: #002775;
+    --custom-color-1: #05f;
+    --custom-color-1-hover: #0040c0;
+    --custom-color-1-active: #002775;
+    --link: #08f;
+    --link-hover: #0040c0;
+    --link-active: #002775;
 }
 
 @media (prefers-color-scheme: light) {
     :root {
-        --Background: #fff;
-        --Foreground: #f8f8f8;
-        --Text: #000;
-        --Gray-Text: #666;
-        --Border: #888;
-        --Button: #eee;
-        --Button_Hover: #f8f8f8;
-        --Button_Active: #ddd;
-        --Scrollbar_Thumb: #aaa;
-        --Scrollbar_Thumb_Hover: #bbb;
-        --Scrollbar_Thumb_Active: #999;
+        --background: #fff;
+        --foreground: #f8f8f8;
+        --text: #000;
+        --gray-Text: #666;
+        --border: #888;
+        --button: #eee;
+        --button-hover: #f8f8f8;
+        --button-active: #ddd;
+        --scrollbar-thumb: #aaa;
+        --scrollbar-thumb-hover: #bbb;
+        --scrollbar-thumb-active: #999;
     }
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --Background: #080808;
-        --Foreground: #111;
-        --Text: #fff;
-        --Gray-Text: #aaa;
-        --Border: #333;
-        --Button: #181818;
-        --Button_Hover: #333;
-        --Button_Active: #000;
-        --Scrollbar_Thumb: #444;
-        --Scrollbar_Thumb_Hover: #555;
-        --Scrollbar_Thumb_Active: #333;
+        --background: #080808;
+        --foreground: #111;
+        --text: #fff;
+        --gray-Text: #aaa;
+        --border: #333;
+        --button: #181818;
+        --button-hover: #333;
+        --button-active: #000;
+        --scrollbar-thumb: #444;
+        --scrollbar-thumb-hover: #555;
+        --scrollbar-thumb-active: #333;
     }
 }
 
@@ -128,32 +128,33 @@
         background-color: #222;
     }
 
-    .Menus
+    .menus
     {
         background-color: #eeeeee80;
     }
 
-    /* .Window, .Window_Body
+    /* .window, .window-body
     {
         color: white;
         background-color: #222;
     } */
-    .Window
+    
+    .window
     {
         background-color: transparent;
     }
 
-    .Window_Body
+    .window-body
     {
         background-color: #222;
     }
 
-    .Window_Caption_Bar
+    .window-caption-bar
     {
         background-color: #3334;
     }
 
-    .Window_Caption_Bar_Name
+    .window-caption-bar-name
     {
         text-shadow: 0px 0px 8px #ffffff;
     }
@@ -179,27 +180,27 @@
     } */
 }
 
-/* *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.Window_Caption_Bar_Button_Group):not(.Window_Caption_Bar_Button_Group)*/
-#Main_Session_Screen { 
+/* *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.window-caption-bar-button-group):not(.window-caption-bar-button-group)*/
+#main-session-screen { 
     font-family: var(--ui-font-family);
     font-size: 16px;
     /* font-family: 'Ubuntu', sans-serif; */
 }
 
-#Main_Session_Screen, button { 
-    color: var(--Text);
+#main-session-screen, button { 
+    color: var(--text);
 }
 
-*:not(.User_Selectable):not(.User_Selectable *):not(#Header_Container):not(#Header_Container *):not(#Blog_Container):not(#Blog_Container *) {
+*:not(.user-selectable):not(.user-selectable *):not(#header-container):not(#header-container *):not(#blog-container):not(#blog-container *) {
     user-select: none;
 }
 
-.User_Selectable, #Header_Container, #Header_Container *, #Blog_Container, #Blog_Container * {
+.user-selectable, #header-container, #header-container *, #blog-container, #blog-container * {
     user-select: text;
 }
 
 /* *:hover {
-    cursor: var(--GexOS_Arrow_Cursor);
+    cursor: var(--azgrin-os-arrow-cursor);
 } */
 
 ::-webkit-scrollbar {
@@ -308,7 +309,7 @@ progress {
     height: 20px;
 }
 
-#Desktop {
+#desktop {
     height: 100vh;
     background-image: url(https://wallpapers.com/images/hd/view-background-s7kpfnpr7qs123bm.jpg);
     background-size: cover;
@@ -316,7 +317,7 @@ progress {
     background-repeat: no-repeat;
 }
 
-#Boot {
+#boot {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -326,7 +327,7 @@ progress {
     background-color: black;
 }
 
-#Shutdown_Dialog {
+#shutdown-dialog {
     display: none;
     position: absolute;
     left: 0px;
@@ -339,7 +340,7 @@ progress {
     align-items: center;
 }
 
-#Shutdown_Dialog > dialog {
+#shutdown-dialog > dialog {
     position: absolute;
     top: 50%;
     bottom: 50%;
@@ -354,33 +355,33 @@ progress {
     box-shadow: 0px 8px 8px 6px rgba(0, 0, 0, 0.5);
 }
 
-#Shutdown_Dialog > dialog > header {
+#shutdown-dialog > dialog > header {
     background-color: #444;
     border-radius: 9px 9px 0px 0px;
     text-align: center;
 }
 
-/* #Shutdown_Dialog > dialog #Shutdown_Dialog_Body */
-#Shutdown_Dialog > dialog div {
+/* #shutdown-dialog > dialog #shutdown-dialog-body */
+#shutdown-dialog > dialog div {
     padding: 10px;
     border-radius: 0px 0px 9px 9px;
 }
 
-#Shutdown_Dialog > dialog button {
+#shutdown-dialog > dialog button {
     border: solid 1px black;
     border-radius: 5px;
     transition-duration: 0.3s;
 }
 
-#Shutdown_Dialog > dialog button:hover {
+#shutdown-dialog > dialog button:hover {
     background-color: #333;
 }
 
-#Shutdown_Dialog > dialog button:active {
+#shutdown-dialog > dialog button:active {
     background-color: #222;
 }
 
-#Docks_And_Working_Area_Layout {
+#docks-and-working-area-layout {
     overflow: hidden;
     position: absolute;
     top: 0px;
@@ -391,7 +392,7 @@ progress {
     grid-template-rows: max-content auto max-content;
 }
 
-#Menu_Bar {
+#menu-bar {
     order: 0;
     position: relative;
     top: 0px;
@@ -400,36 +401,36 @@ progress {
     display: flex;
     z-index: 999999;
     /* background-image: linear-gradient(90deg, magenta, cyan); */
-    background: var(--Foreground);
+    background: var(--foreground);
     border-bottom: solid 1px black;
     box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.5);
 }
 
-#Docks_And_Working_Area_Layout:has(#Working_Area .Window .Window_Maximize_And_Restore_Button > input[type="checkbox"]:checked) > #Menu_Bar {
+#docks-and-working-area-layout:has(#working-area .window .window-maximize-and-restore-button > input[type="checkbox"]:checked) > #menu-bar {
     box-shadow: none;
 }
 
-#Working_Area {
+#working-area {
     order: 1;
 }
 
-.Menu_Bar_Menus {
+.menu-bar-menus {
     display: flex;
     padding: 0px 10px 0px 10px;
     background-color: transparent;
     transition-duration: 0.3s;
 }
 
-.Menu_Bar_Menus:hover {
+.menu-bar-menus:hover {
     /* position: absolute; */
     background-color: #00000020;
 }
 
-.Menu_Bar_Menus:active {
+.menu-bar-menus:active {
     background-color: #00000040;
 }
 
-/* .Menu_Bar_Menus > div */
+/* .menu-bar-menus > div */
 /* { */
     /* position: absolute; */
     /* display: none; */
@@ -443,25 +444,25 @@ progress {
     /* filter: blur(4px); */
     /* backdrop-filter: blur(4px); */
 /* } */
-.Menu_Bar_Menus:hover > div {
+.menu-bar-menus:hover > div {
     display: block;
 }
 
-.Menu_Bar_Menus > div > div {
+.menu-bar-menus > div > div {
     padding: 0px 10px 0px 10px;
     background-color: transparent;
     transition-duration: 0.3s;
 }
 
-.Menu_Bar_Menus > div > div:hover {
+.menu-bar-menus > div > div:hover {
     background-color: #00000020;
 }
 
-.Menu_Bar_Menus > div > div:active {
+.menu-bar-menus > div > div:active {
     background-color: #00000040;
 }
 
-#Taskbar {
+#taskbar {
     order: 2;
     display: flex;
     position: relative;
@@ -470,7 +471,7 @@ progress {
     bottom: 0px;
 }
 
-.Window {
+.window {
     /* display: grid;
     grid-template-rows: fit-content 100% 10px; */
     display: flex;
@@ -499,16 +500,16 @@ progress {
     will-change: top, left;
 }
 
-.Window.Dragging {
+.window.dragging {
     /* transition: transform .01s ease-in-out; */
     transform-origin: center top;
 }
 
-.Window.Maximizing_Or_Restore_Down_Animation {
+.window.maximizing-or-restore-down-animation {
     transition: border-width .5s cubic-bezier(0, 0, 0, 1), border-radius .5s cubic-bezier(0, 0, 0, 1), top .5s cubic-bezier(0, 0, 0, 1), left .5s cubic-bezier(0, 0, 0, 1), width .5s cubic-bezier(0, 0, 0, 1), height .5s cubic-bezier(0, 0, 0, 1);
 }
 
-.Window:has(.Window_Maximize_And_Restore_Button > input[type="checkbox"]:checked) /* Window when maximized */ {
+.window:has(.window-maximize-and-restore-button > input[type="checkbox"]:checked) /* Window when maximized */ {
     top: 23px !important;
     left: 0px !important;
     /* right: 0px !important; */
@@ -519,11 +520,11 @@ progress {
     border-radius: 0px;
 }
 
-.Window::-webkit-scrollbar {
+.window::-webkit-scrollbar {
     display: none;
 }
 
-.Window_Caption_Bar {
+.window-caption-bar {
     border-bottom: solid 1px black;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
@@ -534,31 +535,31 @@ progress {
     backdrop-filter: blur(10px);
 }
 
-.Window:has(.Window_Maximize_And_Restore_Button > input[type="checkbox"]:checked) .Window_Caption_Bar {
+.window:has(.window-maximize-and-restore-button > input[type="checkbox"]:checked) .window-caption-bar {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
 }
 
-.Window_Caption_Bar:active {
+.window-caption-bar:active {
     cursor: move;
 }
 
-/* .Window_Caption_Bar:hover {
+/* .window-caption-bar:hover {
     cursor: default;
     cursor: grab;
 }
 
-.Window_Caption_Bar:active {
+.window-caption-bar:active {
     cursor: move;
     cursor: grabbing;
 } */
 
-.Window_Caption_Bar_Name {
+.window-caption-bar-name {
     background-color: transparent;
     text-shadow: #000 0px 0px 8px, #000 0px 0px 8px;
 }
 
-.Window_Caption_Bar_Button_Group {
+.window-caption-bar-button-group {
     position: absolute;
     display: flex;
     gap: 2px;
@@ -570,7 +571,7 @@ progress {
     font-size: 4px;
 }
 
-.Window_Caption_Bar_Button {
+.window-caption-bar-button {
     border: none;
     width: 18px;
     height: 18px;
@@ -586,7 +587,7 @@ progress {
     transition-duration: 0.5s;
 }
 
-.Window_Caption_Bar_Button > span.material-symbols-outlined {
+.window-caption-bar-button > span.material-symbols-outlined {
     position: relative;
     /* top: 2px; */
     padding: 3px;
@@ -594,49 +595,49 @@ progress {
     text-shadow: #000 0px 0px 8px, #000 0px 0px 8px;
 }
 
-.Window_Caption_Bar_Button:hover {
+.window-caption-bar-button:hover {
     background-color: #00000044;
 }
 
-.Window_Caption_Bar_Button:active {
+.window-caption-bar-button:active {
     cursor: default;
     background-color: #00000088;
 }
 
-.Window_Caption_Bar_Button::before {
+.window-caption-bar-button::before {
     position: relative;
     top: 3px;
 }
 
-/* .Window_Minimize_Button {
+/* .window-minimize-button {
 } */
 
-/* .Window_Maximize_And_Restore_Button {
+/* .window-maximize-and-restore-button {
 } */
 
-.Window_Maximize_And_Restore_Button:not(.Window_Maximize_And_Restore_Button:has(input[type="checkbox"]:checked)) > span.Icon.Restore.material-symbols-outlined {
+.window-maximize-and-restore-button:not(.window-maximize-and-restore-button:has(input[type="checkbox"]:checked)) > span.icon.restore.material-symbols-outlined {
     display: none;
 }
 
-.Window_Maximize_And_Restore_Button:has(input[type="checkbox"]:checked) > span.Icon.Maximize.material-symbols-outlined {
+.window-maximize-and-restore-button:has(input[type="checkbox"]:checked) > span.icon.maximize.material-symbols-outlined {
     display: none;
 }
 
-/* .Window_Close_Button {
+/* .window-close-button {
 } */
 
-.Window_Close_Button:hover {
+.window-close-button:hover {
     transition-duration: 0.5s;
     background: red;
 }
 
-.Window_Close_Button:active {
+.window-close-button:active {
     transition-duration: 0.5s;
     color: white;
     background: darkred;
 }
 
-.Window_Body {
+.window-body {
     /* height: calc(100% - 27px); */
     /* height: 100%; */
     flex-grow: 1;
@@ -648,11 +649,11 @@ progress {
     /* font-size: 100px; */
 }
 
-.Window_Body:hover {
+.window-body:hover {
     cursor: url(Bruh_Cursor.png), default;
 }
 
-.Menus {
+.menus {
     position: absolute;
     display: none;
     margin-left: -10px;
@@ -664,6 +665,6 @@ progress {
     backdrop-filter: blur(4px);
 }
 
-#Header_Container .title {
+#header-container .title {
     margin-top: 0px;
 }
