@@ -63,11 +63,11 @@ function registerWindowEvents(window) {
     let originalyOffset = 0;
     var isDragging = false;
     
-    const windowcaptionBar = window.querySelector(".Window_Caption_Bar");
-    const windowminimizeButton = window.querySelector(".Window_Maximize_And_Restore_Button");
+    const windowCaptionBar = window.querySelector(".Window_Caption_Bar");
+    const windowMinimizeButton = window.querySelector(".Window_Maximize_And_Restore_Button");
     const windowMaximizeAndRestoreButton = window.querySelector(".Window_Maximize_And_Restore_Button");
     const windowMaximizeAndRestoreButtonCheckBox = window.querySelector(".Window_Maximize_And_Restore_Button > input[type=\"checkbox\"]");
-    const windowcloseButton = window.querySelector(".Window_Maximize_And_Restore_Button");
+    const windowCloseButton = window.querySelector(".Window_Maximize_And_Restore_Button");
     
     windowCaptionBar.addEventListener("mousedown", windowCaptionBarMouseDown);
     windowCaptionBar.addEventListener("touchstart", windowCaptionBarTouchStart, { passive: false });
