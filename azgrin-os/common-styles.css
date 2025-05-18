@@ -1,7 +1,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); */
 /* @import url("https://cyanproz.github.io/common-styles.css"); */
 :root {
-    /* --azgrin-os-arrow-cursor: url(GexOS_Cursor.cur), default; */
+    --os-arrow-cursor: url(GexOS_Cursor.cur), default;
     --scrollbar-track: #fff;
 }
 
