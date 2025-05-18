@@ -79,7 +79,7 @@ function registerWindowEvents(window) {
         windowMaximizeAndRestoreButton.click();
     });
 
-    function windowstartDragging(event, cursor) {
+    function windowStartDragging(event, cursor) {
         originalXOffset = window.getBoundingClientRect().left;
         originalYOffset = window.getBoundingClientRect().top;
         window.classList.add("Dragging");
@@ -94,7 +94,7 @@ function registerWindowEvents(window) {
     function windowCaptionBarMouseDown(event) {
         // Prevent default behavior to avoid text selection (mouse down)
         event.preventDefault();
-        Window_Start_Dragging(event, event);
+        windowStartDragging(event, event);
         
         document.addEventListener("mousemove", windowCaptionBarMouseMove);
         document.addEventListener("mouseup", windowCaptionBarMouseUp);
@@ -102,7 +102,7 @@ function registerWindowEvents(window) {
     function windowCaptionBarTouchStart(event) {
         // Prevent default behavior to avoid scrolling (touch start)
         // event.preventDefault();
-        Window_Start_Dragging(event, event.touches[0]);
+        windowStartDragging(event, event.touches[0]);
         
         document.addEventListener("touchmove", windowCaptionBarTouchMove, { passive: false });
         document.addEventListener("touchend", windowCaptionBarTouchEnd);
