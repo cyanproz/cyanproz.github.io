@@ -150,7 +150,7 @@ function registerWindowEvents(window) {
     }
     function windowCaptionBarMouseUp(event) {
         console.log(event);
-        Window_Stop_Dragging(event);
+        windowStopDragging(event);
         
         // Remove event listeners for mousemove and mouseup events
         document.removeEventListener("mousemove", windowCaptionBarMouseMove);
@@ -158,7 +158,7 @@ function registerWindowEvents(window) {
     }
     function windowCaptionBarTouchEnd(event) {
         console.log(event);
-        // Window_Stop_Dragging(event.touches[0]);
+        // windowStopDragging(event.touches[0]);
 
         // Remove event listeners for touchmove and touchend events
         document.removeEventListener("touchmove", windowCaptionBarTouchMove);
