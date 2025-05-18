@@ -134,7 +134,7 @@ function registerWindowEvents(window) {
         windowDragging(event, event.touches[0]);
     }
     
-    function windowstopDragging(cursor) {
+    function windowStopDragging(cursor) {
         window.classList.remove("Dragging");
         // window.style.transform = "skew(0deg)";
         if (cursor.clientY < workingArea.getBoundingClientRect().top) {
