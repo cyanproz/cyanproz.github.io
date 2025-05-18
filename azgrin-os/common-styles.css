@@ -325,6 +325,7 @@ progress {
     right: 0px;
     z-index: 9999999;
     background-color: black;
+    font-family: var(--ui-monospaced-font-family);
 }
 
 #shutdown-dialog {
