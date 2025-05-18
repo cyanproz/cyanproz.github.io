@@ -215,7 +215,7 @@ activeWindow.style.display = "none";
 
 function startBoot() {
     setTimeout(() => {
-        boot.textContent = "Loading Azgrin OS...";
+        boot.textContent = "";
         boot.style.animation = "fade-out 1s linear";
     }, 1000);
     setTimeout(() => {
