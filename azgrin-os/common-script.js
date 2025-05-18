@@ -232,7 +232,7 @@ function startBoot() {
         activeWindow.style.display = "flex";
         activeWindow.classList.add("open-window");
         // activeWindow.style.animation = "open-window 1s cubic-bezier(0, 0, 0, 1);";
-    }, 5000);
+    }, 4000);
 }
 
 startBoot();
