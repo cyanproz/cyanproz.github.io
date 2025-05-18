@@ -235,4 +235,4 @@ function startBoot() {
     }, 4000);
 }
 
-startBoot();
+// startBoot();
