@@ -216,19 +216,23 @@ activeWindow.style.display = "none";
 function startBoot() {
     setTimeout(() => {
         boot.textContent = "";
-        boot.style.animation = "fade-out 1s linear";
     }, 1000);
     setTimeout(() => {
+        boot.style.animation = "fade-out 1s linear";
+    }, 2000);
+    setTimeout(() => {
         boot.style.display = "none";
-    }, 1900);
+    }, 2900);
     setTimeout(() => {
         menuBar.style.display = "flex";
         taskbar.style.display = "flex";
-    }, 2000);
+    }, 3000);
     
     setTimeout(() => {
         activeWindow.style.display = "flex";
         activeWindow.classList.add("open-window");
         // activeWindow.style.animation = "open-window 1s cubic-bezier(0, 0, 0, 1);";
-    }, 4000);
+    }, 5000);
 }
+
+startBoot();
