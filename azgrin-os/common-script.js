@@ -213,20 +213,22 @@ menuBar.style.display = "none";
 taskbar.style.display = "none";
 activeWindow.style.display = "none";
 
-
-setTimeout(() => {
-    boot.style.animation = "fade-out 1s linear";
-}, 2000);
-setTimeout(() => {
-    boot.style.display = "none";
-}, 2900);
-setTimeout(() => {
-    menuBar.style.display = "flex";
-    taskbar.style.display = "flex";
-}, 4000);
-
-setTimeout(() => {
-    activeWindow.style.display = "flex";
-    activeWindow.classList.add("open-window");
-    // activeWindow.style.animation = "open-window 1s cubic-bezier(0, 0, 0, 1);";
-}, 5000);
+function startBoot() {
+    setTimeout(() => {
+        boot.textContent = "Loading Azgrin OS...";
+        boot.style.animation = "fade-out 1s linear";
+    }, 1000);
+    setTimeout(() => {
+        boot.style.display = "none";
+    }, 1900);
+    setTimeout(() => {
+        menuBar.style.display = "flex";
+        taskbar.style.display = "flex";
+    }, 2000);
+    
+    setTimeout(() => {
+        activeWindow.style.display = "flex";
+        activeWindow.classList.add("open-window");
+        // activeWindow.style.animation = "open-window 1s cubic-bezier(0, 0, 0, 1);";
+    }, 4000);
+}
