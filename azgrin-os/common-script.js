@@ -82,7 +82,7 @@ function registerWindowEvents(window) {
     function windowStartDragging(event, cursor) {
         originalXOffset = window.getBoundingClientRect().left;
         originalYOffset = window.getBoundingClientRect().top;
-        window.classList.add("Dragging");
+        window.classList.add("dragging");
         // console.log(`${originalXOffset}, ${originalYOffset}`);
         // console.log(originalXOffset);
         // console.log(originalYOffset);
@@ -135,7 +135,7 @@ function registerWindowEvents(window) {
     }
     
     function windowStopDragging(cursor) {
-        window.classList.remove("Dragging");
+        window.classList.remove("dragging");
         // window.style.transform = "skew(0deg)";
         if (cursor.clientY < workingArea.getBoundingClientRect().top) {
             windowMaximizeAndRestoreButtonCheckBox.checked = false;
