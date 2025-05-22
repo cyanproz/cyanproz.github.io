@@ -618,6 +618,22 @@ input[type="color"]:focus {
     border: solid 1px var(--custom-color-1);
 }
 
+button:not(.header-button) *,
+a.button-link *,
+a.comment-reply *,
+a.blog-pager-older-link *,
+a.blog-pager-newer-link *,
+.item-control a *,
+select *,
+#Translate1 select.goog-te-combo *,
+input[type="button"] *,
+input[type="submit"] *,
+input[type="reset"] *,
+input[type="image"] *,
+input[type="color"] * {
+    color: inherit;
+}
+
 button:not(.header-button) * {
     cursor: inherit;
 }
