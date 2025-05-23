@@ -825,8 +825,8 @@ table.styled tbody.hover tr td {
     transition: background-color .1s ease-in-out;
 }
 
-table.styled.hover tr:hover th,
-table.styled.hover tr:hover td {
+table.styled.row--hover tr:hover th,
+table.styled.row--hover tr:hover td {
     background-color: var(--foreground-hover);
 }
 
