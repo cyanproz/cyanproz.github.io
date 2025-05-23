@@ -768,7 +768,7 @@ input[type="date"]::-webkit-calendar-picker-indicator::after,
 input[type="time"]::-webkit-calendar-picker-indicator::after,
 input[type="datetime-local"]::-webkit-calendar-picker-indicator::after {
     display: block;
-    position: absolute;
+    position: relative;
     width: 10px;
     height: 10px;
     margin-top: -16px;
