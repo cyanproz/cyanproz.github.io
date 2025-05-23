@@ -818,20 +818,20 @@ table.styled th {
     background-color: var(--foreground);
 }
 
-table.styled.row--hover tr th,
-table.styled.row--hover tr td,
-table.styled thead.hover tr th,
-table.styled tbody.hover tr td {
+table.styled.row--hoverable tr th,
+table.styled.row--hoverable tr td,
+table.styled thead.hoverable tr th,
+table.styled tbody.hoverable tr td {
     transition: background-color .1s ease-in-out;
 }
 
-table.styled.row--hover tr:hover th,
-table.styled.row--hover tr:hover td {
+table.styled.row--hoverable tr:hover th,
+table.styled.row--hoverable tr:hover td {
     background-color: var(--foreground-hover);
 }
 
-table.styled thead.hover tr:hover th,
-table.styled tbody.hover tr:hover td {
+table.styled thead.hoverable tr:hover th,
+table.styled tbody.hoverable tr:hover td {
     background-color: var(--background-hover);
 }
 
