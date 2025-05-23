@@ -615,7 +615,7 @@ input[type="reset"]:focus,
 input[type="image"]:focus,
 input[type="color"]:focus {
     outline: transparent;
-    border: solid 1px var(--custom-color-1);
+    border-color: var(--custom-color-1);
 }
 
 button:not(.header-button) *,
@@ -736,15 +736,16 @@ input[type="time"],
 input[type="datetime-local"] {
     padding-right: 2px;
     padding-top: 2px;
-    padding-bottom: 3px;
+    padding-bottom: 2px;
     font-variant-numeric: tabular-nums;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="time"]::-webkit-calendar-picker-indicator,
 input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    border: solid 1px transparent;
     border-radius: 2px;
-    padding: 3px;
+    padding: 2px;
     transition: background-color .2s ease-in-out;
     background-color: transparent;
     color: #999 !important;
@@ -757,10 +758,17 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
     background-color: #8888;
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator:focus,
+input[type="time"]::-webkit-calendar-picker-indicator:focus,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator:focus {
+    border-color: var(--custom-color-1);
+}
+
 input[type="date"]::-webkit-calendar-picker-indicator::after,
 input[type="time"]::-webkit-calendar-picker-indicator::after,
 input[type="datetime-local"]::-webkit-calendar-picker-indicator::after {
     display: block;
+    position: absolute;
     width: 10px;
     height: 10px;
     margin-top: -16px;
