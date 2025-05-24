@@ -891,8 +891,24 @@ details[open] > summary::before {
 
 /* Style-Specific Classes */
 
+.font-var-num--normal {
+    font-variant-numeric: normal;
+}
+
+.font-var-num--proportional {
+    font-variant-numeric: proportional-nums;
+}
+
 .font-var-num--tabular {
     font-variant-numeric: tabular-nums;
+}
+
+.font-var-num---oldstyle {
+    font-variant-numeric: oldstyle-nums;
+}
+
+.font-var-num---oldstyle-tabular {
+    font-variant-numeric: oldstyle-nums tabular-nums;
 }
 
 /* Group End */
