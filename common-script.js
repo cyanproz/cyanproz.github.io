@@ -211,14 +211,15 @@ class AlertDialog {
             
             this.footer.appendChild(button);
         });
-    }
-
-    show() {
+        
         // Append all to form dialog
         this.dialog.appendChild(this.header);
         this.dialog.appendChild(this.body);
         this.dialog.appendChild(this.footer);
         this.overlay.appendChild(this.dialog);
+    }
+
+    show() {
         document.body.appendChild(this.overlay);
         
         requestAnimationFrame(() => {
