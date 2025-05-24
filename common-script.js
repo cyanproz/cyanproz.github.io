@@ -1,5 +1,5 @@
 // Variables
-try { var Search_Parameters = new URLSearchParams(window.location.search); }
+try { var urlQueryParams = new URLSearchParams(window.location.search); }
 catch (e) {}
 
 const Dev_Mode = true;
@@ -244,14 +244,14 @@ try {
 
 // == Search Paremeters ==
 try {
-    console.log(Search_Parameters.get("page"))
+    console.log(urlQueryParams.get("page"))
     // • Pages
-    // if (!(Search_Parameters.get("indexpage") == "blog" || location.href.includes("search?q=")) || Page_Is_Static_Page)
+    // if (!(urlQueryParams.get("indexpage") == "blog" || location.href.includes("search?q=")) || Page_Is_Static_Page)
     // {
     //     Blog_Page.style.display = "none";
     //     Home_Page.style.display = "block";
     // }
-    if ((Page_Is_Home_Page && Search_Parameters.get("indexpage") == "blog" || location.href.includes("search?q=")) || Page_Is_Static_Page) {
+    if ((Page_Is_Home_Page && urlQueryParams.get("indexpage") == "blog" || location.href.includes("search?q=")) || Page_Is_Static_Page) {
         Home_Page.style.display = "none";
         Blog_Page.style.display = "flex";
         // console.log("gyguh9ui");
@@ -261,7 +261,7 @@ try {
     //     Home_Page.style.display = "none";
     //     Blog_Page.style.display = "block";
     // }
-    console.log(Search_Parameters.get("indexpage") == "blog");
+    console.log(urlQueryParams.get("indexpage") == "blog");
     console.log(location.href.includes("search?q="));
     console.log(Page_Is_Home_Page);
     if (Page_Is_Home_Page) {
@@ -275,16 +275,16 @@ try {
 
     }
     // • Easter Eggs
-    if (Search_Parameters.get("secret") == "editable") {
+    if (urlQueryParams.get("secret") == "editable") {
         document.documentElement.setAttribute("contenteditable", "true");
     }
-    if (Search_Parameters.get("secret") == "error") {
+    if (urlQueryParams.get("secret") == "error") {
         console.error("Bruh");
     }
-    if (Search_Parameters.get("secret") == "error_2" || Search_Parameters.get("secret") == "error-2" || Search_Parameters.get("secret") == "error2") {
+    if (urlQueryParams.get("secret") == "error_2" || urlQueryParams.get("secret") == "error-2" || urlQueryParams.get("secret") == "error2") {
         console.error("Bruh");
     }
-    if (Search_Parameters.get("secret") == "ohio") {
+    if (urlQueryParams.get("secret") == "ohio") {
         console.error("Down in Ohio, swag like Ohio");
         const Ohio_Flag = document.createElement("img");
         Ohio_Flag.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Ohio.svg");
@@ -297,7 +297,7 @@ try {
         Ohio_Flag.style.left = "0px";
         document.body.appendChild(Ohio_Flag);
     }
-    if (Search_Parameters.get("secret") == "unexpected") {
+    if (urlQueryParams.get("secret") == "unexpected") {
         console.error("Something went wrong");
         document.getElementById("Header").remove();
         document.getElementById("Main_Content").remove();
@@ -310,10 +310,10 @@ try {
         // Body.appendChild(Error_Text)
         Show_Message_Box_Dialog("Error", "Something went wrong")
     }
-    // if (Search_Parameters.get("secret") == "rtl") {
+    // if (urlQueryParams.get("secret") == "rtl") {
     //     document.documentElement.style.direction = "rtl";
     // }
-    if (Search_Parameters.get("secret") == "keanu") {
+    if (urlQueryParams.get("secret") == "keanu") {
         document.title = document.title.replace("CyanProz", "CyaneProz");
         document.body.querySelectorAll("a, h1.title, div.widget.Attribution > .widget-content").forEach(function(element) {
             if (element.textContent.includes("CyanProz")) {
@@ -325,16 +325,16 @@ try {
         }
         catch (e) {}
     }
-    if (Search_Parameters.get("secret") == "singlestorey") {
+    if (urlQueryParams.get("secret") == "singlestorey") {
         console.log("Hi");
         document.documentElement.style.fontFeatureSettings = "\"ss02\", \"ss03\"";
     }
-    if (Search_Parameters.get("secret") == "smallcaps") {
+    if (urlQueryParams.get("secret") == "smallcaps") {
         console.log("Hi");
         document.documentElement.style.fontFeatureSettings = "\"smcp\"";
     }
     // • Pages
-    // if (Search_Parameters.has("page") && Search_Parameters.get("page").trim() && Search_Parameters.get("page") != "home" && Search_Parameters.get("page") != "website_lab")
+    // if (urlQueryParams.has("page") && urlQueryParams.get("page").trim() && urlQueryParams.get("page") != "home" && urlQueryParams.get("page") != "website_lab")
     // {
     //     Side_Bar.style.display = "block";
     //     Main_Content.style.marginLeft = "300px";
@@ -345,21 +345,21 @@ try {
     //     Side_Bar.style.display = "none";
     //     Main_Content.style.marginLeft = "0px";
     // }
-    // if (Search_Parameters.get("page") == "website_lab")
+    // if (urlQueryParams.get("page") == "website_lab")
     // {
     //     Main_Content.style.padding = "0px";
     //     Main_Content.style.minHeight = "calc(100vh - 55px)";
     //     console.log("OK");
     // }
-    // if (Search_Parameters.get("page") == "home")
+    // if (urlQueryParams.get("page") == "home")
     // {
     //     Home_Page.style.display = "block";
     // }
-    // if (Search_Parameters.get("page") == "c-sharp")
+    // if (urlQueryParams.get("page") == "c-sharp")
     // {
     //     CSharp_Page.style.display = "block";
     // }
-    // if (Search_Parameters.get("page") == "website_lab")
+    // if (urlQueryParams.get("page") == "website_lab")
     // {
     //     Website_Lab_Page.style.display = "block";
     // }
