@@ -53,7 +53,7 @@ function view_image(URL) {
     image_viewer.querySelector(".dialog > img").src = URL;
 }
 
-function Get_Windows_OS() {
+function getWindowsOS() {
     // http://msdn.microsoft.com/en-us/library/ms537503(v=vs.85).aspx#PltToken
     if (navigator.appVersion.indexOf("Windows NT 10.")!=-1) {
         return 'Windows 10, Windows 11';
@@ -101,7 +101,7 @@ function Get_Windows_OS() {
         return "Unknown Windows OS";
     }
 }
-console.log(Get_Windows_OS());
+console.log(getWindowsOs());
 
 var userAgent = navigator.userAgent;
 function getBrowserPlatform() {
