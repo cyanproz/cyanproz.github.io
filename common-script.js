@@ -101,7 +101,7 @@ function getWindowsOS() {
         return "Unknown Windows OS";
     }
 }
-console.log(getWindowsOs());
+console.log(getWindowsOS());
 
 var userAgent = navigator.userAgent;
 function getBrowserPlatform() {
