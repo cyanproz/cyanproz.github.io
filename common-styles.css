@@ -365,6 +365,7 @@ h5,
 h6 {
     margin: 0px;
     color: var(--text);
+    font-weight: bold;
 }
 
 h1:not(.widget.Header h1.title), h1 > a, h2, h3, h4, h5, h6 {
