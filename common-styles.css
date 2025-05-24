@@ -365,7 +365,7 @@ h5,
 h6 {
     margin: 0px;
     color: var(--text);
-    font-weight: bold;
+    font-weight: 600;
 }
 
 h1:not(.widget.Header h1.title), h1 > a, h2, h3, h4, h5, h6 {
@@ -412,6 +412,7 @@ h5 {
 
 h6 {
     font-size: 1.4em;
+    font-weight: 600;
 }
 
 h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a, h3.post-title.entry-title > a {
