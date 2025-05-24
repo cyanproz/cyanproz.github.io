@@ -889,9 +889,13 @@ details[open] > summary::before {
     /* transform: rotate(90deg); */
 }
 
+/* Style-Specific Classes */
+
 .font-var-num--tabular {
     font-variant-numeric: tabular-nums;
 }
+
+/* Group End */
 
 .container-box-template--1,
 .container-box-template--1--wide {
