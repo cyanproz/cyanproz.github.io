@@ -316,7 +316,7 @@ body > div.skiptranslate[style*="display: none"] {
 #Blog_Container > .widget > h2, #Blog_Container > .widget h3:not(.Blog h3), #Blog_Container > .widget h3:not(.Blog h3) a,
 #Footer > .widget > h2, #Footer > .widget h3, #Footer > .widget h3 a {
     font-size: 1.4rem;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .widget > .widget-content > ul {
