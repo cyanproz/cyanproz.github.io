@@ -136,6 +136,18 @@ const AlertDialogType = Object.freeze({
 });
 
 class AlertDialog {
+    /**
+     * @param {{
+     * title: string,
+     * bodyHTML: string,
+     * buttons: string[],
+     * id: string,
+     * alertDialogType: AlertDialogType,
+     * formAction: string,
+     * formMethod: string,
+     * fitToContent: boolean,
+     * }} param
+     */
     constructor({ title, bodyHTML, buttons, id = null, alertDialogType = AlertDialogType.DIV, formAction = "", formMethod = null, fitToContent = false }) {
         // Create overlay
         this.overlay = document.createElement("div");
