@@ -749,7 +749,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     border: solid 1px transparent;
     border-radius: 2px;
     padding: 2px;
-    transition: background-color .2s ease-in-out,  border-color .2s ease-in-out;
+    transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
     background-color: transparent;
     color: #999 !important;
     cursor: pointer;
