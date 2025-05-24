@@ -130,6 +130,105 @@ console.log(getBrowserPlatform());
 //     alert(`You're currently running this website on ${getBrowserPlatform()}. It may not be perfect.`);
 // }
 
+const AlertDialogType = Object.freeze({
+    DIV: "div",
+    FORM: "form"
+});
+
+class AlertDialog {
+    constructor({ title, bodyHTML, buttons, id = null, alertDialogType = AlertDialogType.DIV, formAction = "", formMethod = null, fitToContent = false }) {
+        // Create overlay
+        this.overlay = document.createElement("div");
+        this.overlay.className = "overlay";
+        this.overlay.style.backgroundColor = "#0000";
+        
+        // Create form dialog
+        this.dialog = document.createElement(alertDialogType);
+        if (id != null && id != "") this.dialog.id = id;
+        this.dialog.className = "alert-dialog";
+        this.dialog.style.translate = "0 calc(-100% - 32px)";
+        this.dialog.style.opacity = "0";
+        if (fitToContent) this.dialog.style.width = "max-content";
+        if (alertDialogType == AlertDialogType.FORM) {
+            this.dialog.method = formMethod == "" || formMethod == null ? "POST" : formMethod;
+            this.dialog.action = formAction;
+        }
+        
+        this.overlay.addEventListener("click", (e) => {
+            if (e.target == e.currentTarget) this.close();
+        });
+        
+        // Header
+        this.header = document.createElement("div");
+        this.header.className = "header";
+        this.header.textContent = title;
+        
+        // Body
+        this.body = document.createElement("div");
+        this.body.className = "body";
+        this.body.innerHTML = bodyHTML;
+        
+        // Footer
+        this.footer = document.createElement("div");
+        this.footer.className = "footer";
+        
+        buttons.forEach(btnHTML => {
+            const wrapper = document.createElement("div");
+            wrapper.innerHTML = btnHTML + "&#32;d";
+            const button = wrapper.firstElementChild;
+            let isSubmitButton = button.getAttribute("type") == "submit";
+            if (verboseMode && isSubmitButton) console.log(button + "is a submit button");
+            
+            // Optional: handle cancel-type buttons
+            if (button.classList.contains("close-alert-dialog") ||
+                button.classList.contains("cancel-button") ||
+                button.classList.contains("ok-button") ||
+                isSubmitButton) {
+                if (isSubmitButton) {
+                    // Let the form submit naturally, but also close the dialog right before it does
+                    this.dialog.addEventListener("submit", () => {
+                        this.close();
+                    });
+                } else {
+                    button.addEventListener("click", e => {
+                        if (button.classList.contains("cancel-button")) e.preventDefault();
+                        this.close();
+                    });
+                }
+            }
+            
+            this.footer.appendChild(button);
+        });
+    }
+
+    show() {
+        // Append all to form dialog
+        this.dialog.appendChild(this.header);
+        this.dialog.appendChild(this.body);
+        this.dialog.appendChild(this.footer);
+        this.overlay.appendChild(this.dialog);
+        document.body.appendChild(this.overlay);
+        
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                this.overlay.style.removeProperty("background-color");
+                this.dialog.style.removeProperty("translate");
+                this.dialog.style.removeProperty("opacity");
+            });
+        });
+    }
+    
+    close() {
+        this.overlay.style.backgroundColor = "#0000";
+        this.dialog.style.translate = "0 calc(-100% - 32px)";
+        this.dialog.style.opacity = "0";
+        
+        setTimeout(() => {
+            this.overlay.remove();
+        }, 500);
+    }
+}
+
 // == Events ==
 try {
     image_viewer.addEventListener("click", function(event) {
