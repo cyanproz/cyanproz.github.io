@@ -397,6 +397,7 @@ h3.post-title.entry-title > a {
     display: block;
     text-decoration: none;
     font-size: inherit;
+    font-weight: inherit;
 }
 
 h4/* , h3.post-title.entry-title */ {
