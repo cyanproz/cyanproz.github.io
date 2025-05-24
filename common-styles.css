@@ -889,6 +889,10 @@ details[open] > summary::before {
     /* transform: rotate(90deg); */
 }
 
+.font-var-num--tabular {
+    font-variant-numeric: tabular-nums;
+}
+
 .container-box-template--1,
 .container-box-template--1--wide {
     padding: 15px;
