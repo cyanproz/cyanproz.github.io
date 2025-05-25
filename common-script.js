@@ -139,7 +139,7 @@ class AlertDialog {
     /**
      * @param {{
      * title: string,
-     * bodyHTML: string,
+     * bodyHtml: string,
      * buttons: string[],
      * id: string,
      * alertDialogType: AlertDialogType,
@@ -148,7 +148,7 @@ class AlertDialog {
      * fitToContent: boolean,
      * }} param
      */
-    constructor({ title, bodyHTML, buttons, id = null, alertDialogType = AlertDialogType.DIV, formAction = "", formMethod = null, fitToContent = false }) {
+    constructor({ title, bodyHtml, buttons, id = null, alertDialogType = AlertDialogType.DIV, formAction = "", formMethod = null, fitToContent = false }) {
         // Create overlay
         this.overlay = document.createElement("div");
         this.overlay.className = "overlay";
@@ -178,7 +178,7 @@ class AlertDialog {
         // Body
         this.body = document.createElement("div");
         this.body.className = "body";
-        this.body.innerHTML = bodyHTML;
+        this.body.innerHTML = bodyHtml;
         
         // Footer
         this.footer = document.createElement("div");
