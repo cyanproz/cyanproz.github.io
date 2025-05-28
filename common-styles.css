@@ -529,6 +529,26 @@ input[type="color"]:disabled {
     cursor: not-allowed;
 }
 
+button:not(.header-button).unstyled,
+a.button-link.unstyled,
+a.comment-reply.unstyled,
+a.blog-pager-older-link.unstyled,
+a.blog-pager-newer-link.unstyled,
+.item-control a.unstyled,
+select.unstyled,
+#Translate1 select.goog-te-combo.unstyled,
+input[type="button"].unstyled,
+input[type="submit"].unstyled,
+input[type="reset"].unstyled,
+input[type="image"].unstyled,
+input[type="color"].unstyled {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
 button:not(.header-button).success,
 a.button-link.success,
 a.comment-reply.success,
