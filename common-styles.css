@@ -442,27 +442,27 @@ a {
     /* text-decoration: underline 1px; */
 }
 
-/* a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.comment-reply):not(.item-control a),
-a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.comment-reply):not(.item-control a) * { */
-a.button-link:not(.default):not(.unstyled), a.comment-reply:not(.default):not(.unstyled), .item-control a,
-a.button-link:not(.default):not(.unstyled) *, a.comment-reply:not(.default):not(.unstyled) *, .item-control a * {
+/* a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.comment-reply):not(.item-control a:not(.default):not(.unstyled)),
+a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.comment-reply):not(.item-control a:not(.default):not(.unstyled)) * { */
+a.button-link:not(.default):not(.unstyled), a.comment-reply:not(.default):not(.unstyled), .item-control a:not(.default):not(.unstyled),
+a.button-link:not(.default):not(.unstyled) *, a.comment-reply:not(.default):not(.unstyled) *, .item-control a:not(.default):not(.unstyled) * {
     color: var(--text);
     /* text-decoration: none; */
     /* text-decoration: underline 1px; */
 }
 
-a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):not(:active):hover,
-a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):not(:active):hover * {
+a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a:not(.default):not(.unstyled)):not(:active):hover,
+a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a:not(.default):not(.unstyled)):not(:active):hover * {
     color: var(--link-hover);
 }
 
-a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):active,
-a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):active * {
+a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a:not(.default):not(.unstyled)):active,
+a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a:not(.default):not(.unstyled)):active * {
     color: var(--link-active) !important;
 }
 
-a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):focus,
-a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):focus * {
+a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a:not(.default):not(.unstyled)):focus,
+a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a:not(.default):not(.unstyled)):focus * {
     color: var(--link);
     outline: dotted 1px var(--text);
 }
@@ -472,17 +472,30 @@ a * {
     transition: color .2s ease-in-out;
 }
 
-button:not(.default):not(.unstyled):not(.header-button),
+/* button:not(.default):not(.unstyled):not(.header-button),
 a.button-link:not(.default):not(.unstyled),
 a.comment-reply:not(.default):not(.unstyled),
-.item-control a,
+.item-control a:not(.default):not(.unstyled),
 select,
 #Translate1 select.goog-te-combo,
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
 input[type="image"],
-input[type="color"] {
+input[type="color"] { */
+:is(
+    button:not(.header-button),
+    a.button-link,
+    a.comment-reply,
+    .item-control a,
+    select,
+    #Translate1 select.goog-te-combo,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    input[type="image"],
+    input[type="color"]
+):not(.default):not(.unstyled) {
     border: solid 1px var(--border);
     border-radius: 6px;
     padding: 3px 5px;
@@ -494,46 +507,52 @@ input[type="color"] {
     /* font-size: inherit; */
 }
 
-button:not(.default):not(.unstyled):not(.header-button):not(:disabled),
-a.button-link:not(.default):not(.unstyled):not(:disabled),
-a.comment-reply:not(.default):not(.unstyled):not(:disabled),
-.item-control a:not(:disabled),
-select:not(:disabled),
-#Translate1 select.goog-te-combo:not(:disabled),
-input[type="button"]:not(:disabled),
-input[type="submit"]:not(:disabled),
-input[type="reset"]:not(:disabled),
-input[type="image"]:not(:disabled),
-input[type="color"]:not(:disabled) {
+:is(
+    button:not(.header-button),
+    a.button-link,
+    a.comment-reply,
+    .item-control a,
+    select,
+    #Translate1 select.goog-te-combo,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    input[type="image"],
+    input[type="color"]
+):not(.default):not(.unstyled):not(:disabled) {
     transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
 }
 
-button:not(.default):not(.unstyled):not(.header-button):disabled,
-a.button-link:not(.default):not(.unstyled):disabled,
-a.comment-reply:not(.default):not(.unstyled):disabled,
-.item-control a:disabled,
-select:disabled,
-#Translate1 select.goog-te-combo:disabled,
-input[type="button"]:disabled,
-input[type="submit"]:disabled,
-input[type="reset"]:disabled,
-input[type="image"]:disabled,
-input[type="color"]:disabled {
+:is(
+    button:not(.header-button),
+    a.button-link,
+    a.comment-reply,
+    .item-control a,
+    select,
+    #Translate1 select.goog-te-combo,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    input[type="image"],
+    input[type="color"]
+):not(.default):not(.unstyled):disabled {
     opacity: .75;
     cursor: not-allowed;
 }
 
-button:not(.default):not(.unstyled):not(.header-button).unstyled,
-a.button-link:not(.default):not(.unstyled).unstyled,
-a.comment-reply:not(.default):not(.unstyled).unstyled,
-.item-control a.unstyled,
-select.unstyled,
-#Translate1 select.goog-te-combo.unstyled,
-input[type="button"].unstyled,
-input[type="submit"].unstyled,
-input[type="reset"].unstyled,
-input[type="image"].unstyled,
-input[type="color"].unstyled {
+:is(
+    button:not(.header-button),
+    a.button-link,
+    a.comment-reply,
+    .item-control a,
+    select,
+    #Translate1 select.goog-te-combo,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    input[type="image"],
+    input[type="color"]
+):not(.default).unstyled {
     margin: 0;
     border: none;
     border-radius: 0;
@@ -541,128 +560,144 @@ input[type="color"].unstyled {
     background-color: transparent;
 }
 
-button:not(.default):not(.unstyled):not(.header-button).success,
-a.button-link:not(.default):not(.unstyled).success,
-a.comment-reply:not(.default):not(.unstyled).success,
-.item-control a.success,
-select.success,
-#Translate1 select.goog-te-combo.success,
-input[type="button"].success,
-input[type="submit"].success,
-input[type="reset"].success,
-input[type="image"].success,
-input[type="color"].success {
+:is(
+    button:not(.header-button),
+    a.button-link,
+    a.comment-reply,
+    .item-control a,
+    select,
+    #Translate1 select.goog-te-combo,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    input[type="image"],
+    input[type="color"]
+):not(.default):not(.unstyled).success {
     color: var(--color-success-text-color);
     --button: var(--color-success);
     --button-hover: var(--color-success-hover);
     --button-active: var(--color-success-active);
 }
 
-button:not(.default):not(.unstyled):not(.header-button).info,
-a.button-link:not(.default):not(.unstyled).info,
-a.comment-reply:not(.default):not(.unstyled).info,
-.item-control a.info,
-select.info,
-#Translate1 select.goog-te-combo.info,
-input[type="button"].info,
-input[type="submit"].info,
-input[type="reset"].info,
-input[type="image"].info,
-input[type="color"].info {
+:is(
+    button:not(.header-button),
+    a.button-link,
+    a.comment-reply,
+    .item-control a,
+    select,
+    #Translate1 select.goog-te-combo,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    input[type="image"],
+    input[type="color"]
+):not(.default):not(.unstyled).info {
     color: var(--color-info-text-color);
     --button: var(--color-info);
     --button-hover: var(--color-info-hover);
     --button-active: var(--color-info-active);
 }
 
-button:not(.default):not(.unstyled):not(.header-button).warning,
-a.button-link:not(.default):not(.unstyled).warning,
-a.comment-reply:not(.default):not(.unstyled).warning,
-.item-control a.warning,
-select.warning,
-#Translate1 select.goog-te-combo.warning,
-input[type="button"].warning,
-input[type="submit"].warning,
-input[type="reset"].warning,
-input[type="image"].warning,
-input[type="color"].warning {
+:is(
+    button:not(.header-button),
+    a.button-link,
+    a.comment-reply,
+    .item-control a,
+    select,
+    #Translate1 select.goog-te-combo,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    input[type="image"],
+    input[type="color"]
+):not(.default):not(.unstyled).warning {
     color: var(--color-warning-text-color);
     --button: var(--color-warning);
     --button-hover: var(--color-warning-hover);
     --button-active: var(--color-warning-active);
 }
 
-button:not(.default):not(.unstyled):not(.header-button).danger,
-a.button-link:not(.default):not(.unstyled).danger,
-a.comment-reply:not(.default):not(.unstyled).danger,
-.item-control a.danger,
-select.danger,
-#Translate1 select.goog-te-combo.danger,
-input[type="button"].danger,
-input[type="submit"].danger,
-input[type="reset"].danger,
-input[type="image"].danger,
-input[type="color"].danger {
+:is(
+    button:not(.header-button),
+    a.button-link,
+    a.comment-reply,
+    .item-control a,
+    select,
+    #Translate1 select.goog-te-combo,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    input[type="image"],
+    input[type="color"]
+):not(.default):not(.unstyled).danger {
     color: var(--color-danger-text-color);
     --button: var(--color-danger);
     --button-hover: var(--color-danger-hover);
     --button-active: var(--color-danger-active);
 }
 
-button:not(.default):not(.unstyled):not(.header-button):not(:disabled):hover,
-a.button-link:not(.default):not(.unstyled):not(:disabled):hover,
-a.comment-reply:not(.default):not(.unstyled):not(:disabled):hover,
-.item-control a:not(:disabled):hover,
-select:not(:disabled):hover,
-#Translate1 select.goog-te-combo:not(:disabled):hover,
-input[type="button"]:not(:disabled):hover,
-input[type="submit"]:not(:disabled):hover,
-input[type="reset"]:not(:disabled):hover,
-input[type="image"]:not(:disabled):hover,
-input[type="color"]:not(:disabled):hover {
+:is(
+    button:not(.header-button),
+    a.button-link,
+    a.comment-reply,
+    .item-control a,
+    select,
+    #Translate1 select.goog-te-combo,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    input[type="image"],
+    input[type="color"]
+):not(.default):not(.unstyled):hover {
     background-color: var(--button-hover);
 }
 
-button:not(.default):not(.unstyled):not(.header-button):not(:disabled):active,
-a.button-link:not(.default):not(.unstyled):not(:disabled):active,
-a.comment-reply:not(.default):not(.unstyled):not(:disabled):active,
-.item-control a:not(:disabled):active,
-select:not(:disabled):active,
-#Translate1 select.goog-te-combo:not(:disabled):active,
-input[type="button"]:not(:disabled):active,
-input[type="submit"]:not(:disabled):active,
-input[type="reset"]:not(:disabled):active,
-input[type="image"]:not(:disabled):active,
-input[type="color"]:not(:disabled):active {
+:is(
+    button:not(.header-button),
+    a.button-link,
+    a.comment-reply,
+    .item-control a,
+    select,
+    #Translate1 select.goog-te-combo,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    input[type="image"],
+    input[type="color"]
+):not(.default):not(.unstyled):active {
     background-color: var(--button-active);
 }
 
-button:not(.default):not(.unstyled):not(.header-button):not(:disabled):focus,
-a.button-link:not(.default):not(.unstyled):not(:disabled):focus,
-a.comment-reply:not(.default):not(.unstyled):not(:disabled):focus,
-.item-control a:not(:disabled):focus,
-select:not(:disabled):focus,
-#Translate1 select.goog-te-combo:not(:disabled):focus,
-input[type="button"]:not(:disabled):focus,
-input[type="submit"]:not(:disabled):focus,
-input[type="reset"]:not(:disabled):focus,
-input[type="image"]:not(:disabled):focus,
-input[type="color"]:not(:disabled):focus {
+:is(
+    button:not(.header-button),
+    a.button-link,
+    a.comment-reply,
+    .item-control a,
+    select,
+    #Translate1 select.goog-te-combo,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    input[type="image"],
+    input[type="color"]
+):not(.default):not(.unstyled):focus {
     outline: transparent;
     border-color: var(--custom-color-1);
 }
 
-button:not(.default):not(.unstyled):not(.header-button) *,
-a.button-link:not(.default):not(.unstyled) *,
-a.comment-reply:not(.default):not(.unstyled) *,
-.item-control a *,
-select *,
-#Translate1 select.goog-te-combo *,
-input[type="button"] *,
-input[type="submit"] *,
-input[type="reset"] *,
-input[type="image"] *,
-input[type="color"] * {
+:is(
+    button:not(.header-button),
+    a.button-link,
+    a.comment-reply,
+    .item-control a,
+    select,
+    #Translate1 select.goog-te-combo,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    input[type="image"],
+    input[type="color"]
+):not(.default):not(.unstyled) * {
     color: inherit;
 }
 
@@ -692,17 +727,17 @@ input[type="color"] {
 
 a.button-link:not(.default):not(.unstyled),
 a.comment-reply:not(.default):not(.unstyled),
-.item-control a {
+.item-control a:not(.default):not(.unstyled) {
     text-decoration: none;
 }
 
 a.comment-reply:not(.default):not(.unstyled),
-.item-control a:not(:has(img.icon-action)) {
+.item-control a:not(.default):not(.unstyled):not(:has(img.icon-action)) {
     display: inline-block;
     padding: 3px 5px !important;
 }
 
-.item-control a:has(img.icon-action) {
+.item-control a:not(.default):not(.unstyled):has(img.icon-action) {
     display: inline-flex;
     align-items: center;
     padding: 3px;
