@@ -755,8 +755,8 @@ input[type="datetime-local"] {
     transition: border-color .2s ease-in-out;
 }
 
-input[type="number"] {
-    padding-right: 2px;
+input[type="number"]::-webkit-scrollbar {
+    background-color: transparent;
 }
 
 input[type="date"],
