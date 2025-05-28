@@ -610,7 +610,7 @@ input[type="color"].danger {
 }
 
 button:not(.default):not(.unstyled):not(.header-button):not(:disabled):hover,
-a.button-link:not(.default):not(.unstyled)::not(:disabled):hover,
+a.button-link:not(.default):not(.unstyled):not(:disabled):hover,
 a.comment-reply:not(.default):not(.unstyled):not(:disabled):hover,
 .item-control a:not(:disabled):hover,
 select:not(:disabled):hover,
