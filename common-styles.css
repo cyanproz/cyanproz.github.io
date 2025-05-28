@@ -483,7 +483,7 @@ input[type="submit"],
 input[type="reset"],
 input[type="image"],
 input[type="color"] { */
-:is(
+:where(
     button:not(.header-button),
     a.button-link,
     a.comment-reply,
@@ -507,7 +507,7 @@ input[type="color"] { */
     /* font-size: inherit; */
 }
 
-:is(
+:where(
     button:not(.header-button),
     a.button-link,
     a.comment-reply,
@@ -523,7 +523,7 @@ input[type="color"] { */
     transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
 }
 
-:is(
+:where(
     button:not(.header-button),
     a.button-link,
     a.comment-reply,
@@ -540,7 +540,7 @@ input[type="color"] { */
     cursor: not-allowed;
 }
 
-:is(
+:where(
     button:not(.header-button),
     a.button-link,
     a.comment-reply,
@@ -560,7 +560,7 @@ input[type="color"] { */
     background-color: transparent;
 }
 
-:is(
+:where(
     button:not(.header-button),
     a.button-link,
     a.comment-reply,
@@ -579,7 +579,7 @@ input[type="color"] { */
     --button-active: var(--color-success-active);
 }
 
-:is(
+:where(
     button:not(.header-button),
     a.button-link,
     a.comment-reply,
@@ -598,7 +598,7 @@ input[type="color"] { */
     --button-active: var(--color-info-active);
 }
 
-:is(
+:where(
     button:not(.header-button),
     a.button-link,
     a.comment-reply,
@@ -617,7 +617,7 @@ input[type="color"] { */
     --button-active: var(--color-warning-active);
 }
 
-:is(
+:where(
     button:not(.header-button),
     a.button-link,
     a.comment-reply,
@@ -636,7 +636,7 @@ input[type="color"] { */
     --button-active: var(--color-danger-active);
 }
 
-:is(
+:where(
     button:not(.header-button),
     a.button-link,
     a.comment-reply,
@@ -652,7 +652,7 @@ input[type="color"] { */
     background-color: var(--button-hover);
 }
 
-:is(
+:where(
     button:not(.header-button),
     a.button-link,
     a.comment-reply,
@@ -668,7 +668,7 @@ input[type="color"] { */
     background-color: var(--button-active);
 }
 
-:is(
+:where(
     button:not(.header-button),
     a.button-link,
     a.comment-reply,
@@ -685,7 +685,7 @@ input[type="color"] { */
     border-color: var(--custom-color-1);
 }
 
-:is(
+:where(
     button:not(.header-button),
     a.button-link,
     a.comment-reply,
