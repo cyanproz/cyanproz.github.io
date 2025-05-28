@@ -442,27 +442,27 @@ a {
     /* text-decoration: underline 1px; */
 }
 
-/* a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.comment-reply):not(.item-control a):not(a.blog-pager-older-link):not(a.blog-pager-newer-link),
-a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.comment-reply):not(.item-control a):not(a.blog-pager-older-link):not(a.blog-pager-newer-link) * { */
-a.button-link, a.comment-reply, .item-control a, a.blog-pager-older-link, a.blog-pager-newer-link,
-a.button-link, a.comment-reply, .item-control a, a.blog-pager-older-link, a.blog-pager-newer-link * {
+/* a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.comment-reply):not(.item-control a),
+a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.comment-reply):not(.item-control a) * { */
+a.button-link:not(.default):not(.unstyled), a.comment-reply:not(.default):not(.unstyled), .item-control a,
+a.button-link:not(.default):not(.unstyled) *, a.comment-reply:not(.default):not(.unstyled) *, .item-control a * {
     color: var(--text);
     /* text-decoration: none; */
     /* text-decoration: underline 1px; */
 }
 
-a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):not(a.blog-pager-older-link):not(a.blog-pager-newer-link):not(:active):hover,
-a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):not(a.blog-pager-older-link):not(a.blog-pager-newer-link):not(:active):hover * {
+a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):not(:active):hover,
+a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):not(:active):hover * {
     color: var(--link-hover);
 }
 
-a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):not(a.blog-pager-older-link):not(a.blog-pager-newer-link):active,
-a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):not(a.blog-pager-older-link):not(a.blog-pager-newer-link):active * {
+a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):active,
+a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):active * {
     color: var(--link-active) !important;
 }
 
-a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):not(a.blog-pager-older-link):not(a.blog-pager-newer-link):focus,
-a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):not(a.blog-pager-older-link):not(a.blog-pager-newer-link):focus * {
+a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):focus,
+a:not(.Dropdown_Item a):not(.Dropdown .header-button > a):not(.button-link):not(.post-labels a.post-label):not(.comment-reply):not(.item-control a):focus * {
     color: var(--link);
     outline: dotted 1px var(--text);
 }
@@ -472,11 +472,11 @@ a * {
     transition: color .2s ease-in-out;
 }
 
-button:not(.header-button),
-a.button-link,
-a.comment-reply,
-a.blog-pager-older-link,
-a.blog-pager-newer-link,
+button:not(.default):not(.unstyled):not(.header-button),
+a.button-link:not(.default):not(.unstyled),
+a.comment-reply:not(.default):not(.unstyled),
+a.blog-pager-older-link:not(.default):not(.unstyled),
+a.blog-pager-newer-link:not(.default):not(.unstyled),
 .item-control a,
 select,
 #Translate1 select.goog-te-combo,
@@ -496,11 +496,11 @@ input[type="color"] {
     /* font-size: inherit; */
 }
 
-button:not(.header-button):not(:disabled),
-a.button-link:not(:disabled),
-a.comment-reply:not(:disabled),
-a.blog-pager-older-link:not(:disabled),
-a.blog-pager-newer-link:not(:disabled),
+button:not(.default):not(.unstyled):not(.header-button):not(:disabled),
+a.button-link:not(.default):not(.unstyled):not(:disabled),
+a.comment-reply:not(.default):not(.unstyled):not(:disabled),
+a.blog-pager-older-link:not(.default):not(.unstyled):not(:disabled),
+a.blog-pager-newer-link:not(.default):not(.unstyled):not(:disabled),
 .item-control a:not(:disabled),
 select:not(:disabled),
 #Translate1 select.goog-te-combo:not(:disabled),
@@ -512,11 +512,11 @@ input[type="color"]:not(:disabled) {
     transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
 }
 
-button:not(.header-button):disabled,
-a.button-link:disabled,
-a.comment-reply:disabled,
-a.blog-pager-older-link:disabled,
-a.blog-pager-newer-link:disabled,
+button:not(.default):not(.unstyled):not(.header-button):disabled,
+a.button-link:not(.default):not(.unstyled):disabled,
+a.comment-reply:not(.default):not(.unstyled):disabled,
+a.blog-pager-older-link:not(.default):not(.unstyled):disabled,
+a.blog-pager-newer-link:not(.default):not(.unstyled):disabled,
 .item-control a:disabled,
 select:disabled,
 #Translate1 select.goog-te-combo:disabled,
@@ -529,11 +529,11 @@ input[type="color"]:disabled {
     cursor: not-allowed;
 }
 
-button:not(.header-button).unstyled,
-a.button-link.unstyled,
-a.comment-reply.unstyled,
-a.blog-pager-older-link.unstyled,
-a.blog-pager-newer-link.unstyled,
+button:not(.default):not(.unstyled):not(.header-button).unstyled,
+a.button-link:not(.default):not(.unstyled).unstyled,
+a.comment-reply:not(.default):not(.unstyled).unstyled,
+a.blog-pager-older-link:not(.default):not(.unstyled).unstyled,
+a.blog-pager-newer-link:not(.default):not(.unstyled).unstyled,
 .item-control a.unstyled,
 select.unstyled,
 #Translate1 select.goog-te-combo.unstyled,
@@ -549,11 +549,11 @@ input[type="color"].unstyled {
     background-color: transparent;
 }
 
-button:not(.header-button).success,
-a.button-link.success,
-a.comment-reply.success,
-a.blog-pager-older-link.success,
-a.blog-pager-newer-link.success,
+button:not(.default):not(.unstyled):not(.header-button).success,
+a.button-link:not(.default):not(.unstyled).success,
+a.comment-reply:not(.default):not(.unstyled).success,
+a.blog-pager-older-link:not(.default):not(.unstyled).success,
+a.blog-pager-newer-link:not(.default):not(.unstyled).success,
 .item-control a.success,
 select.success,
 #Translate1 select.goog-te-combo.success,
@@ -568,11 +568,11 @@ input[type="color"].success {
     --button-active: var(--color-success-active);
 }
 
-button:not(.header-button).info,
-a.button-link.info,
-a.comment-reply.info,
-a.blog-pager-older-link.info,
-a.blog-pager-newer-link.info,
+button:not(.default):not(.unstyled):not(.header-button).info,
+a.button-link:not(.default):not(.unstyled).info,
+a.comment-reply:not(.default):not(.unstyled).info,
+a.blog-pager-older-link:not(.default):not(.unstyled).info,
+a.blog-pager-newer-link:not(.default):not(.unstyled).info,
 .item-control a.info,
 select.info,
 #Translate1 select.goog-te-combo.info,
@@ -587,11 +587,11 @@ input[type="color"].info {
     --button-active: var(--color-info-active);
 }
 
-button:not(.header-button).warning,
-a.button-link.warning,
-a.comment-reply.warning,
-a.blog-pager-older-link.warning,
-a.blog-pager-newer-link.warning,
+button:not(.default):not(.unstyled):not(.header-button).warning,
+a.button-link:not(.default):not(.unstyled).warning,
+a.comment-reply:not(.default):not(.unstyled).warning,
+a.blog-pager-older-link:not(.default):not(.unstyled).warning,
+a.blog-pager-newer-link:not(.default):not(.unstyled).warning,
 .item-control a.warning,
 select.warning,
 #Translate1 select.goog-te-combo.warning,
@@ -606,11 +606,11 @@ input[type="color"].warning {
     --button-active: var(--color-warning-active);
 }
 
-button:not(.header-button).danger,
-a.button-link.danger,
-a.comment-reply.danger,
-a.blog-pager-older-link.danger,
-a.blog-pager-newer-link.danger,
+button:not(.default):not(.unstyled):not(.header-button).danger,
+a.button-link:not(.default):not(.unstyled).danger,
+a.comment-reply:not(.default):not(.unstyled).danger,
+a.blog-pager-older-link:not(.default):not(.unstyled).danger,
+a.blog-pager-newer-link:not(.default):not(.unstyled).danger,
 .item-control a.danger,
 select.danger,
 #Translate1 select.goog-te-combo.danger,
@@ -625,11 +625,11 @@ input[type="color"].danger {
     --button-active: var(--color-danger-active);
 }
 
-button:not(.header-button):hover:not(:disabled),
-a.button-link::not(:disabled),
-a.comment-reply:hover:not(:disabled),
-a.blog-pager-older-link:hover:not(:disabled),
-a.blog-pager-newer-link:hover:not(:disabled),
+button:not(.default):not(.unstyled):not(.header-button):hover:not(:disabled),
+a.button-link:not(.default):not(.unstyled)::not(:disabled),
+a.comment-reply:not(.default):not(.unstyled):hover:not(:disabled),
+a.blog-pager-older-link:not(.default):not(.unstyled):hover:not(:disabled),
+a.blog-pager-newer-link:not(.default):not(.unstyled):hover:not(:disabled),
 .item-control a:hover:not(:disabled),
 select:hover:not(:disabled),
 #Translate1 select.goog-te-combo:hover:not(:disabled),
@@ -641,11 +641,11 @@ input[type="color"]:hover:not(:disabled) {
     background-color: var(--button-hover);
 }
 
-button:not(.header-button):active:not(:disabled),
-a.button-link:active:not(:disabled),
-a.comment-reply:active:not(:disabled),
-a.blog-pager-older-link:active:not(:disabled),
-a.blog-pager-newer-link:active:not(:disabled),
+button:not(.default):not(.unstyled):not(.header-button):active:not(:disabled),
+a.button-link:not(.default):not(.unstyled):active:not(:disabled),
+a.comment-reply:not(.default):not(.unstyled):active:not(:disabled),
+a.blog-pager-older-link:not(.default):not(.unstyled):active:not(:disabled),
+a.blog-pager-newer-link:not(.default):not(.unstyled):active:not(:disabled),
 .item-control a:active:not(:disabled),
 select:active:not(:disabled),
 #Translate1 select.goog-te-combo:active:not(:disabled),
@@ -657,11 +657,11 @@ input[type="color"]:active:not(:disabled) {
     background-color: var(--button-active);
 }
 
-button:not(.header-button):focus:not(:disabled),
-a.button-link:focus:not(:disabled),
-a.comment-reply:focus:not(:disabled),
-a.blog-pager-older-link:focus:not(:disabled),
-a.blog-pager-newer-link:focus:not(:disabled),
+button:not(.default):not(.unstyled):not(.header-button):focus:not(:disabled),
+a.button-link:not(.default):not(.unstyled):focus:not(:disabled),
+a.comment-reply:not(.default):not(.unstyled):focus:not(:disabled),
+a.blog-pager-older-link:not(.default):not(.unstyled):focus:not(:disabled),
+a.blog-pager-newer-link:not(.default):not(.unstyled):focus:not(:disabled),
 .item-control a:focus:not(:disabled),
 select:focus:not(:disabled),
 #Translate1 select.goog-te-combo:focus:not(:disabled),
@@ -674,11 +674,11 @@ input[type="color"]:focus:not(:disabled) {
     border-color: var(--custom-color-1);
 }
 
-button:not(.header-button) *,
-a.button-link *,
-a.comment-reply *,
-a.blog-pager-older-link *,
-a.blog-pager-newer-link *,
+button:not(.default):not(.unstyled):not(.header-button) *,
+a.button-link:not(.default):not(.unstyled) *,
+a.comment-reply:not(.default):not(.unstyled) *,
+a.blog-pager-older-link:not(.default):not(.unstyled) *,
+a.blog-pager-newer-link:not(.default):not(.unstyled) *,
 .item-control a *,
 select *,
 #Translate1 select.goog-te-combo *,
@@ -690,11 +690,11 @@ input[type="color"] * {
     color: inherit;
 }
 
-button:not(.header-button) * {
+button:not(.default):not(.unstyled):not(.header-button) * {
     cursor: inherit;
 }
 
-a.button-link {
+a.button-link:not(.default):not(.unstyled) {
     display: inline-block;
 }
 
@@ -714,15 +714,15 @@ input[type="color"] {
     height: calc(1rem + 3px);
 }
 
-a.button-link,
-a.comment-reply,
+a.button-link:not(.default):not(.unstyled),
+a.comment-reply:not(.default):not(.unstyled),
 .item-control a,
-a.blog-pager-older-link,
-a.blog-pager-newer-link {
+a.blog-pager-older-link:not(.default):not(.unstyled),
+a.blog-pager-newer-link:not(.default):not(.unstyled) {
     text-decoration: none;
 }
 
-a.comment-reply,
+a.comment-reply:not(.default):not(.unstyled),
 .item-control a:not(:has(img.icon-action)) {
     display: inline-block;
     padding: 3px 5px !important;
@@ -734,14 +734,14 @@ a.comment-reply,
     padding: 3px;
 }
 
-a.blog-pager-older-link,
-a.blog-pager-newer-link {
+a.blog-pager-older-link:not(.default):not(.unstyled),
+a.blog-pager-newer-link:not(.default):not(.unstyled) {
     display: inline-block;
 }
 
-a.comment-reply,
-a.blog-pager-older-link,
-a.blog-pager-newer-link {
+a.comment-reply:not(.default):not(.unstyled),
+a.blog-pager-older-link:not(.default):not(.unstyled),
+a.blog-pager-newer-link:not(.default):not(.unstyled) {
     transition: background-color .2s ease-in-out, border-color .2s ease-in-out !important;
     text-decoration: none !important;
 }
