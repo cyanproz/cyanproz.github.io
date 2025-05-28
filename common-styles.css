@@ -572,51 +572,51 @@ input[type="color"].danger {
     --button-active: var(--color-danger-active);
 }
 
-button:not(.header-button):hover,
-a.button-link:hover,
-a.comment-reply:hover,
-a.blog-pager-older-link:hover,
-a.blog-pager-newer-link:hover,
-.item-control a:hover,
-select:hover,
-#Translate1 select.goog-te-combo:hover,
-input[type="button"]:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="image"]:hover,
-input[type="color"]:hover {
+button:not(.header-button):hover:not([disabled]),
+a.button-link::not([disabled]),
+a.comment-reply:hover:not([disabled]),
+a.blog-pager-older-link:hover:not([disabled]),
+a.blog-pager-newer-link:hover:not([disabled]),
+.item-control a:hover:not([disabled]),
+select:hover:not([disabled]),
+#Translate1 select.goog-te-combo:hover:not([disabled]),
+input[type="button"]:hover:not([disabled]),
+input[type="submit"]:hover:not([disabled]),
+input[type="reset"]:hover:not([disabled]),
+input[type="image"]:hover:not([disabled]),
+input[type="color"]:hover:not([disabled]) {
     background-color: var(--button-hover);
 }
 
-button:not(.header-button):active,
-a.button-link:active,
-a.comment-reply:active,
-a.blog-pager-older-link:active,
-a.blog-pager-newer-link:active,
-.item-control a:active,
-select:active,
-#Translate1 select.goog-te-combo:active,
-input[type="button"]:active,
-input[type="submit"]:active,
-input[type="reset"]:active,
-input[type="image"]:active,
-input[type="color"]:active {
+button:not(.header-button):active:not([disabled]),
+a.button-link:active:not([disabled]),
+a.comment-reply:active:not([disabled]),
+a.blog-pager-older-link:active:not([disabled]),
+a.blog-pager-newer-link:active:not([disabled]),
+.item-control a:active:not([disabled]),
+select:active:not([disabled]),
+#Translate1 select.goog-te-combo:active:not([disabled]),
+input[type="button"]:active:not([disabled]),
+input[type="submit"]:active:not([disabled]),
+input[type="reset"]:active:not([disabled]),
+input[type="image"]:active:not([disabled]),
+input[type="color"]:active:not([disabled]) {
     background-color: var(--button-active);
 }
 
-button:not(.header-button):focus,
-a.button-link:focus,
-a.comment-reply:focus,
-a.blog-pager-older-link:focus,
-a.blog-pager-newer-link:focus,
-.item-control a:focus,
-select:focus,
-#Translate1 select.goog-te-combo:focus,
-input[type="button"]:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="image"]:focus,
-input[type="color"]:focus {
+button:not(.header-button):focus:not([disabled]),
+a.button-link:focus:not([disabled]),
+a.comment-reply:focus:not([disabled]),
+a.blog-pager-older-link:focus:not([disabled]),
+a.blog-pager-newer-link:focus:not([disabled]),
+.item-control a:focus:not([disabled]),
+select:focus:not([disabled]),
+#Translate1 select.goog-te-combo:focus:not([disabled]),
+input[type="button"]:focus:not([disabled]),
+input[type="submit"]:focus:not([disabled]),
+input[type="reset"]:focus:not([disabled]),
+input[type="image"]:focus:not([disabled]),
+input[type="color"]:focus:not([disabled]) {
     outline: transparent;
     border-color: var(--custom-color-1);
 }
