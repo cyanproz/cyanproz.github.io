@@ -475,8 +475,6 @@ a * {
 button:not(.default):not(.unstyled):not(.header-button),
 a.button-link:not(.default):not(.unstyled),
 a.comment-reply:not(.default):not(.unstyled),
-a.blog-pager-older-link:not(.default):not(.unstyled),
-a.blog-pager-newer-link:not(.default):not(.unstyled),
 .item-control a,
 select,
 #Translate1 select.goog-te-combo,
@@ -499,8 +497,6 @@ input[type="color"] {
 button:not(.default):not(.unstyled):not(.header-button):not(:disabled),
 a.button-link:not(.default):not(.unstyled):not(:disabled),
 a.comment-reply:not(.default):not(.unstyled):not(:disabled),
-a.blog-pager-older-link:not(.default):not(.unstyled):not(:disabled),
-a.blog-pager-newer-link:not(.default):not(.unstyled):not(:disabled),
 .item-control a:not(:disabled),
 select:not(:disabled),
 #Translate1 select.goog-te-combo:not(:disabled),
@@ -515,8 +511,6 @@ input[type="color"]:not(:disabled) {
 button:not(.default):not(.unstyled):not(.header-button):disabled,
 a.button-link:not(.default):not(.unstyled):disabled,
 a.comment-reply:not(.default):not(.unstyled):disabled,
-a.blog-pager-older-link:not(.default):not(.unstyled):disabled,
-a.blog-pager-newer-link:not(.default):not(.unstyled):disabled,
 .item-control a:disabled,
 select:disabled,
 #Translate1 select.goog-te-combo:disabled,
@@ -532,8 +526,6 @@ input[type="color"]:disabled {
 button:not(.default):not(.unstyled):not(.header-button).unstyled,
 a.button-link:not(.default):not(.unstyled).unstyled,
 a.comment-reply:not(.default):not(.unstyled).unstyled,
-a.blog-pager-older-link:not(.default):not(.unstyled).unstyled,
-a.blog-pager-newer-link:not(.default):not(.unstyled).unstyled,
 .item-control a.unstyled,
 select.unstyled,
 #Translate1 select.goog-te-combo.unstyled,
@@ -552,8 +544,6 @@ input[type="color"].unstyled {
 button:not(.default):not(.unstyled):not(.header-button).success,
 a.button-link:not(.default):not(.unstyled).success,
 a.comment-reply:not(.default):not(.unstyled).success,
-a.blog-pager-older-link:not(.default):not(.unstyled).success,
-a.blog-pager-newer-link:not(.default):not(.unstyled).success,
 .item-control a.success,
 select.success,
 #Translate1 select.goog-te-combo.success,
@@ -571,8 +561,6 @@ input[type="color"].success {
 button:not(.default):not(.unstyled):not(.header-button).info,
 a.button-link:not(.default):not(.unstyled).info,
 a.comment-reply:not(.default):not(.unstyled).info,
-a.blog-pager-older-link:not(.default):not(.unstyled).info,
-a.blog-pager-newer-link:not(.default):not(.unstyled).info,
 .item-control a.info,
 select.info,
 #Translate1 select.goog-te-combo.info,
@@ -590,8 +578,6 @@ input[type="color"].info {
 button:not(.default):not(.unstyled):not(.header-button).warning,
 a.button-link:not(.default):not(.unstyled).warning,
 a.comment-reply:not(.default):not(.unstyled).warning,
-a.blog-pager-older-link:not(.default):not(.unstyled).warning,
-a.blog-pager-newer-link:not(.default):not(.unstyled).warning,
 .item-control a.warning,
 select.warning,
 #Translate1 select.goog-te-combo.warning,
@@ -609,8 +595,6 @@ input[type="color"].warning {
 button:not(.default):not(.unstyled):not(.header-button).danger,
 a.button-link:not(.default):not(.unstyled).danger,
 a.comment-reply:not(.default):not(.unstyled).danger,
-a.blog-pager-older-link:not(.default):not(.unstyled).danger,
-a.blog-pager-newer-link:not(.default):not(.unstyled).danger,
 .item-control a.danger,
 select.danger,
 #Translate1 select.goog-te-combo.danger,
@@ -628,8 +612,6 @@ input[type="color"].danger {
 button:not(.default):not(.unstyled):not(.header-button):hover:not(:disabled),
 a.button-link:not(.default):not(.unstyled)::not(:disabled),
 a.comment-reply:not(.default):not(.unstyled):hover:not(:disabled),
-a.blog-pager-older-link:not(.default):not(.unstyled):hover:not(:disabled),
-a.blog-pager-newer-link:not(.default):not(.unstyled):hover:not(:disabled),
 .item-control a:hover:not(:disabled),
 select:hover:not(:disabled),
 #Translate1 select.goog-te-combo:hover:not(:disabled),
@@ -644,8 +626,6 @@ input[type="color"]:hover:not(:disabled) {
 button:not(.default):not(.unstyled):not(.header-button):active:not(:disabled),
 a.button-link:not(.default):not(.unstyled):active:not(:disabled),
 a.comment-reply:not(.default):not(.unstyled):active:not(:disabled),
-a.blog-pager-older-link:not(.default):not(.unstyled):active:not(:disabled),
-a.blog-pager-newer-link:not(.default):not(.unstyled):active:not(:disabled),
 .item-control a:active:not(:disabled),
 select:active:not(:disabled),
 #Translate1 select.goog-te-combo:active:not(:disabled),
@@ -660,8 +640,6 @@ input[type="color"]:active:not(:disabled) {
 button:not(.default):not(.unstyled):not(.header-button):focus:not(:disabled),
 a.button-link:not(.default):not(.unstyled):focus:not(:disabled),
 a.comment-reply:not(.default):not(.unstyled):focus:not(:disabled),
-a.blog-pager-older-link:not(.default):not(.unstyled):focus:not(:disabled),
-a.blog-pager-newer-link:not(.default):not(.unstyled):focus:not(:disabled),
 .item-control a:focus:not(:disabled),
 select:focus:not(:disabled),
 #Translate1 select.goog-te-combo:focus:not(:disabled),
@@ -677,8 +655,6 @@ input[type="color"]:focus:not(:disabled) {
 button:not(.default):not(.unstyled):not(.header-button) *,
 a.button-link:not(.default):not(.unstyled) *,
 a.comment-reply:not(.default):not(.unstyled) *,
-a.blog-pager-older-link:not(.default):not(.unstyled) *,
-a.blog-pager-newer-link:not(.default):not(.unstyled) *,
 .item-control a *,
 select *,
 #Translate1 select.goog-te-combo *,
@@ -716,9 +692,7 @@ input[type="color"] {
 
 a.button-link:not(.default):not(.unstyled),
 a.comment-reply:not(.default):not(.unstyled),
-.item-control a,
-a.blog-pager-older-link:not(.default):not(.unstyled),
-a.blog-pager-newer-link:not(.default):not(.unstyled) {
+.item-control a {
     text-decoration: none;
 }
 
@@ -739,9 +713,7 @@ a.blog-pager-newer-link:not(.default):not(.unstyled) {
     display: inline-block;
 }
 
-a.comment-reply:not(.default):not(.unstyled),
-a.blog-pager-older-link:not(.default):not(.unstyled),
-a.blog-pager-newer-link:not(.default):not(.unstyled) {
+a.comment-reply:not(.default):not(.unstyled) {
     transition: background-color .2s ease-in-out, border-color .2s ease-in-out !important;
     text-decoration: none !important;
 }
