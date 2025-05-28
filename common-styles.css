@@ -972,6 +972,20 @@ details[open] > summary::before {
     bottom: 0;
 }
 
+.overlay {
+    z-index: 1000000000000000000000000000000000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #0008;
+    transition: background-color .5s cubic-bezier(0, 0, 0, 1);
+}
+
 .dialog-background {
     display: none;
     justify-content: center;
@@ -1031,6 +1045,43 @@ details[open] > summary::before {
 .alert.danger {
     border-color: var(--color-danger);
     background-color: var(--color-danger-background-transparent);
+}
+
+.alert-dialog {
+    margin-top: 16px;
+    border-radius: 11px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
+    width: 480px;
+    max-width: 100%;
+    transition: translate .5s cubic-bezier(0, 0, 0, 1), opacity .5s linear;
+}
+
+.alert-dialog > .header,
+.alert-dialog > .footer,
+.alert-dialog > .body {
+    padding: 11px;
+    box-sizing: border-box;
+    border: solid var(--border);
+    background-color: var(--foreground);
+}
+
+.alert-dialog > .header {
+    border-width: 1px;
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+}
+
+.alert-dialog > .body {
+    border-width: 0 1px;
+}
+
+.alert-dialog > .footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px;
+    border-width: 1px;
+    border-radius: 0 0 10px 10px;
 }
 
 .code-box {
