@@ -710,7 +710,8 @@ a.comment-reply:not(.default):not(.unstyled),
 
 a.blog-pager-older-link:not(.default):not(.unstyled),
 a.blog-pager-newer-link:not(.default):not(.unstyled) {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
 }
 
 a.comment-reply:not(.default):not(.unstyled) {
