@@ -755,7 +755,8 @@ input[type="datetime-local"] {
     transition: border-color .2s ease-in-out;
 }
 
-input[type="number"]::-webkit-scrollbar {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
     background-color: transparent;
 }
 
