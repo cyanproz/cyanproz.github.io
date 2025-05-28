@@ -496,35 +496,35 @@ input[type="color"] {
     /* font-size: inherit; */
 }
 
-button:not(.header-button):not([disabled]),
-a.button-link:not([disabled]),
-a.comment-reply:not([disabled]),
-a.blog-pager-older-link:not([disabled]),
-a.blog-pager-newer-link:not([disabled]),
-.item-control a:not([disabled]),
-select:not([disabled]),
-#Translate1 select.goog-te-combo:not([disabled]),
-input[type="button"]:not([disabled]),
-input[type="submit"]:not([disabled]),
-input[type="reset"]:not([disabled]),
-input[type="image"]:not([disabled]),
-input[type="color"]:not([disabled]) {
+button:not(.header-button):not(:disabled),
+a.button-link:not(:disabled),
+a.comment-reply:not(:disabled),
+a.blog-pager-older-link:not(:disabled),
+a.blog-pager-newer-link:not(:disabled),
+.item-control a:not(:disabled),
+select:not(:disabled),
+#Translate1 select.goog-te-combo:not(:disabled),
+input[type="button"]:not(:disabled),
+input[type="submit"]:not(:disabled),
+input[type="reset"]:not(:disabled),
+input[type="image"]:not(:disabled),
+input[type="color"]:not(:disabled) {
     transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
 }
 
-button:not(.header-button)[disabled],
-a.button-link[disabled],
-a.comment-reply[disabled],
-a.blog-pager-older-link[disabled],
-a.blog-pager-newer-link[disabled],
-.item-control a[disabled],
-select[disabled],
-#Translate1 select.goog-te-combo[disabled],
-input[type="button"][disabled],
-input[type="submit"][disabled],
-input[type="reset"][disabled],
-input[type="image"][disabled],
-input[type="color"][disabled] {
+button:not(.header-button):disabled,
+a.button-link:disabled,
+a.comment-reply:disabled,
+a.blog-pager-older-link:disabled,
+a.blog-pager-newer-link:disabled,
+.item-control a:disabled,
+select:disabled,
+#Translate1 select.goog-te-combo:disabled,
+input[type="button"]:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled,
+input[type="image"]:disabled,
+input[type="color"]:disabled {
     opacity: .75;
     cursor: not-allowed;
 }
@@ -605,51 +605,51 @@ input[type="color"].danger {
     --button-active: var(--color-danger-active);
 }
 
-button:not(.header-button):hover:not([disabled]),
-a.button-link::not([disabled]),
-a.comment-reply:hover:not([disabled]),
-a.blog-pager-older-link:hover:not([disabled]),
-a.blog-pager-newer-link:hover:not([disabled]),
-.item-control a:hover:not([disabled]),
-select:hover:not([disabled]),
-#Translate1 select.goog-te-combo:hover:not([disabled]),
-input[type="button"]:hover:not([disabled]),
-input[type="submit"]:hover:not([disabled]),
-input[type="reset"]:hover:not([disabled]),
-input[type="image"]:hover:not([disabled]),
-input[type="color"]:hover:not([disabled]) {
+button:not(.header-button):hover:not(:disabled),
+a.button-link::not(:disabled),
+a.comment-reply:hover:not(:disabled),
+a.blog-pager-older-link:hover:not(:disabled),
+a.blog-pager-newer-link:hover:not(:disabled),
+.item-control a:hover:not(:disabled),
+select:hover:not(:disabled),
+#Translate1 select.goog-te-combo:hover:not(:disabled),
+input[type="button"]:hover:not(:disabled),
+input[type="submit"]:hover:not(:disabled),
+input[type="reset"]:hover:not(:disabled),
+input[type="image"]:hover:not(:disabled),
+input[type="color"]:hover:not(:disabled) {
     background-color: var(--button-hover);
 }
 
-button:not(.header-button):active:not([disabled]),
-a.button-link:active:not([disabled]),
-a.comment-reply:active:not([disabled]),
-a.blog-pager-older-link:active:not([disabled]),
-a.blog-pager-newer-link:active:not([disabled]),
-.item-control a:active:not([disabled]),
-select:active:not([disabled]),
-#Translate1 select.goog-te-combo:active:not([disabled]),
-input[type="button"]:active:not([disabled]),
-input[type="submit"]:active:not([disabled]),
-input[type="reset"]:active:not([disabled]),
-input[type="image"]:active:not([disabled]),
-input[type="color"]:active:not([disabled]) {
+button:not(.header-button):active:not(:disabled),
+a.button-link:active:not(:disabled),
+a.comment-reply:active:not(:disabled),
+a.blog-pager-older-link:active:not(:disabled),
+a.blog-pager-newer-link:active:not(:disabled),
+.item-control a:active:not(:disabled),
+select:active:not(:disabled),
+#Translate1 select.goog-te-combo:active:not(:disabled),
+input[type="button"]:active:not(:disabled),
+input[type="submit"]:active:not(:disabled),
+input[type="reset"]:active:not(:disabled),
+input[type="image"]:active:not(:disabled),
+input[type="color"]:active:not(:disabled) {
     background-color: var(--button-active);
 }
 
-button:not(.header-button):focus:not([disabled]),
-a.button-link:focus:not([disabled]),
-a.comment-reply:focus:not([disabled]),
-a.blog-pager-older-link:focus:not([disabled]),
-a.blog-pager-newer-link:focus:not([disabled]),
-.item-control a:focus:not([disabled]),
-select:focus:not([disabled]),
-#Translate1 select.goog-te-combo:focus:not([disabled]),
-input[type="button"]:focus:not([disabled]),
-input[type="submit"]:focus:not([disabled]),
-input[type="reset"]:focus:not([disabled]),
-input[type="image"]:focus:not([disabled]),
-input[type="color"]:focus:not([disabled]) {
+button:not(.header-button):focus:not(:disabled),
+a.button-link:focus:not(:disabled),
+a.comment-reply:focus:not(:disabled),
+a.blog-pager-older-link:focus:not(:disabled),
+a.blog-pager-newer-link:focus:not(:disabled),
+.item-control a:focus:not(:disabled),
+select:focus:not(:disabled),
+#Translate1 select.goog-te-combo:focus:not(:disabled),
+input[type="button"]:focus:not(:disabled),
+input[type="submit"]:focus:not(:disabled),
+input[type="reset"]:focus:not(:disabled),
+input[type="image"]:focus:not(:disabled),
+input[type="color"]:focus:not(:disabled) {
     outline: transparent;
     border-color: var(--custom-color-1);
 }
