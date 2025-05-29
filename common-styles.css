@@ -536,7 +536,7 @@ input[type="color"] { */
     input[type="image"],
     input[type="color"]
 ):not(.default):not(.unstyled):disabled {
-    opacity: .75;
+    opacity: .6;
     cursor: not-allowed;
 }
 
