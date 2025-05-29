@@ -648,7 +648,7 @@ input[type="color"] { */
     input[type="reset"],
     input[type="image"],
     input[type="color"]
-):not(.default):not(.unstyled):hover {
+):not(.default):not(.unstyled):not(:disabled):hover {
     background-color: var(--button-hover);
 }
 
@@ -664,7 +664,7 @@ input[type="color"] { */
     input[type="reset"],
     input[type="image"],
     input[type="color"]
-):not(.default):not(.unstyled):active {
+):not(.default):not(.unstyled):not(:disabled):active {
     background-color: var(--button-active);
 }
 
@@ -680,7 +680,7 @@ input[type="color"] { */
     input[type="reset"],
     input[type="image"],
     input[type="color"]
-):not(.default):not(.unstyled):focus {
+):not(.default):not(.unstyled):not(:disabled):focus {
     outline: transparent;
     border-color: var(--custom-color-1);
 }
