@@ -357,38 +357,56 @@ body {
 } */
 
 h1,
-h1 > a,
+.h1,
 h2,
+.h2,
 h3,
+.h3,
 h4,
+.h4,
 h5,
-h6 {
+.h5,
+h6,
+.h6 {
     margin: 0px;
     color: var(--text);
     font-weight: 600;
 }
 
-h1:not(.widget.Header h1.title), h1 > a, h2, h3, h4, h5, h6 {
+h1:not(.widget.Header h1.title),
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
     font-family: var(--ui-font-family);
     /* font-stretch: 87.5%; */
-    text-transform: capitalize;
 }
 
 .widget.Header h1.title {
     font-family: var(--ui-font-family);
 }
 
-h1 {
+h1,
+.h1 {
     font-size: 2.4em;
     font-weight: 500;
 }
 
-h2 {
+h2,
+.h2 {
     font-size: 2.2em;
     font-weight: 500;
 }
 
-h3 {
+h3,
+.h3 {
     font-size: 2em;
     font-weight: 500;
 }
@@ -400,22 +418,38 @@ h3.post-title.entry-title > a {
     font-weight: inherit;
 }
 
-h4/* , h3.post-title.entry-title */ {
+h4,
+.h4/*,
+h3.post-title.entry-title */ {
     font-size: 1.8em;
     font-weight: 600;
 }
 
-h5 {
+h5,
+.h5 {
     font-size: 1.6em;
     font-weight: 600;
 }
 
-h6 {
+h6,
+.h6 {
     font-size: 1.4em;
     font-weight: 600;
 }
 
-h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a, h3.post-title.entry-title > a {
+h1 > a,
+.h1 > a,
+h2 > a,
+.h2 > a,
+h3 > a,
+.h3 > a,
+h4 > a,
+.h4 > a,
+h5 > a,
+.h5 > a,
+h6 > a,
+.h6 > a,
+h3.post-title.entry-title > a {
     font: inherit;
 }
 
