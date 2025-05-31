@@ -1313,6 +1313,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #page
 .page-header-item {
     display: inline-block;
     padding: 7px 10px;
+    font-size: 1.25rem;
 }
 
 /* .page-header-dropdown */ .page-header-button {
