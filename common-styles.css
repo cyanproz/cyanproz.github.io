@@ -1314,24 +1314,8 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #page
     display: block;
     padding: 7px 10px;
     font-size: 1.25rem;
-}
-
-/* .page-header-dropdown */ .page-header-button {
-    display: block;
-    padding: 0;
     height: 100%;
     min-height: 40px;
-    border: none;
-    border-radius: 0px;
-    background-color: transparent;
-    font-size: 1.25rem;
-    /* font-stretch: 87.5%; */
-    /* text-transform: uppercase; */
-    /* letter-spacing: 0.1rem; */
-    text-align: left;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.25s ease-in-out;
 }
 
 /* .page-header-dropdown */ .page-header-button {
