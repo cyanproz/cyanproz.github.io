@@ -1313,7 +1313,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #page
 .page-header-item {
     display: block;
     padding: 7px 10px;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     height: 100%;
     min-height: 40px;
 }
@@ -1326,7 +1326,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #page
     border: none;
     border-radius: 0px;
     background-color: transparent;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     /* font-stretch: 87.5%; */
     /* text-transform: uppercase; */
     /* letter-spacing: 0.1rem; */
