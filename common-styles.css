@@ -748,6 +748,7 @@ button:not(.default):not(.unstyled):not(.page-header-button) * {
 
 a.button-link:not(.default):not(.unstyled) {
     display: inline-block;
+    text-align: center;
 }
 
 select, #Translate1 select.goog-te-combo {
