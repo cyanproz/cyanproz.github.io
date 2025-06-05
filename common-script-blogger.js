@@ -41,22 +41,22 @@ window.addEventListener("resize", function() {
 // == Dev Mode ==
 
 if (Dev_Mode && (localStorage["isAdmin"] && localStorage["isAdmin"] == "true")) {
-    const Screen_Width_Element = document.createElement("div");
-    Screen_Width_Element.id = "Screen_Width";
-    Screen_Width_Element.style.display = "inline-block";
-    Screen_Width_Element.style.position = "fixed";
-    Screen_Width_Element.style.top = "0px";
-    Screen_Width_Element.style.left = "0px";
-    Screen_Width_Element.style.zIndex = "100000000000000000000000000000000000000";
-    Screen_Width_Element.style.backgroundColor = "#FFFFFF88";
-    Screen_Width_Element.style.color = "black";
+    const screenWidthElement = document.createElement("div");
+    screenWidthElement.id = "Screen_Width";
+    screenWidthElement.style.display = "inline-block";
+    screenWidthElement.style.position = "fixed";
+    screenWidthElement.style.top = "0px";
+    screenWidthElement.style.left = "0px";
+    screenWidthElement.style.zIndex = "100000000000000000000000000000000000000";
+    screenWidthElement.style.backgroundColor = "#FFFFFF88";
+    screenWidthElement.style.color = "black";
     document.get
     
-    document.body.appendChild(Screen_Width_Element);
+    document.body.appendChild(screenWidthElement);
     
-    Screen_Width_Element.textContent = window.innerWidth + " × " + window.innerHeight;
+    screenWidthElement.textContent = window.innerWidth + " × " + window.innerHeight;
     window.addEventListener("resize", function() {
-        Screen_Width_Element.textContent = window.innerWidth + " × " + window.innerHeight;
+        screenWidthElement.textContent = window.innerWidth + " × " + window.innerHeight;
     });
 }
 
