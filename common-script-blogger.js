@@ -42,7 +42,7 @@ window.addEventListener("resize", function() {
 
 if (Dev_Mode && (localStorage["isAdmin"] && localStorage["isAdmin"] == "true")) {
     const screenWidthElement = document.createElement("div");
-    screenWidthElement.id = "Screen_Width";
+    screenWidthElement.id = "screen-width";
     screenWidthElement.style.display = "inline-block";
     screenWidthElement.style.position = "fixed";
     screenWidthElement.style.top = "0px";
@@ -50,7 +50,6 @@ if (Dev_Mode && (localStorage["isAdmin"] && localStorage["isAdmin"] == "true")) 
     screenWidthElement.style.zIndex = "100000000000000000000000000000000000000";
     screenWidthElement.style.backgroundColor = "#ffffff88";
     screenWidthElement.style.color = "black";
-    document.get
     
     document.body.appendChild(screenWidthElement);
     
