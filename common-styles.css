@@ -455,6 +455,7 @@ h3.post-title.entry-title > a {
 
 .material-symbols-outlined:not(#page-header .page-header-button .material-symbols-outlined) {
     font-size: 1em;
+    user-select: none;
 }
 
 .icon--left {
