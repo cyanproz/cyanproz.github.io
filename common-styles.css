@@ -116,8 +116,11 @@
     --link-active-light: #002b80;
     --link-active-dark: #006680;
 
-    --border-light: #aaa;
-    --border-dark: #333;
+    --border-1-light: #aaa;
+    --border-1-dark: #333;
+
+    --border-2-light: #ccc;
+    --border-2-dark: #222;
 
     --button-light: #eee;
     --button-light: hsl(0, 0%, 93%);
@@ -159,7 +162,8 @@
     --link: var(--link-light);
     --link-hover: var(--link-hover-light);
     --link-active: var(--link-active-light);
-    --border: var(--border-light);
+    --border-1: var(--border-1-light);
+    --border-1: var(--border-1-light);
     --button: var(--button-light);
     --button-hover: var(--button-hover-light);
     --button-active: var(--button-active-light);
@@ -182,7 +186,8 @@
     --link: var(--link-dark);
     --link-hover: var(--link-hover-dark);
     --link-active: var(--link-active-dark);
-    --border: var(--border-dark);
+    --border-1: var(--border-1-dark);
+    --border-2: var(--border-2-dark);
     --button: var(--button-dark);
     --button-hover: var(--button-hover-dark);
     --button-active: var(--button-active-dark);
@@ -205,7 +210,8 @@
         --link: var(--link-dark);
         --link-hover: var(--link-hover-dark);
         --link-active: var(--link-active-dark);
-        --border: var(--border-dark);
+        --border-1: var(--border-1-dark);
+        --border-2: var(--border-2-dark);
         --button: var(--button-dark);
         --button-hover: var(--button-hover-dark);
         --button-active: var(--button-active-dark);
@@ -323,7 +329,7 @@ body {
 } */
 
 /* ::-webkit-scrollbar-track {
-    border: 0px solid var(--border);
+    border: 0px solid var(--border-1);
 } */
 
 /* ::-webkit-scrollbar-track:horizontal {
@@ -531,7 +537,7 @@ input[type="color"] { */
     input[type="image"],
     input[type="color"]
 ):not(.default):not(.unstyled) {
-    border: solid 1px var(--border);
+    border: solid 1px var(--border-1);
     border-radius: 6px;
     padding: 3px 5px;
     background-color: var(--button);
@@ -819,7 +825,7 @@ input[type="time"],
 input[type="datetime-local"] {
     font-family: var(--ui-font-family);
     font-size: 1rem;
-    border: solid 1px var(--border);
+    border: solid 1px var(--border-1);
     border-radius: 4px;
     padding: 3px 5px;
     background-color: var(--background);
@@ -902,7 +908,7 @@ pre, pre * {
 }
 
 fieldset {
-    border: solid 1px var(--border);
+    border: solid 1px var(--border-1);
     border-radius: 8px;
     padding: 8px;
 }
@@ -914,7 +920,7 @@ table.styled {
 
 table.styled th,
 table.styled td {
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-1);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -1017,7 +1023,7 @@ details[open] > summary::before {
 .container-box-template--1--wide {
     padding: 15px;
     box-sizing: border-box;
-    border: solid var(--border);
+    border: solid var(--border-1);
     background-color: var(--foreground);
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
 }
@@ -1069,7 +1075,7 @@ details[open] > summary::before {
 }
 
 .dialog {
-    border: solid 1px var(--border);
+    border: solid 1px var(--border-1);
     border-radius: 10px;
     background-color: var(--foreground);
     padding: 16px;
@@ -1087,7 +1093,7 @@ details[open] > summary::before {
 }
 
 .alert {
-    border: var(--border) solid;
+    border: var(--border-1) solid;
     border-radius: 8px;
     border-width: 1px 1px 1px 8px;
     margin: 8px 0;
@@ -1128,7 +1134,7 @@ details[open] > summary::before {
 .alert-dialog > .body {
     padding: 11px;
     box-sizing: border-box;
-    border: solid var(--border);
+    border: solid var(--border-1);
     background-color: var(--foreground);
 }
 
@@ -1154,7 +1160,7 @@ details[open] > summary::before {
 .code-box {
     overflow: hidden;
     background-color: var(--foreground);
-    border: solid 1px var(--border);
+    border: solid 1px var(--border-1);
     font-size: 1rem;
     border-radius: 8px;
 }
@@ -1234,7 +1240,7 @@ details[open] > summary::before {
     padding: 0px 0px 0px 0px;
     justify-content: space-between;
     font-size: 1.25rem;
-    border-bottom: solid 1px var(--border);
+    border-bottom: solid 1px var(--border-1);
     border-top: none;
     /* border-radius: 0px 0px 10px 10px; */
     background-color: var(--foreground);
@@ -1354,7 +1360,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #page
     }
 
     /* .page-header-dropdown */ .page-header-button:hover {
-        /* border: solid 1px var(--border);
+        /* border: solid 1px var(--border-1);
         border-bottom: none;
         padding: 11px 11px 12px 11px;
         border-radius: 12px 12px 0px 0px;
@@ -1399,7 +1405,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #page
  
 /* #page-header > nav:nth-child(1) > .page-header-dropdown:nth-child(1) > .page-header-button */
 #cyanproz-button {
-    /* border: solid 1px var(--border); */
+    /* border: solid 1px var(--border-1); */
     /* border-bottom: none; */
     padding: 0px;
     /* padding: 6px 10px; */
@@ -1418,7 +1424,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #page
 /* #page-header > nav:nth-child(1) > .page-header-dropdown:nth-child(1) > .page-header-button > a */
 #cyanproz-button > a {
     display: inline-block;
-    /* border: solid 1px var(--border); */
+    /* border: solid 1px var(--border-1); */
     /* border-bottom: none; */
     /* padding: none; */
     /* padding: 11px 11px 12px 11px; */
@@ -1489,7 +1495,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #page
         /* visibility: hidden; */
         padding: 0px;
         background-color: var(--foreground);
-        border: solid 1px var(--border);
+        border: solid 1px var(--border-1);
         border-radius: 10px;
         font-size: 20px;
         text-decoration: none;
@@ -1539,7 +1545,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #page
         transition-duration: 0.25s;
         text-decoration: none;
         font-size: 1.125rem;
-        border-bottom: solid 1px var(--border);
+        border-bottom: solid 1px var(--border-1);
     }
 
     .page-header-dropdown .page-header-button .page-header-dropdown-menu > ul a.page-header-dropdown-item:nth-child(1),
@@ -1568,7 +1574,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #page
     /* .page-header-dropdown .page-header-button .page-header-dropdown-menu > ul hr.page-header-dropdown-item_Separator */
     hr.Separator {
         border: none;
-        border-bottom: solid 1px var(--border);
+        border-bottom: solid 1px var(--border-1);
         /* margin: 2px 2px 2px 2px; */
     }
 }
@@ -1612,7 +1618,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #page
         display: flex;
         flex-direction: column;
         position: absolute;
-        border-right: solid 1px var(--border);
+        border-right: solid 1px var(--border-1);
         width: 240px;
         height: 100vh;
         /* height: max-content; */
@@ -1638,7 +1644,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #page
         position: absolute;
         padding: 0px;
         background-color: var(--foreground);
-        border: solid 1px var(--border);
+        border: solid 1px var(--border-1);
         border-top: none;
         border-radius: 0px 0px 12px 12px;
         font-size: 20px;
@@ -1701,7 +1707,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #page
         /* transition-duration: 0.25s; */
         text-decoration: none;
         font-size: 18px;
-        /* border-bottom: solid 1px var(--border); */
+        /* border-bottom: solid 1px var(--border-1); */
     }
 }
 
