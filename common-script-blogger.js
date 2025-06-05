@@ -48,7 +48,7 @@ if (Dev_Mode && (localStorage["isAdmin"] && localStorage["isAdmin"] == "true")) 
     screenWidthElement.style.top = "0px";
     screenWidthElement.style.left = "0px";
     screenWidthElement.style.zIndex = "100000000000000000000000000000000000000";
-    screenWidthElement.style.backgroundColor = "#FFFFFF88";
+    screenWidthElement.style.backgroundColor = "#ffffff88";
     screenWidthElement.style.color = "black";
     document.get
     
