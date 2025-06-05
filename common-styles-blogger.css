@@ -232,7 +232,7 @@ body > div.skiptranslate[style*="display: none"] {
     top: 0;
     min-width: 224px;
     /* background-color: var(--background); */
-    /* border-right: solid 1px var(--border); */
+    /* border-right: solid 1px var(--border-1); */
     /* box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5); */
     /* z-index: 1; */
 }
@@ -243,7 +243,7 @@ body > div.skiptranslate[style*="display: none"] {
     box-sizing: border-box;
     width: 100%;
     /* max-width: 1200px; */
-    border: solid 1px var(--border);
+    border: solid 1px var(--border-1);
     border-radius: 10px;
     background-color: var(--foreground);
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
@@ -263,7 +263,7 @@ body > div.skiptranslate[style*="display: none"] {
     }
 
     #Sidebar {
-        border-color: var(--border);
+        border-color: var(--border-1);
         border-width: 1px 0 0 0;
         border-style: solid;
         background-color: var(--foreground);
@@ -287,7 +287,7 @@ body > div.skiptranslate[style*="display: none"] {
 } */
 /* #Sidebar > hr {
     border: none;
-    border-bottom: solid 1px var(--border);
+    border-bottom: solid 1px var(--border-1);
 }
 
 #Sidebar > details {
@@ -355,7 +355,7 @@ body > div.skiptranslate[style*="display: none"] {
 } */
 
 .widget.FeaturedPost > .post-summary {
-    border: var(--border) 1px dashed;
+    border: var(--border-1) 1px dashed;
     border-radius: 5px;
     padding: 5px;
 }
@@ -466,7 +466,7 @@ ul.Navigation_Arrows li::before {
 
 #Blog_Container div.date-outer h2.date-header > span, .post-labels a.post-label {
     display: inline-block;
-    border: solid 1px var(--border);
+    border: solid 1px var(--border-1);
     /* border-radius: 0px 0px 8px 8px; */
     border-radius: 1000vh;
     padding: 3px 6px;
@@ -515,8 +515,8 @@ ul.Navigation_Arrows li::before {
 
 #Blog_Container div.date-outer div.post-body.entry-content {
     margin: 8px 0 8px 0;
-    border-top: dashed 1px var(--border);
-    border-bottom: dashed 1px var(--border);
+    border-top: dashed 1px var(--border-1);
+    border-bottom: dashed 1px var(--border-1);
     padding: 8px 0 8px 0;
 }
 
@@ -583,7 +583,7 @@ ul.Navigation_Arrows li::before {
 }
 
 #Blog_Container .status-msg-wrap > .status-msg-border {
-    border: dashed 1px var(--border);
+    border: dashed 1px var(--border-1);
     border-radius: 10px;
     max-width: 732px;
     opacity: 1;
@@ -619,7 +619,7 @@ ul.Navigation_Arrows li::before {
 }
 
 li.comment {
-    border-bottom: solid 1px var(--border);
+    border-bottom: solid 1px var(--border-1);
 }
 
 li.comment:nth-last-child(1) {
@@ -683,7 +683,7 @@ a.blog-pager-older-link, a.blog-pager-newer-link {
     display: flex;
     justify-content: center;
     gap: 16px;
-    border-top: solid 1px var(--border);
+    border-top: solid 1px var(--border-1);
     padding: 16px;
     min-height: max-content;
     background-color: var(--background);
@@ -726,7 +726,7 @@ a.blog-pager-older-link, a.blog-pager-newer-link {
 #Page_Box {
     display: block;
     background-color: var(--foreground);
-    border: solid 1px var(--border);
+    border: solid 1px var(--border-1);
     border-radius: 12px;
 }
 
@@ -760,7 +760,7 @@ a.blog-pager-older-link, a.blog-pager-newer-link {
 }
 
 #Message_Dialog > div {
-    border: solid 1px var(--border);
+    border: solid 1px var(--border-1);
     border-radius: 12px;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
     min-width: 400px;
