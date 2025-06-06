@@ -1407,14 +1407,11 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #page
 
 /* #page-header /. > nav:nth-child(1) > ./ *:nth-child(1) .page-header-button:nth-child(1) {
     border-bottom-left-radius: 9px;
-    }
-
-    #page-header /. > nav:nth-last-child(1) > ./ *:nth-last-child(1) .page-header-button:nth-last-child(1) {
-        x  border-bottom-right-radius: 9px;
-        } */
-/* .page-header-dropdown */ .page-header-button span:nth-child(1) {
-    font-size: inherit;
 }
+
+#page-header /. > nav:nth-last-child(1) > ./ *:nth-last-child(1) .page-header-button:nth-last-child(1) {
+    x  border-bottom-right-radius: 9px;
+} */
 
 /* .page-header-dropdown .page-header-button > span:nth-child(1)::after {
     content: " &#9662;";
