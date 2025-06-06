@@ -1320,7 +1320,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #page
 
 .page-header-item {
     display: flex;
-    padding: 7px 10px;
+    padding: 8px 10px;
     font-size: 1.25rem;
     height: 100%;
     min-height: 40px;
