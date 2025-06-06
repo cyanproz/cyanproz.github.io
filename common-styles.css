@@ -1327,6 +1327,7 @@ body:has(div.skiptranslate[style*="display: none"] > iframe.skiptranslate) #page
 
 /* .page-header-dropdown */ .page-header-button {
     display: flex;
+    padding: 0;
     height: 100%;
     min-height: 40px;
     border: none;
