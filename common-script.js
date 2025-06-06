@@ -27,7 +27,7 @@ var Javascript_Input_Box = document.querySelector("#Website_Lab_Side_Bar > :nth-
 var Page_Is_Home_Page = document.querySelector('#Flag_Tags .Page_Is_Home_Page');
 var Page_Is_Static_Page = document.querySelector('#Flag_Tags .Page_Is_Static_Page');
 
-// == Functions ==
+// == Functions & Classes ==
 function Show_Message_Box_Dialog(Title, Message) {
     const Message_Dialog = document.getElementById("Message_Dialog").querySelector("div");
     const Message_Dialog_Title = Message_Dialog.querySelector(".Title");
@@ -129,6 +129,19 @@ console.log(getBrowserPlatform());
 // {
 //     alert(`You're currently running this website on ${getBrowserPlatform()}. It may not be perfect.`);
 // }
+
+function ajaxJsonPhpErrorHandler(response) {
+    return response.clone().json()
+        .then(data => {
+            return data; // ✅ Return the parsed JSON
+        })
+        .catch(() => {
+            // If JSON parsing fails, fall back to text
+            return response.text().then(text => {
+                throw new Error("Server error (not JSON):\n" + text);
+            });
+        });
+}
 
 const AlertDialogType = Object.freeze({
     DIV: "div",
