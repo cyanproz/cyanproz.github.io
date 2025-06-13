@@ -246,6 +246,7 @@ class AlertDialog {
     
     close() {
         this.overlay.style.backgroundColor = "#0000";
+        this.overlay.style.pointerEvents = "none";
         this.dialog.style.translate = "0 calc(-100% - 32px)";
         this.dialog.style.opacity = "0";
         
