@@ -15,13 +15,13 @@ setInterval(function() {
 
     if (Google_Translate_Combobox()) {
         if (Google_Translate_Combobox().value == "ar" || Google_Translate_Combobox().value == "fa" || Google_Translate_Combobox().value == "fa-AF" || Google_Translate_Combobox().value == "ps" || Google_Translate_Combobox().value == "iw" || Google_Translate_Combobox().value == "ye") {
-            if (searchParameters.get("secret") == "rtl") {
+            if (urlQueryParams.get("secret") == "rtl") {
                 document.documentElement.style.direction = "ltr";
             } else {
                 document.documentElement.style.direction = "rtl";
             }
         } else {
-            if (searchParameters.get("secret") == "rtl") {
+            if (urlQueryParams.get("secret") == "rtl") {
                 document.documentElement.style.direction = "rtl";
             } else {
                 document.documentElement.style.direction = "ltr";
