@@ -1094,6 +1094,72 @@ details[open] > summary::before {
     display: block;
 }
 
+.tooltip {
+    padding: 3px;
+    box-sizing: border-box;
+    border: solid 1px var(--border-1);
+    border-radius: 4px;
+    padding: 4px;
+    white-space: nowrap;
+    background-color: var(--foreground);
+    font-size: .75rem;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
+    /* transition: scale .2s cubic-bezier(0, 0, 0, 1); */
+    /* transform-origin: 0% 0%; */
+}
+
+#notification-area {
+    display: block;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 10000000000000000000000000;
+    /* height: 100px; */
+    /* background-color: wheat; */
+    pointer-events: none;
+}
+
+#notification-area > * {
+    pointer-events: auto;
+}
+
+.notification {
+    margin-bottom: 16px;
+    padding: 11px;
+    box-sizing: border-box;
+    border: solid 1px var(--border-1);
+    border-radius: 10px;
+    width: 300px;
+    background-color: var(--foreground);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
+    transition: translate .5s cubic-bezier(0, 0, 0, 1), opacity .5s linear;
+}
+
+@media screen and (max-width: 332px) {
+    #notification-area {
+        left: 16px;
+    }
+
+    .notification {
+        max-width: 100%;
+    }
+}
+
+.notification > .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.notification > .header > .caption {
+    font-weight: bold;
+}
+
+.notification > .header > .close-button {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
 .alert {
     border: var(--border-1) solid;
     border-radius: 8px;
