@@ -259,6 +259,7 @@
 
 * {
     /* background-color: var(--background); */
+    box-sizing: border-box;
     /* font-family: "Nunito Sans", "Open Sans", "Noto Color Emoji", sans-serif; */
     /* font-stretch: 50%; */
     /* font-variation-settings:
