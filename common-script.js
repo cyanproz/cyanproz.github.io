@@ -148,6 +148,241 @@ const AlertDialogType = Object.freeze({
     FORM: "form"
 });
 
+class Notification {
+    /**
+     * @param {{
+     * title: string,
+     * bodyHtml: string,
+     * id: string,
+     * fitToContent: boolean,
+     * }} param
+     */
+    constructor({ title, bodyHtml, id = null, fitToContent = false }) {
+        // Create form dialog
+        this.notification = document.createElement("div");
+        if (id != null && id != "") this.notification.id = id;
+        this.notification.className = "notification";
+        this.notification.style.translate = "calc(100% + 32px) 0";
+        this.notification.style.opacity = "0";
+        if (fitToContent) this.notification.style.width = "max-content";
+        
+        // Header
+        this.header = document.createElement("div");
+        this.header.className = "header";
+        
+        // Header Caption
+        this.headerCaption = document.createElement("div");
+        this.headerCaption.classList.add("caption");
+        this.headerCaption.textContent = title;
+        this.header.appendChild(this.headerCaption);
+        
+        // Close Button
+        this.closeButton = document.createElement("button");
+        this.closeButton.classList.add("close-button");
+        this.closeButton.classList.add("unstyled");
+        this.closeButton.innerHTML = `<span class="material-symbols-outlined">close</span>`;
+        this.closeButton.addEventListener("click", () => this.close());
+        this.header.appendChild(this.closeButton);
+        
+        // Body
+        this.body = document.createElement("div");
+        this.body.className = "body";
+        this.body.innerHTML = bodyHtml;
+                
+        // Append all to form dialog
+        this.notification.appendChild(this.header);
+        this.notification.appendChild(this.body);
+    }
+
+    show(duration = 5000) {
+        document.getElementById("notification-area").appendChild(this.notification);
+
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                this.notification.style.removeProperty("translate");
+                this.notification.style.removeProperty("opacity");
+
+                setTimeout(() => {
+                    this.close();
+                }, duration);
+            });
+        });
+    }
+    
+    close() {
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                // this.notification.style.translate = "0 calc(-100% - 32px)";
+                this.notification.style.opacity = "0";
+                
+                setTimeout(() => {
+                    this.notification.remove();
+                }, 500);
+            });
+        });
+        // // this.notification.style.translate = "0 calc(-100% - 32px)";
+        // this.notification.style.opacity = "0";
+        
+        // setTimeout(() => {
+        //     this.overlay.remove();
+        // }, 500);
+    }
+}
+
+const ContextMenuItemType = Object.freeze({
+    LINK: "a",
+    BUTTON: "button"
+});
+
+class ContextMenu {
+    /**
+     * @param {{
+     *     items: Array<{
+     *         text: string,
+     *         icon?: string, // @default ""
+     *         clickEvent?: () => void, // @default () => {}
+     *         createSeparator?: boolean // @default false
+     *     }>
+     * }} param
+     */
+    constructor(event, { items }) {
+        this.contextMenuElement = document.createElement("div");
+        this.contextMenuElement.classList.add("context-menu");
+        this.contextMenuElement.style.scale = "0";
+        this.contextMenuElement.addEventListener("click", (e) => e.preventDefault());
+        this.contextMenuElement.addEventListener("contextmenu", (e) => e.preventDefault());
+        
+        this.contextMenuElementUl = document.createElement("ul");
+        this.contextMenuElement.appendChild(this.contextMenuElementUl);
+        this.event = event;
+
+        items.forEach(({ text, icon = "", contextMenuItemType = ContextMenuItemType.BUTTON, clickEvent = () => {}, createSeparator = false }) => {
+            const itemElement = document.createElement("li");
+            itemElement.classList.add("context-menu__item");
+
+            const itemElementButton = document.createElement(contextMenuItemType);
+            const itemElementButtonText = document.createElement("span");
+            itemElementButtonText.classList.add("text");
+            itemElementButtonText.textContent = text;
+            itemElementButton.appendChild(itemElementButtonText);
+            itemElementButton.addEventListener("click", () => {
+                this.close();
+                clickEvent();
+            });
+
+            itemElement.appendChild(itemElementButton);
+            this.contextMenuElementUl.appendChild(itemElement);
+
+            if (createSeparator) itemElement.classList.add("separator");
+        });
+    }
+    
+    show() {
+        this.event.preventDefault();
+
+        const x = this.event.clientX;
+        const y = this.event.clientY;
+
+        this.contextMenuElement.style.top = `${y}px`;
+        this.contextMenuElement.style.left = `${x}px`;
+        this.contextMenuElement.style.display = 'block';
+
+        // Optional: Ensure it doesn't overflow viewport
+        const { innerWidth, innerHeight } = window;
+        const { offsetWidth, offsetHeight } = this.contextMenuElement;
+
+        if (x + offsetWidth > innerWidth) {
+            this.contextMenuElement.style.left = `${innerWidth - offsetWidth}px`;
+        }
+        if (y + offsetHeight > innerHeight) {
+            this.contextMenuElement.style.top = `${innerHeight - offsetHeight}px`;
+        }
+        document.body.appendChild(this.contextMenuElement);
+        
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                this.contextMenuElement.style.removeProperty("scale");
+
+                document.addEventListener("click", (e) => {
+                    if (!this.contextMenuElement.contains(e.target) && !this.contextMenuElement.contains(this.event.currentTarget)) this.close();
+                });
+                document.addEventListener("contextmenu", (e) => {
+                    if (!this.contextMenuElement.contains(e.target) && !this.contextMenuElement.contains(this.event.currentTarget)) this.close();
+                });
+            });
+        });
+    }
+    
+    close() {
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                this.contextMenuElement.style.scale = 0;
+                setTimeout(() => this.contextMenuElement.remove(), 200);
+            });
+        });
+    }
+}
+
+function showTooltip(event, text, { timeout = 500, followCursor = true , pointerEvents = false } = {}) {
+    let stillShowing = true;
+
+    // Create tooltip element
+    const tooltipElement = document.createElement("div");
+    tooltipElement.innerHTML = text;
+    tooltipElement.classList.add("tooltip");
+
+    // Base styles
+    tooltipElement.style.position = "fixed";
+    tooltipElement.style.zIndex = "99999999999999999999999999999";
+    tooltipElement.style.pointerEvents = pointerEvents ? "auto" : "none";
+    tooltipElement.style.visibility = "hidden";
+
+    document.body.appendChild(tooltipElement);
+
+    // Cleanup
+    event.target.addEventListener("mouseleave", () => {
+        stillShowing = false;
+        tooltipElement.remove();
+    });
+    
+    const moveHandler = (e) => {
+        tooltipElement.style.left = `${e.clientX}px`;
+        tooltipElement.style.top = `${e.clientY + 24}px`;
+        if (verboseMode) console.log(`X: ${e.clientX}, Y: ${e.clientY + 24}`);
+    };
+    
+    event.target.addEventListener("mousemove", moveHandler);
+
+    setTimeout(() => {
+        if (!stillShowing) return;
+
+        var tooltipElementBoundingClientRect = tooltipElement.getBoundingClientRect();
+        if (verboseMode) console.log(tooltipElementBoundingClientRect);
+        
+        if (followCursor) {
+            event.target.removeEventListener("mousemove", moveHandler);
+        } else {
+            const rect = event.target.getBoundingClientRect();
+            tooltipElement.style.transform = "translateX(-50%)";
+            tooltipElement.style.left = `${rect.left + rect.width / 2}px`;
+            tooltipElement.style.top = `${rect.bottom + 8}px`;
+        }
+
+        if (verboseMode) {
+            console.log(tooltipElementBoundingClientRect.left + tooltipElementBoundingClientRect.width);
+            console.log(window.innerWidth);
+        }
+        if (tooltipElementBoundingClientRect.left + tooltipElementBoundingClientRect.width > window.innerWidth) {
+            tooltipElement.style.left = `${window.innerWidth - tooltipElementBoundingClientRect.width}px`;
+        }
+        if (tooltipElementBoundingClientRect.top + tooltipElementBoundingClientRect.height > window.innerHeight) {
+            tooltipElement.style.top = `${window.innerHeight - tooltipElementBoundingClientRect.height}px`;
+        }
+
+        tooltipElement.style.visibility = "visible";
+    }, timeout);
+}
+
 class AlertDialog {
     /**
      * @param {{
