@@ -4,8 +4,8 @@ catch (e) {}
 
 const Dev_Mode = true;
 
-const Header_And_Content_Layout = document.getElementById("header-and-content-layout");
-const Header = document.getElementById("header");
+const header = document.getElementById("page-header");
+const headerAndContentLayout = document.getElementById("header-and-content-layout");
 const Side_Bar = document.getElementById("side-bar"); 
 const Main_Content = document.getElementById("main-content");
 const Home_Page = document.getElementById("Home_Page");
@@ -412,9 +412,9 @@ Array.from(upload_file_button_class).forEach(function(Selected_Button) {
 //     element.setAttribute("href",  + element.getAttribute("href") + "/index.html");
 // });
 
-// Header_And_Content_Layout.style.height = "100vh";
-// Main_Content.style.paddingTop = Header.offsetHeight + "px";
-// Main_Content.style.height = "calc(100vh - " + Header.offsetHeight + "px)";
+// headerAndContentLayout.style.height = "100vh";
+// Main_Content.style.paddingTop = header.offsetHeight + "px";
+// Main_Content.style.height = "calc(100vh - " + header.offsetHeight + "px)";
 // document.querySelector("#Blog_Container .status-msg-wrap .status-msg-body > a").setAttribute("href", "https://cyanproz.blogspot.com/?indexpage=blog")
 
 // export class Serial_Port {

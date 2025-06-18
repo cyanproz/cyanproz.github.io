@@ -4,13 +4,13 @@
 
 setInterval(function() {
     if (document.documentElement.scrollTop <= 16) {
-        Header.style.background = "#0000";
-        Header.style.borderBottomColor = "#0000";
-        Header.style.boxShadow = "none";
+        header.style.background = "#0000";
+        header.style.borderBottomColor = "#0000";
+        header.style.boxShadow = "none";
     } else {
-        Header.style.removeProperty("background");
-        Header.style.removeProperty("border-bottom-color");
-        Header.style.removeProperty("box-shadow");
+        header.style.removeProperty("background");
+        header.style.removeProperty("border-bottom-color");
+        header.style.removeProperty("box-shadow");
     }
 
     if (Google_Translate_Combobox()) {
