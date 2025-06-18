@@ -15,7 +15,7 @@
     --ui-font-family: /* "Source Sans Pro", */ "Fira Sans", "Source Sans 3", "Open Sans", "Noto Sans", "Noto Color Emoji", system-ui, ui-sans-serif, sans-serif;
     --ui-monospaced-font-family: "Fira Mono", "Source Code Pro", monospace;
     --ui-font-size: 16px;
-    --header-height: 45px;
+    --page-header-height: 41px;
 
     /* --color-success: hsl(120, 100%, 40%);
     --color-success-hover: hsl(120, 100%, 35%);
