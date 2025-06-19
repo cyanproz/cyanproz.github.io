@@ -1104,7 +1104,7 @@ details[open] > summary::before {
     background-color: var(--foreground);
     font-size: .75rem;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
-    /* transition: scale .2s cubic-bezier(0, 0, 0, 1); */
+    transition: opacity .2s linear;
     /* transform-origin: 0% 0%; */
 }
 
