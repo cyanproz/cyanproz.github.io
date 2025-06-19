@@ -335,14 +335,20 @@ function showTooltip(event, text, { timeout = 500, followCursor = true , pointer
     tooltipElement.style.position = "fixed";
     tooltipElement.style.zIndex = "99999999999999999999999999999";
     tooltipElement.style.pointerEvents = pointerEvents ? "auto" : "none";
-    tooltipElement.style.visibility = "hidden";
+    tooltipElement.style.opacity = "0";
 
     document.body.appendChild(tooltipElement);
 
     // Cleanup
     event.target.addEventListener("mouseleave", () => {
         stillShowing = false;
-        tooltipElement.remove();
+        tooltipElement.style.opacity = "0";
+
+        setTimeout(() => {
+            if (tooltipElement) {
+                tooltipElement.remove();
+            }
+        }, 200);
     });
     
     const moveHandler = (e) => {
@@ -379,7 +385,7 @@ function showTooltip(event, text, { timeout = 500, followCursor = true , pointer
             tooltipElement.style.top = `${window.innerHeight - tooltipElementBoundingClientRect.height}px`;
         }
 
-        tooltipElement.style.visibility = "visible";
+        tooltipElement.style.opacity = "1";
     }, timeout);
 }
 
