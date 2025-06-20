@@ -323,7 +323,7 @@ class ContextMenu {
     }
 }
 
-function showTooltip(event, text, { timeout = 500, followCursor = true , pointerEvents = false } = {}) {
+function showTooltip(event, text, { timeout = 400, followCursor = true , pointerEvents = false } = {}) {
     let stillShowing = true;
 
     // Create tooltip element
